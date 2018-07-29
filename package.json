@@ -11,6 +11,14 @@
     "prod:watch": "webpack --config webpack.config.prod.js -w",
     "start": "nodemon server/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icbootcamp-project/estore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/icbootcamp-project/estore/issues"
+  },
+  "homepage": "https://github.com/icbootcamp-project/estore#readme",
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
