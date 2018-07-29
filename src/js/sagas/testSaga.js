@@ -3,7 +3,7 @@ import { delay } from 'redux-saga';
 import * as actions from '../actions';
 import * as api from '../api';
 
-export default function* fetchDataSaga(action) {
+export default function* testSaga(action) {
   const { query } = action.payload;
   yield put(actions.fetchDataAttempt());
   yield call(delay, 1000);

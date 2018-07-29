@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import fetchDataReducer from './fetchDataReducer';
-import fetchStudentsReducer from './fetchStudentsReducer';
+import testReducer from './testReducer';
 
 const rootReducer = combineReducers({
-  data: fetchDataReducer,
-  students: fetchStudentsReducer
+  data: testReducer
 });
 
 export default rootReducer;

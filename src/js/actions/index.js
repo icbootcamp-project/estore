@@ -1,64 +1,25 @@
 import * as types from '../constants';
 
-export function fetchDataAttempt() {
+export function testAction() {
   return {
-    type: types.FETCH_DATA_ATTEMPT
+    type: types.TEST_ACTION
   };
 }
 
-export function fetchDataSuccess(data) {
+export function testActionAttempt() {
   return {
-    type: types.FETCH_DATA_SUCCESS,
-    payload: data
+    type: types.TEST_ACTION_ATTEMPT
   };
 }
 
-export function fetchDataFail(error) {
+export function testActionSuccess() {
   return {
-    type: types.FETCH_DATA_FAIL,
-    payload: error
+    type: types.TEST_ACTION_SUCCESS
   };
 }
 
-export function fetchData(query) {
+export function testActionFail() {
   return {
-    type: types.FETCH_DATA,
-    payload: {
-      query
-    }
+    type: types.TEST_ACTION_FAIL
   };
 }
-
-export function saveForm(formData) {
-  return {
-    type: types.SAVE_FORM,
-    payload: formData
-  };
-}
-
-export function fetchStudents() {
-  return {
-    type: types.FETCH_STUDENTS
-  };
-}
-
-export function fetchStudentsAttempt() {
-  return {
-    type: types.FETCH_STUDENTS_ATTEMPT
-  };
-}
-
-export function fetchStudentsSuccess(data) {
-  return {
-    type: types.FETCH_STUDENTS_SUCCESS,
-    payload: data
-  };
-}
-
-export function fetchStudentsFail(error) {
-  return {
-    type: types.FETCH_STUDENTS_FAIL,
-    payload: error
-  };
-}
-

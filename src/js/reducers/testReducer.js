@@ -10,12 +10,12 @@ export default function(state = initial, action) {
   let data;
 
   switch (action.type) {
-    case types.FETCH_STUDENTS_ATTEMPT:
+    case types.TEST_ACTION_ATTEMPT:
       return { ...state, isLoading: true };
-    case types.FETCH_STUDENTS_SUCCESS:
+    case types.TEST_ACTION_SUCCESS:
       data = action.payload;
       return { ...state, data, isLoading: false, error: null };
-    case types.FETCH_STUDENTS_FAIL:
+    case types.TEST_ACTION_FAIL:
       return { ...state, isLoading: false, error: action.payload };
     default:
       return state;
