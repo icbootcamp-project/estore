@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Component renders 1`] = `
+<div
+  className="nav"
+>
+  <Search
+    getVideos={[MockFunction]}
+  />
+</div>
+`;

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoListEntry Component renders 1`] = `
+<div
+  className="videoListEntry"
+>
+  <div
+    className="media"
+  >
+    <div
+      className="media-left media-middle"
+    >
+      <img
+        alt=""
+        className="media-object"
+        src="someurl"
+      />
+    </div>
+    <div
+      className="media-body"
+    >
+      <button
+        className="media-heading"
+        onClick={[Function]}
+      >
+        some title
+      </button>
+      <p
+        className="media-description"
+      >
+        some description
+      </p>
+    </div>
+  </div>
+</div>
+`;

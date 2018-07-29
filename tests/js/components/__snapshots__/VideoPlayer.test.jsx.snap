@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoPlayer Component it renders given an empty video object 1`] = `
+<div
+  className="videoPlayer"
+>
+  <div
+    className="player embed-responsive embed-responsive-16by9"
+  >
+    <iframe
+      allowFullScreen={true}
+      className="embed-responsive-item"
+      title="Video Player"
+    />
+  </div>
+  <div
+    className="video-details"
+  >
+    <h4
+      className="video-title"
+    />
+    <p
+      className="video-description"
+    />
+  </div>
+</div>
+`;
+
+exports[`VideoPlayer Component renders 1`] = `
+<div
+  className="videoPlayer"
+>
+  <div
+    className="player embed-responsive embed-responsive-16by9"
+  >
+    <iframe
+      allowFullScreen={true}
+      className="embed-responsive-item"
+      src="https://www.youtube.com/embed/1234"
+      title="Video Player"
+    />
+  </div>
+  <div
+    className="video-details"
+  >
+    <h4
+      className="video-title"
+    >
+      some title
+    </h4>
+    <p
+      className="video-description"
+    >
+      some description
+    </p>
+  </div>
+</div>
+`;

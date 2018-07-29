@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component renders 1`] = `
+<div
+  className="search col-md-6 col-md-offset-4 form-inline"
+>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    className="btn"
+  >
+    <span
+      className="glyphicon glyphicon-search "
+    />
+  </button>
+</div>
+`;

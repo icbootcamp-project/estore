@@ -1,0 +1,24 @@
+@mixin button($bg, $fg, $w:80px, $h:40px) {
+  margin: 10px;
+  height: $h;
+  width: $w;
+  line-height: $h - 2px;
+  background-color: $bg;
+  text-align: center;
+  color: $fg;
+  border: 1px solid $fg;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-weight: lighter;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 0px 6px;
+    background-color: darken($bg, 5%);
+  }
+  &:active {
+    transform: scale(0.95);
+    color: $bg;
+    background-color: $fg;
+  }
+}

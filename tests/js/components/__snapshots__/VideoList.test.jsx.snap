@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoList Component renders 1`] = `
+<div
+  className="videoList"
+>
+  <VideoListEntry
+    handleSelectedVideo={[MockFunction]}
+    key="1"
+    video={
+      Object {
+        "id": Object {
+          "videoId": "1",
+        },
+        "snippet": Object {
+          "description": "some description",
+          "thumbnails": Object {
+            "default": Object {
+              "url": "someurl",
+            },
+          },
+          "title": "some title",
+        },
+      }
+    }
+  />
+  <VideoListEntry
+    handleSelectedVideo={[MockFunction]}
+    key="2"
+    video={
+      Object {
+        "id": Object {
+          "videoId": "2",
+        },
+        "snippet": Object {
+          "description": "some description2",
+          "thumbnails": Object {
+            "default": Object {
+              "url": "someurl2",
+            },
+          },
+          "title": "some title2",
+        },
+      }
+    }
+  />
+</div>
+`;
+
+exports[`VideoList Component renders Error message 1`] = `
+<div
+  className="videoList"
+>
+  <div>
+    Error While loading Videos
+  </div>
+</div>
+`;
+
+exports[`VideoList Component renders Loading message 1`] = `
+<div
+  className="videoList"
+>
+  <div>
+    Loading Videos.....
+  </div>
+</div>
+`;
