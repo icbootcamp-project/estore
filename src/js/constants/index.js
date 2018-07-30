@@ -1,4 +1,5 @@
-export const TEST_ACTION = 'TEST_ACTION';
-export const TEST_ACTION_ATTEMPT = 'TEST_ACTION_ATTEMPT';
-export const TEST_ACTION_SUCCESS = 'TEST_ACTION_SUCCESS';
-export const TEST_ACTION_FAIL = 'TEST_ACTION_FAIL';
+// ########## Import Header Constants Here ##########
+export const LOAD_HEADER = "LOAD_HEADER";
+export const LOAD_HEADER_ATTEMPT = "LOAD_HEADER_ATTEMPT";
+export const LOAD_HEADER_SUCCESS = "LOAD_HEADER_SUCCESS";
+export const LOAD_HEADER_FAIL = "LOAD_HEADER_FAIL";

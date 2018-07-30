@@ -1,14 +1,17 @@
-import { takeLatest, fork, all } from 'redux-saga/effects';
-import * as types from '../constants';
-import testSaga from './testSaga';
+// ########## Import Dependencies Here ##########
+import { takeLatest, fork, all } from "redux-saga/effects";
 
-function* watchTest() {
-  yield takeLatest(types.TEST_ACTION, testSaga);
+// ########## Import Components Here ##########
+import * as types from "../constants";
+import loadHeaderSaga from "./loadHeaderSaga";
+
+function* watchLoadHeader() {
+  yield takeLatest(types.LOAD_HEADER, loadHeaderSaga);
 }
 
 export default function* rootSaga() {
   yield all([
-    fork(watchTest),
+    fork(watchLoadHeader)
     // another action listener,
   ]);
 }

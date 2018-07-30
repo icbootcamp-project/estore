@@ -1,0 +1,27 @@
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5%;
+  .search-icon {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .favourite-icon {
+    @extend .search-icon;
+    padding-left: 2%;
+  }
+  .logo {
+    @extend .search-icon;
+    flex: 1 1 auto;
+  }
+  .cart-icon {
+    @extend .search-icon;
+    padding-right: 2%;
+  }
+  .res-menu-icon {
+    @extend .search-icon;
+  }
+}

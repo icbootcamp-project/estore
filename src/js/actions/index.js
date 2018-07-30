@@ -1,25 +1,27 @@
-import * as types from '../constants';
+import * as types from "../constants";
 
-export function testAction() {
+export function loadHeader() {
   return {
-    type: types.TEST_ACTION
+    type: types.LOAD_HEADER
   };
 }
 
-export function testActionAttempt() {
+export function loadHeaderAttempt() {
   return {
-    type: types.TEST_ACTION_ATTEMPT
+    type: types.LOAD_HEADER_ATTEMPT
   };
 }
 
-export function testActionSuccess() {
+export function loadHeaderSuccess(data) {
   return {
-    type: types.TEST_ACTION_SUCCESS
+    type: types.LOAD_HEADER_SUCCESS,
+    payload: data
   };
 }
 
-export function testActionFail() {
+export function loadHeaderFail(error) {
   return {
-    type: types.TEST_ACTION_FAIL
+    type: types.LOAD_HEADER_FAIL,
+    payload: error
   };
 }

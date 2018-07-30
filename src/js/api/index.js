@@ -1,8 +1,10 @@
-import axios from "axios";
+// ########## Import Components Here ##########
+import appData from "../components/appData";
 
-async function youtube() {
-  const res = await axios.get("/students");
-  return res.data;
+export function headerResponse() {
+  return appData[0];
 }
 
-export default youtube;
+export function footerResponse() {
+  return appData[1];
+}
