@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { func, shape, arrayOf, string, bool, any } from "prop-types";
+// import { func, shape, arrayOf, string, bool, any } from "prop-types";
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
+  // BrowserRouter as Router,
+  // Route,
+  // Link,
+  // Switch,
   withRouter
 } from "react-router-dom";
 import * as actions from "../actions";
@@ -13,9 +13,9 @@ import * as actions from "../actions";
 export class App extends React.Component {
   static propTypes = {};
 
-  static defaultProps = {
-    error: null
-  };
+  static defaultProps = {};
+
+  componentDidMount() {}
 
   render() {
     return <div className="app">Hello ICBootcamp</div>;

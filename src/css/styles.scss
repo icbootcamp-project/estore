@@ -1,8 +1,7 @@
-@import './partials/mixins';
-@import './partials/variables';
+// ########## Import Partials Here ##########
+@import "./partials/globals";
+@import "./partials/mixins";
+@import "./partials/variables";
 
-@import './modules/app';
-
-body {
-  margin: 0;
-}
+// ########## Import Public Page Components Here ##########
+@import "./modules/app";
