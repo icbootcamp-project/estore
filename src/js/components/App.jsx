@@ -9,7 +9,6 @@ import {
   withRouter
 } from "react-router-dom";
 import * as actions from "../actions";
-import Home from "./Dashboard/Home";
 
 export class App extends React.Component {
   static propTypes = {};
@@ -33,7 +32,7 @@ export class App extends React.Component {
 
 export default withRouter(
   connect(
-    mapStateToProps,
+    null,
     { fetchData: actions.fetchData }
   )(App)
 );
