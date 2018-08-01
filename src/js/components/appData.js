@@ -30,8 +30,27 @@ const header = {
   }
 };
 
+const categories = [
+  {
+    id: "category-1",
+    name: "grocery"
+  },
+  {
+    id: "category-2",
+    name: "food"
+  },
+  {
+    id: "category-3",
+    name: "house care"
+  },
+  {
+    id: "category-4",
+    name: "sale"
+  }
+];
+
 const footer = [];
 
-const appData = [header, footer];
+const appData = [header, categories, footer];
 
 export default appData;

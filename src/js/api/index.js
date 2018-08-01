@@ -5,6 +5,10 @@ export function headerResponse() {
   return appData[0];
 }
 
-export function footerResponse() {
+export function categoriesResponse() {
   return appData[1];
+}
+
+export function footerResponse() {
+  return appData[2];
 }

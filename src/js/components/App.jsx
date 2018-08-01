@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { func } from "prop-types";
 import {
@@ -16,34 +16,42 @@ import Home from "./Home";
 
 export class App extends Component {
   static propTypes = {
-    loadHeader: func.isRequired
+    loadHeader: func.isRequired,
+    loadCategories: func.isRequired
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const { loadHeader } = this.props;
+    const { loadHeader, loadCategories } = this.props;
     loadHeader();
+    loadCategories();
   }
 
   render() {
     return (
-      <div className="app">
-        <Home {...this.props} />
-      </div>
+      <Fragment>
+        <div className="app">
+          <Home {...this.props} />
+        </div>
+      </Fragment>
     );
   }
 }
 
-function mapStateToProps({ headerReducer }) {
+function mapStateToProps({ headerReducer, categoriesReducer }) {
   return {
-    header: headerReducer.data
+    header: headerReducer.data,
+    categories: categoriesReducer.data
   };
 }
 
 export default withRouter(
   connect(
     mapStateToProps,
-    { loadHeader: actions.loadHeader }
+    {
+      loadHeader: actions.loadHeader,
+      loadCategories: actions.loadCategories
+    }
   )(App)
 );

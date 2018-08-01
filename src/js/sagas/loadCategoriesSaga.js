@@ -5,12 +5,12 @@ import { put, call } from "redux-saga/effects";
 import * as actions from "../actions";
 import * as api from "../api";
 
-export default function* loadHeaderSaga() {
-  yield put(actions.loadHeaderAttempt());
+export default function* loadCategoriesSaga() {
+  yield put(actions.loadCategoriesAttempt());
   try {
-    const data = yield call(api.headerResponse);
-    yield put(actions.loadHeaderSuccess(data));
+    const data = yield call(api.categoriesResponse);
+    yield put(actions.loadCategoriesSuccess(data));
   } catch (err) {
-    yield put(actions.loadHeaderFail(err));
+    yield put(actions.loadCategoriesFail(err));
   }
 }
