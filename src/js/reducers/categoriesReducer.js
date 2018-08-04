@@ -1,24 +1,29 @@
-import * as types from '../constants';
+// ########## Import Components Here ##########
+import * as types from "../constants";
 
 const initial = {
   isLoading: false,
   error: null,
-  data: {}
+  data: [
+    {
+      id: "",
+      name: ""
+    }
+  ]
 };
 
 export default function(state = initial, action) {
   let data;
 
   switch (action.type) {
-    case types.TEST_ACTION_ATTEMPT:
+    case types.LOAD_CATEGORIES_ATTEMPT:
       return { ...state, isLoading: true };
-    case types.TEST_ACTION_SUCCESS:
+    case types.LOAD_CATEGORIES_SUCCESS:
       data = action.payload;
       return { ...state, data, isLoading: false, error: null };
-    case types.TEST_ACTION_FAIL:
+    case types.LOAD_CATEGORIES_FAIL:
       return { ...state, isLoading: false, error: action.payload };
     default:
       return state;
   }
 }
-

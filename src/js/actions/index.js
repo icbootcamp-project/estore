@@ -1,25 +1,56 @@
-import * as types from '../constants';
+// ########## Import Components Here ##########
+import * as types from "../constants";
 
-export function testAction() {
+// ########## Import Header Actions Here ##########
+export function loadHeader() {
   return {
-    type: types.TEST_ACTION
+    type: types.LOAD_HEADER
   };
 }
 
-export function testActionAttempt() {
+export function loadHeaderAttempt() {
   return {
-    type: types.TEST_ACTION_ATTEMPT
+    type: types.LOAD_HEADER_ATTEMPT
   };
 }
 
-export function testActionSuccess() {
+export function loadHeaderSuccess(data) {
   return {
-    type: types.TEST_ACTION_SUCCESS
+    type: types.LOAD_HEADER_SUCCESS,
+    payload: data
   };
 }
 
-export function testActionFail() {
+export function loadHeaderFail(error) {
   return {
-    type: types.TEST_ACTION_FAIL
+    type: types.LOAD_HEADER_FAIL,
+    payload: error
+  };
+}
+
+// ########## Import Categories Actions Here ##########
+export function loadCategories() {
+  return {
+    type: types.LOAD_CATEGORIES
+  };
+}
+
+export function loadCategoriesAttempt() {
+  return {
+    type: types.LOAD_CATEGORIES_ATTEMPT
+  };
+}
+
+export function loadCategoriesSuccess(data) {
+  return {
+    type: types.LOAD_CATEGORIES_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadCategoriesFail(error) {
+  return {
+    type: types.LOAD_CATEGORIES_FAIL,
+    payload: error
   };
 }
