@@ -34,7 +34,7 @@
   font-weight: 500;
   font-size: 24px;
   margin: 0px;
-  padding-top: 60px;
+  padding-top: 0px;
   text-align: $t-a;
   color: $c;
   letter-spacing: 0.05em;
@@ -71,4 +71,14 @@
   text-align: $t-a;
   color: $c;
   letter-spacing: 0.05em;
+}
+
+// ########## All Image Mixins Here ##########
+@mixin sub-category-item($bil) {
+  width: 22em;
+  height: 22em;
+  background: url($bil) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 1em;
 }

@@ -54,3 +54,30 @@ export function loadCategoriesFail(error) {
     payload: error
   };
 }
+
+// ########## Import Sub Categories Gallery Actions Here ##########
+export function loadSubCategoriesGallery() {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY
+  };
+}
+
+export function loadSubCategoriesGalleryAttempt() {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_ATTEMPT
+  };
+}
+
+export function loadSubCategoriesGallerySuccess(data) {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadSubCategoriesGalleryFail(error) {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_FAIL,
+    payload: error
+  };
+}

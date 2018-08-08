@@ -17,15 +17,17 @@ import Home from "./Home";
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
-    loadCategories: func.isRequired
+    loadCategories: func.isRequired,
+    loadSubCategoriesGallery: func.isRequired
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const { loadHeader, loadCategories } = this.props;
+    const { loadHeader, loadCategories, loadSubCategoriesGallery } = this.props;
     loadHeader();
     loadCategories();
+    loadSubCategoriesGallery();
   }
 
   render() {
@@ -39,10 +41,15 @@ export class App extends Component {
   }
 }
 
-function mapStateToProps({ headerReducer, categoriesReducer }) {
+function mapStateToProps({
+  headerReducer,
+  categoriesReducer,
+  subCategoriesGalleryReducer
+}) {
   return {
     header: headerReducer.data,
-    categories: categoriesReducer.data
+    categories: categoriesReducer.data,
+    subCategoriesGallery: subCategoriesGalleryReducer.data
   };
 }
 
@@ -51,7 +58,8 @@ export default withRouter(
     mapStateToProps,
     {
       loadHeader: actions.loadHeader,
-      loadCategories: actions.loadCategories
+      loadCategories: actions.loadCategories,
+      loadSubCategoriesGallery: actions.loadSubCategoriesGallery
     }
   )(App)
 );

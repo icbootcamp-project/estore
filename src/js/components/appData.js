@@ -49,8 +49,47 @@ const categories = [
   }
 ];
 
+const subCategoriesGallery = [
+  {
+    subCategoriesGalleryId: "subcategory-item-1",
+    subCategoryName: "Oils & Ghee",
+    subCategoryImage: "./img/subcategories-gallery/oils-ghee.jpg",
+    isOnSale: true
+  },
+  {
+    subCategoriesGalleryId: "subcategory-item-2",
+    subCategoryName: "Canned Items",
+    subCategoryImage: "./img/subcategories-gallery/canned-items.jpg",
+    isOnSale: true
+  },
+  {
+    subCategoriesGalleryId: "subcategory-item-3",
+    subCategoryName: "Rice & Atta",
+    subCategoryImage: "./img/subcategories-gallery/rice-atta.jpg",
+    isOnSale: false
+  },
+  {
+    subCategoriesGalleryId: "subcategory-item-4",
+    subCategoryName: "Home Baking",
+    subCategoryImage: "./img/subcategories-gallery/home-baking.jpg",
+    isOnSale: true
+  },
+  {
+    subCategoriesGalleryId: "subcategory-item-5",
+    subCategoryName: "Pasta & Noodles",
+    subCategoryImage: "./img/subcategories-gallery/pasta-noodles.jpg",
+    isOnSale: false
+  },
+  {
+    subCategoriesGalleryId: "subcategory-item-6",
+    subCategoryName: "Pickles",
+    subCategoryImage: "./img/subcategories-gallery/pickles.jpg",
+    isOnSale: true
+  }
+];
+
 const footer = [];
 
-const appData = [header, categories, footer];
+const appData = [header, categories, subCategoriesGallery, footer];
 
 export default appData;
