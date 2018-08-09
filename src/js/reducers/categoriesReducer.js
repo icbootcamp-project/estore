@@ -7,7 +7,8 @@ const initial = {
   data: [
     {
       id: "",
-      name: ""
+      name: "",
+      isActive: false
     }
   ]
 };

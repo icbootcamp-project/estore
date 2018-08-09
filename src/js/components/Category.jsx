@@ -8,7 +8,9 @@ const Category = props => {
   const { category } = props;
   return (
     <Fragment>
-      <div className="category-name">{category.name.toUpperCase()}</div>
+      <div className={`category-name ${category.isActive ? "underline" : ""}`}>
+        {category.name.toUpperCase()}
+      </div>
     </Fragment>
   );
 };

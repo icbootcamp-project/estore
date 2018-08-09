@@ -4,25 +4,29 @@ const header = {
       iconId: "header-icon-1",
       iconName: "search icon",
       iconPosition: "far-left",
-      iconPath: "./img/header/search-icon.png"
+      iconPath: "./img/header/search-icon.png",
+      iconBadgeCount: 0
     },
     {
       iconId: "header-icon-2",
       iconName: "favourite icon",
       iconPosition: "left",
-      iconPath: "./img/header/favourite-icon.png"
+      iconPath: "./img/header/favourite-icon.png",
+      iconBadgeCount: 0
     },
     {
       iconId: "header-icon-3",
       iconName: "cart icon",
       iconPosition: "right",
-      iconPath: "./img/header/cart-icon.png"
+      iconPath: "./img/header/cart-icon.png",
+      iconBadgeCount: 3
     },
     {
       iconId: "header-icon-4",
       iconName: "menu icon",
       iconPosition: "far-right",
-      iconPath: "./img/header/res-menu-icon.png"
+      iconPath: "./img/header/res-menu-icon.png",
+      iconBadgeCount: 0
     }
   ],
   logo: {
@@ -33,19 +37,23 @@ const header = {
 const categories = [
   {
     id: "category-1",
-    name: "grocery"
+    name: "grocery",
+    isActive: false
   },
   {
     id: "category-2",
-    name: "food"
+    name: "food",
+    isActive: false
   },
   {
     id: "category-3",
-    name: "house care"
+    name: "house care",
+    isActive: true
   },
   {
     id: "category-4",
-    name: "sale"
+    name: "sale",
+    isActive: false
   }
 ];
 
