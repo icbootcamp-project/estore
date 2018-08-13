@@ -5,7 +5,9 @@ import React, { Fragment } from "react";
 
 const Footer = () => (
   <Fragment>
-    <div id="footer">This is a footer</div>
+    <div id="footer">
+      <img src="./img/footer/EStore-white.png" alt="Estore logo white" />
+    </div>
   </Fragment>
 );
 
