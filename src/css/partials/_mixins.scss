@@ -51,6 +51,17 @@
   letter-spacing: 0.05em;
 }
 
+@mixin H5($t-a, $c) {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0px;
+  padding-top: 0px;
+  text-align: $t-a;
+  color: $c;
+  letter-spacing: 0.05em;
+}
+
 @mixin Subtitle($t-a, $c) {
   font-family: $font-family;
   font-weight: 300;

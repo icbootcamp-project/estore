@@ -6,6 +6,7 @@ import * as types from "../constants";
 import loadHeaderSaga from "./loadHeaderSaga";
 import loadCategoriesSaga from "./loadCategoriesSaga";
 import loadSubCategoriesGallerySaga from "./loadSubCategoriesGallerySaga";
+import loadFooterSaga from "./loadFooterSaga";
 
 function* watchLoadHeader() {
   yield takeLatest(types.LOAD_HEADER, loadHeaderSaga);
@@ -22,10 +23,15 @@ function* watchLoadSubCategoriesGallery() {
   );
 }
 
+function* watchLoadFooter() {
+  yield takeLatest(types.LOAD_FOOTER, loadFooterSaga);
+}
+
 export default function* rootSaga() {
   yield all([
     fork(watchLoadHeader),
     fork(watchLoadCategories),
-    fork(watchLoadSubCategoriesGallery)
+    fork(watchLoadSubCategoriesGallery),
+    fork(watchLoadFooter)
   ]);
 }

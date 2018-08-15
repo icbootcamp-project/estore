@@ -81,3 +81,30 @@ export function loadSubCategoriesGalleryFail(error) {
     payload: error
   };
 }
+
+// ########## Import Footer Gallery Actions Here ##########
+export function loadFooter() {
+  return {
+    type: types.LOAD_FOOTER
+  };
+}
+
+export function loadFooterAttempt() {
+  return {
+    type: types.LOAD_FOOTER_ATTEMPT
+  };
+}
+
+export function loadFooterSuccess(data) {
+  return {
+    type: types.LOAD_FOOTER_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadFooterFail(error) {
+  return {
+    type: types.LOAD_FOOTER_FAIL,
+    payload: error
+  };
+}

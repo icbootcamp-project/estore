@@ -18,16 +18,23 @@ export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadCategories: func.isRequired,
-    loadSubCategoriesGallery: func.isRequired
+    loadSubCategoriesGallery: func.isRequired,
+    loadFooter: func.isRequired
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const { loadHeader, loadCategories, loadSubCategoriesGallery } = this.props;
+    const {
+      loadHeader,
+      loadCategories,
+      loadSubCategoriesGallery,
+      loadFooter
+    } = this.props;
     loadHeader();
     loadCategories();
     loadSubCategoriesGallery();
+    loadFooter();
   }
 
   render() {
@@ -44,12 +51,14 @@ export class App extends Component {
 function mapStateToProps({
   headerReducer,
   categoriesReducer,
-  subCategoriesGalleryReducer
+  subCategoriesGalleryReducer,
+  footerReducer
 }) {
   return {
     header: headerReducer.data,
     categories: categoriesReducer.data,
-    subCategoriesGallery: subCategoriesGalleryReducer.data
+    subCategoriesGallery: subCategoriesGalleryReducer.data,
+    footer: footerReducer.data
   };
 }
 
@@ -59,7 +68,8 @@ export default withRouter(
     {
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
-      loadSubCategoriesGallery: actions.loadSubCategoriesGallery
+      loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
+      loadFooter: actions.loadFooter
     }
   )(App)
 );

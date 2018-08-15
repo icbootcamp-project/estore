@@ -9,13 +9,13 @@ import SubCategoriesGallery from "./SubCategoriesGallery";
 import Footer from "./Footer";
 
 const Home = props => {
-  const { header, categories, subCategoriesGallery } = props;
+  const { header, categories, subCategoriesGallery, footer } = props;
   return (
     <Fragment>
       <Header header={header} />
       <Categories categories={categories} />
       <SubCategoriesGallery subCategoriesGallery={subCategoriesGallery} />
-      <Footer />
+      <Footer footer={footer} />
     </Fragment>
   );
 };
@@ -23,7 +23,8 @@ const Home = props => {
 Home.propTypes = {
   header: shape().isRequired,
   categories: arrayOf(shape()).isRequired,
-  subCategoriesGallery: arrayOf(shape()).isRequired
+  subCategoriesGallery: arrayOf(shape()).isRequired,
+  footer: shape().isRequired
 };
 
 export default Home;

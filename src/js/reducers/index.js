@@ -5,11 +5,13 @@ import { combineReducers } from "redux";
 import headerReducer from "./headerReducer";
 import categoriesReducer from "./categoriesReducer";
 import subCategoriesGalleryReducer from "./subCategoriesGalleryReducer";
+import footerReducer from "./footerReducer";
 
 const rootReducer = combineReducers({
   headerReducer,
   categoriesReducer,
-  subCategoriesGalleryReducer
+  subCategoriesGalleryReducer,
+  footerReducer
 });
 
 export default rootReducer;

@@ -96,7 +96,83 @@ const subCategoriesGallery = [
   }
 ];
 
-const footer = [];
+const footer = {
+  footerMenuItems: [
+    {
+      footerMenuId: "footer-menu-1",
+      footerMenuName: "about",
+      footerMenuLink: "/about",
+      footerMenuSubMenuItems: [
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-1",
+          footerMenuSubMenuName: "item1",
+          footerMenuSubMenuLink: "/item1"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-2",
+          footerMenuSubMenuName: "item2",
+          footerMenuSubMenuLink: "/item2"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-3",
+          footerMenuSubMenuName: "item3",
+          footerMenuSubMenuLink: "/item3"
+        }
+      ]
+    },
+    {
+      footerMenuId: "footer-menu-2",
+      footerMenuName: "company",
+      footerMenuLink: "/company",
+      footerMenuSubMenuItems: [
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-1",
+          footerMenuSubMenuName: "item1",
+          footerMenuSubMenuLink: "/item1"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-2",
+          footerMenuSubMenuName: "item2",
+          footerMenuSubMenuLink: "/item2"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-3",
+          footerMenuSubMenuName: "item3",
+          footerMenuSubMenuLink: "/item3"
+        }
+      ]
+    },
+    {
+      footerMenuId: "footer-menu-3",
+      footerMenuName: "support",
+      footerMenuLink: "/support",
+      footerMenuSubMenuItems: [
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-1",
+          footerMenuSubMenuName: "item1",
+          footerMenuSubMenuLink: "/item1"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-2",
+          footerMenuSubMenuName: "item2",
+          footerMenuSubMenuLink: "/item2"
+        },
+        {
+          footerMenuSubMenuId: "footer-menu-submenu-3",
+          footerMenuSubMenuName: "item3",
+          footerMenuSubMenuLink: "/item3"
+        }
+      ]
+    }
+  ],
+  footerLogo: {
+    footerLogoLink: "./img/footer/EStore-white.png",
+    footerLogoAltText: "Estore logo white"
+  },
+  footerDisclaimer: {
+    footerDisclaimerLiner: "© EStore. 2018 All Rights Reserved."
+  }
+};
 
 const appData = [header, categories, subCategoriesGallery, footer];
 
