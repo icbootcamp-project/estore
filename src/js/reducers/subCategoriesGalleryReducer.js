@@ -6,9 +6,10 @@ const initial = {
   error: null,
   data: [
     {
-      id: "",
-      name: "",
-      isActive: false
+      subCategoriesGalleryId: "",
+      subCategoryName: "",
+      subCategoryImage: "",
+      isOnSale: null
     }
   ]
 };
@@ -17,12 +18,12 @@ export default function(state = initial, action) {
   let data;
 
   switch (action.type) {
-    case types.LOAD_CATEGORIES_ATTEMPT:
+    case types.LOAD_SUB_CATEGORIES_GALLERY_ATTEMPT:
       return { ...state, isLoading: true };
-    case types.LOAD_CATEGORIES_SUCCESS:
+    case types.LOAD_SUB_CATEGORIES_GALLERY_SUCCESS:
       data = action.payload;
       return { ...state, data, isLoading: false, error: null };
-    case types.LOAD_CATEGORIES_FAIL:
+    case types.LOAD_SUB_CATEGORIES_GALLERY_FAIL:
       return { ...state, isLoading: false, error: action.payload };
     default:
       return state;

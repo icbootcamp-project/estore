@@ -19,6 +19,7 @@ const Header = props => {
           <img src={header.logo.logoPath} alt="" />
         </div>
         <div className="cart-icon">
+          <div className="badge-circle">{header.icons[2].iconBadgeCount}</div>
           <img src={header.icons[2].iconPath} alt="cart icon" />
         </div>
         <div className="res-menu-icon">

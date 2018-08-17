@@ -54,3 +54,57 @@ export function loadCategoriesFail(error) {
     payload: error
   };
 }
+
+// ########## Import Sub Categories Gallery Actions Here ##########
+export function loadSubCategoriesGallery() {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY
+  };
+}
+
+export function loadSubCategoriesGalleryAttempt() {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_ATTEMPT
+  };
+}
+
+export function loadSubCategoriesGallerySuccess(data) {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadSubCategoriesGalleryFail(error) {
+  return {
+    type: types.LOAD_SUB_CATEGORIES_GALLERY_FAIL,
+    payload: error
+  };
+}
+
+// ########## Import Footer Gallery Actions Here ##########
+export function loadFooter() {
+  return {
+    type: types.LOAD_FOOTER
+  };
+}
+
+export function loadFooterAttempt() {
+  return {
+    type: types.LOAD_FOOTER_ATTEMPT
+  };
+}
+
+export function loadFooterSuccess(data) {
+  return {
+    type: types.LOAD_FOOTER_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadFooterFail(error) {
+  return {
+    type: types.LOAD_FOOTER_FAIL,
+    payload: error
+  };
+}

@@ -9,6 +9,10 @@ export function categoriesResponse() {
   return appData[1];
 }
 
-export function footerResponse() {
+export function subCategoriesGalleryResponse() {
   return appData[2];
+}
+
+export function footerResponse() {
+  return appData[3];
 }
