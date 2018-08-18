@@ -4,15 +4,18 @@ import { arrayOf, shape } from "prop-types";
 
 // ########## Import Components Here ##########
 import Header from "./Header";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import Footer from "./Footer";
+import Payment from './Payment'
 
 const Home = props => {
   const { header, categories } = props;
   return (
     <Fragment>
       <Header header={header} />
-      <Categories categories={categories} />
+      { //     <Categories categories={categories} />
+      }   
+      <Payment />
       <Footer />
     </Fragment>
   );
