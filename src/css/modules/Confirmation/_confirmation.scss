@@ -39,6 +39,7 @@ $des-color:#404040;
 	}
 	.confirm-des{
 		width:100%;
+		margin-top:70px;
 		h1{
 			
 			@include H1(center,$des-color);
@@ -58,6 +59,7 @@ $des-color:#404040;
 			@include H3(center,$secondary-color);
 			width:80%;
 			margin:0px auto;
+			font-size: 1.2em;
 			//border:1px grey solid;
 
 		}
