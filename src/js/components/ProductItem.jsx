@@ -1,22 +1,21 @@
-// ########## Import Dependencies Here ##########
 import React, { Fragment } from "react";
 import { shape } from "prop-types";
 
 // ########## Import Components Here ##########
 
-const SubCategoryItem = props => {
-  const { subCategoryItem } = props;
+const ProductItem = props => {
+  const { productItem } = props;
   return (
     <Fragment>
       <div className="sub-category-item">
         <div
-          className={`sub-category-item-frame-${subCategoryItem.subCategoriesGalleryId.slice(
+          className={`sub-category-item-frame-${productItem.productId.slice(
             12
           )}`}
         >
           <div className="sub-category-item-overlay">
             <h3 className="sub-category-item-heading">
-              {subCategoryItem.subCategoryName}
+              {productItem.subCategoryName}
             </h3>
           </div>
         </div>
@@ -25,8 +24,8 @@ const SubCategoryItem = props => {
   );
 };
 
-SubCategoryItem.propTypes = {
-  subCategoryItem: shape().isRequired
+ProductItem.propTypes = {
+  productItem: shape().isRequired
 };
 
-export default SubCategoryItem;
+export default ProductItem;

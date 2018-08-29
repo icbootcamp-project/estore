@@ -18,7 +18,7 @@ export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadCategories: func.isRequired,
-    loadSubCategoriesGallery: func.isRequired,
+    loadProducts: func.isRequired,
     loadFooter: func.isRequired
   };
 
@@ -28,16 +28,17 @@ export class App extends Component {
     const {
       loadHeader,
       loadCategories,
-      loadSubCategoriesGallery,
+      loadProducts,
       loadFooter
     } = this.props;
     loadHeader();
     loadCategories();
-    loadSubCategoriesGallery();
+    loadProducts();
     loadFooter();
   }
 
   render() {
+    
     return (
       <Fragment>
         <div className="app">
@@ -52,12 +53,14 @@ function mapStateToProps({
   headerReducer,
   categoriesReducer,
   subCategoriesGalleryReducer,
+  productsReducer,
   footerReducer
 }) {
   return {
     header: headerReducer.data,
     categories: categoriesReducer.data,
     subCategoriesGallery: subCategoriesGalleryReducer.data,
+    products: productsReducer.data,
     footer: footerReducer.data
   };
 }
@@ -69,7 +72,8 @@ export default withRouter(
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
       loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
-      loadFooter: actions.loadFooter
+      loadProducts: actions.loadProducts,
+      loadFooter: actions.loadFooter,
     }
   )(App)
 );

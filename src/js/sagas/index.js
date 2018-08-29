@@ -5,7 +5,8 @@ import { takeLatest, fork, all } from "redux-saga/effects";
 import * as types from "../constants";
 import loadHeaderSaga from "./loadHeaderSaga";
 import loadCategoriesSaga from "./loadCategoriesSaga";
-import loadSubCategoriesGallerySaga from "./loadSubCategoriesGallerySaga";
+import loadProductsSaga from "./loadProductsSaga";
+
 import loadFooterSaga from "./loadFooterSaga";
 
 function* watchLoadHeader() {
@@ -16,10 +17,12 @@ function* watchLoadCategories() {
   yield takeLatest(types.LOAD_CATEGORIES, loadCategoriesSaga);
 }
 
-function* watchLoadSubCategoriesGallery() {
+
+
+function* watchLoadProducts() {
   yield takeLatest(
-    types.LOAD_SUB_CATEGORIES_GALLERY,
-    loadSubCategoriesGallerySaga
+    types.LOAD_PRODUCTS,
+    loadProductsSaga
   );
 }
 
@@ -31,7 +34,7 @@ export default function* rootSaga() {
   yield all([
     fork(watchLoadHeader),
     fork(watchLoadCategories),
-    fork(watchLoadSubCategoriesGallery),
+    fork(watchLoadProducts),
     fork(watchLoadFooter)
   ]);
 }

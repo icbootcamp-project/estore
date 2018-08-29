@@ -5,16 +5,16 @@ import { arrayOf, shape } from "prop-types";
 // ########## Import Components Here ##########
 import Header from "./Header";
 import Categories from "./Categories";
-import SubCategoriesGallery from "./SubCategoriesGallery";
+import Products from "./Products";
 import Footer from "./Footer";
 
 const Home = props => {
-  const { header, categories, subCategoriesGallery, footer } = props;
+  const { header, categories, products, footer } = props;
   return (
     <Fragment>
       <Header header={header} />
       <Categories categories={categories} />
-      <SubCategoriesGallery subCategoriesGallery={subCategoriesGallery} />
+      <Products products={products} />
       <Footer footer={footer} />
     </Fragment>
   );
@@ -23,7 +23,7 @@ const Home = props => {
 Home.propTypes = {
   header: shape().isRequired,
   categories: arrayOf(shape()).isRequired,
-  subCategoriesGallery: arrayOf(shape()).isRequired,
+  products: arrayOf(shape()).isRequired,
   footer: shape().isRequired
 };
 

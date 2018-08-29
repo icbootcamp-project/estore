@@ -13,6 +13,10 @@ export function subCategoriesGalleryResponse() {
   return appData[2];
 }
 
+export function productsResponse() {
+  return appData[3];
+}
+
 export function footerResponse() {
   return appData[3];
 }
