@@ -5,7 +5,7 @@ const initial = {
   error: null,
   data: [
     {
-      productsId: "",
+      productId: "",
       productName: "",
       productImage: "",
       isOnSale: null

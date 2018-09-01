@@ -61,37 +61,37 @@ const categories = [
 
 const products = [
   {
-    productId: "subcategory-item-1",
+    productId: "product-item-1",
     productName: "Oils & Ghee",
     productImage: "./img/subcategories-gallery/oils-ghee.jpg",
     isOnSale: true
   },
   {
-    productId: "subcategory-item-2",
+    productId: "product-item-2",
     productName: "Canned Items",
     productImage: "./img/subcategories-gallery/canned-items.jpg",
     isOnSale: true
   },
   {
-    productId: "subcategory-item-3",
+    productId: "product-item-3",
     productName: "Rice & Atta",
     productImage: "./img/subcategories-gallery/rice-atta.jpg",
     isOnSale: false
   },
   {
-    productId: "subcategory-item-4",
+    productId: "product-item-4",
     productName: "Home Baking",
     productImage: "./img/subcategories-gallery/home-baking.jpg",
     isOnSale: true
   },
   {
-    productId: "subcategory-item-5",
+    productId: "product-item-5",
     productName: "Pasta & Noodles",
     productImage: "./img/subcategories-gallery/pasta-noodles.jpg",
     isOnSale: false
   },
   {
-    productId: "subcategory-item-6",
+    productId: "product-item-6",
     productName: "Pickles",
     productImage: "./img/subcategories-gallery/pickles.jpg",
     isOnSale: true
