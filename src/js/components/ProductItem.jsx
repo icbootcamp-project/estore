@@ -13,11 +13,7 @@ const ProductItem = props => {
             12
           )}`}
         >
-          <div className="sub-category-item-overlay">
-            <h3 className="sub-category-item-heading">
-              {productItem.subCategoryName}
-            </h3>
-          </div>
+          <div className="sub-category-item-overlay" />
         </div>
       </div>
     </Fragment>
