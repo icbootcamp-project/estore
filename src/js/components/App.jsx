@@ -69,7 +69,6 @@ export default withRouter(
     {
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
-      loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
       loadProducts: actions.loadProducts,
       loadFooter: actions.loadFooter,
     }
