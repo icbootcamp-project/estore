@@ -52,14 +52,12 @@ export class App extends Component {
 function mapStateToProps({
   headerReducer,
   categoriesReducer,
-  subCategoriesGalleryReducer,
   productsReducer,
   footerReducer
 }) {
   return {
     header: headerReducer.data,
     categories: categoriesReducer.data,
-    subCategoriesGallery: subCategoriesGalleryReducer.data,
     products: productsReducer.data,
     footer: footerReducer.data
   };
