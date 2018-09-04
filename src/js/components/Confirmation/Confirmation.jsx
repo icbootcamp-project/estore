@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
+import HeroTitle from "../HeroTitle/HeroTitle";
 
 const Confirmation = () => ( 
   <Fragment>
     <div id="confirmation">
-      <div className="confirm-msg">
-        <h1>Confirmation</h1>
-      </div>
-
+      
+      <HeroTitle name="Confirmation" section="0" />
       <div className="confirm-icon">
         <div className="circle-icon">
           <div className="tick-icon" />

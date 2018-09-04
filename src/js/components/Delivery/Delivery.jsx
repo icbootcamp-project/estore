@@ -1,36 +1,40 @@
 import React, { Fragment } from "react";
+import HeroTitle from "../HeroTitle/HeroTitle";
+import TextField from "../TextField/TextField";
+import DeliveryData from "./DeliveryData";
+import Button from "../Button/Button";
 
+function showtextFields(){
+    const textFields = DeliveryData.map(data => {
+  
+      return (
+        <TextField
+          name={data.name}
+          type={data.type}
+          width={data.width}
+          key={Math.random()}
+        />
+      );
+    });
+
+    return textFields;
+}
 const Delivery = () => ( 
-  <Fragment>
-    <div id="Delivery">
+    <Fragment>
+      <div id="Delivery">
+        
+        <HeroTitle name="Delivery" section="2" />
 
-      <div className="d-title">
-        <h1>Delivery</h1>
+        <div className="d-form">
+          <form>
+            {showtextFields()}
+            <Button value="Next step" arrow="true" />
+          </form>
+          
+        </div>
+        
       </div>
-
-      <div className="d-form">
-        <form>
-          <input type="text" className="d-tf1" placeholder="First name" />
-          <input type="text" className="d-tf1" placeholder="Last name" />
-          <input type="text" className="d-tf1" placeholder="E-mail" />
-          <input type="text" className="d-tf1" placeholder="Phone" />
-          <input type="text" className="d-tf1" placeholder="Country" />
-          <input type="text" className="d-tf2" placeholder="State" />
-          <input type="text" className="d-tf3" placeholder="City" />
-          <input type="text" className="d-tf1" placeholder="Address" />
-          <div className="d-btn">
-            Next step
-            <div className="btn-circle" />
-            <div className="btn-glyphicon">
-              <span className="glyphicons glyphicons-play" />
-            </div>
-          </div>
-        </form>
-        <div className="clear" />
-      </div>
-      
-    </div>
-  </Fragment>
+    </Fragment>
 );
 export default Delivery;
    

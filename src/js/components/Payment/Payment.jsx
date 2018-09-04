@@ -1,41 +1,31 @@
 import React, { Fragment } from "react";
+import HeroTitle from "../HeroTitle/HeroTitle";
+import TextField from "../TextField/TextField";
+import PaymentData from "./PaymentData";
+import Button from "../Button/Button";
 
+function showtextFields(){
+
+  const textFields =  PaymentData.map((data)=>{
+
+    console.log(data)
+    return <TextField name={data.name} type={data.type} width={data.width} key={Math.random()} />
+
+
+  });
+
+  return textFields;
+}
 const Payment = () => ( 
   <Fragment>
     <div id="Payment">
 
-      <div className="p-title">
-        <h1>Payment</h1>
-      </div>
+      <HeroTitle name="Payment" section="1" />
 
       <div className="p-form">
         <form>
-          <div className="p-tf2">
-            <div className="p-icon">
-              <img src="../img/payment/jazzcash.png" alt="jazzcash" />
-            </div>
-          </div>
-          <div className="p-tf3">
-            <div className="p-icon">
-              <img src="../img/payment/cashondelivery.png"alt="cash-on-delivery" />
-            </div>
-          </div>
-          <input type="text" className="p-tf1" placeholder="Card name" />
-          <input type="text" className="p-tf1" placeholder="Card number" />
-          <select className="p-tf4">
-            <option>MM</option>
-          </select>
-          <select className="p-tf4">
-            <option>YY</option>
-          </select>
-          <input type="text" className="p-tf4" placeholder="" />
-          <div className="p-btn">
-            Next step
-            <div className="btn-circle" />
-            <div className="btn-glyphicon">
-              <span className="glyphicons glyphicons-play" />
-            </div>
-          </div>
+          {showtextFields()}
+          <Button value="Next step" arrow="true" />
         </form>
         <div className="clear" />
       </div>
