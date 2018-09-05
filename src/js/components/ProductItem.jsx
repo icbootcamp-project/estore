@@ -10,15 +10,10 @@ const ProductItem = props => {
       <div className="sub-category-item">
         <div
           className={`sub-category-item-frame-${productItem.productId.slice(
-            12
+            8
           )}`}
-        >
-          <div className="sub-category-item-overlay">
-            <h3 className="sub-category-item-heading">
-              {productItem.productName}
-            </h3>
-          </div>
-        </div>
+        />
+          
       </div>
     </Fragment>
   );
