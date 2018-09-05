@@ -26,4 +26,18 @@ const PaymentData = [
 		type:"text"
 	}
 ];
+export const PaymentMethodData = [
+	{
+		name:"Jazz cash",
+		width:"half",
+		src:"jazzcash.png",
+		value:"true"
+	},
+	{
+		name:"Cash on delivery",
+		width:"half",
+		src:"cashondelivery.png",
+		value:"false"
+	}
+];
 export default PaymentData;

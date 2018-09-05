@@ -95,7 +95,7 @@
 }
 
 // ########## All Textfield mixins Here ##########
-@mixin textfield($size,$position,$margin) {
+@mixin textfield($size,$margin) {
   width: $size;
   margin:$margin;
   height: 90px;

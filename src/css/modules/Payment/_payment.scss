@@ -16,3 +16,24 @@
 		}
 	}
 }
+#PaymentMethod{
+	width: 100%;
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	flex-wrap:wrap;
+	margin-bottom: 50px;
+	.pm-half {
+		@include textfield(48%,10px 0px 5px 0px);
+		display: flex;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:center;
+		overflow: hidden;
+		img{
+			height: 80%;
+			overflow: hidden;
+
+		}
+	}
+}

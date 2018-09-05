@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import HeroTitle from "../HeroTitle/HeroTitle";
 import TextField from "../TextField/TextField";
-import PaymentData from "./PaymentData";
+import PaymentData ,{PaymentMethodData} from "./PaymentData";
 import Button from "../Button/Button";
+import PaymentMethod from "./PaymentMethod";
 
 function showtextFields(){
 
@@ -16,14 +17,16 @@ function showtextFields(){
 
   return textFields;
 }
+
 const Payment = () => ( 
   <Fragment>
     <div id="Payment">
 
       <HeroTitle name="Payment" section="1" />
-
+      
       <div className="p-form">
         <form>
+          <PaymentMethod data={PaymentMethodData} />
           {showtextFields()}
           <Button value="Next step" arrow="true" />
         </form>

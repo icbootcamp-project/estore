@@ -2,7 +2,6 @@ import React from "react";
 import { string } from "prop-types";
 
 const HeroTitle = props => {
-
 	const { name, section } = props;
 	let lineClass;
 	let circleClass;
@@ -56,8 +55,8 @@ const HeroTitle = props => {
 };
 
 HeroTitle.propTypes = {
-	name:string.isRequired,
-	section:string.isRequired
+	name: string.isRequired,
+	section: string.isRequired
 };
 
 export default HeroTitle;
