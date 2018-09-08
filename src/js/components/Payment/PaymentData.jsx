@@ -1,4 +1,5 @@
-const PaymentData = [
+const PaymentData = {
+	tfData:[
 	{
 		name: "Card name",
 		width: "full",
@@ -25,19 +26,19 @@ const PaymentData = [
 		width:"onethird",
 		type:"text"
 	}
-];
-export const PaymentMethodData = [
+
+	],
+	pmData:[
 	{
 		name:"Jazz cash",
-		width:"half",
 		src:"jazzcash.png",
-		value:"true"
+		value:true
 	},
 	{
 		name:"Cash on delivery",
-		width:"half",
 		src:"cashondelivery.png",
-		value:"false"
+		value:false
 	}
-];
+	]
+}
 export default PaymentData;

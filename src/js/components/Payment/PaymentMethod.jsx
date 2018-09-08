@@ -1,31 +1,36 @@
 import React from "react";
+import {shape ,string ,bollean} from "prop-types";
 
-function showMethodItem(paymentData){
-
-  const methodItem = paymentData.map((data)=>{
-  	let size,src;
-  	 if(data.width === "half"){
-  	 		size = "pm-"+data.width;
-  	 }
-  	 src = "./img/payment/"+data.src;
+function showMethodItem(paymentData) {
+  const methodItem = paymentData.map(data => {
+    const select =  data.value;
+    let addclass;
+    if(select){
+      addclass = "pm-radio radio-select";
+    }
+    const src = `./img/payment/${data.src}`;
     return (
-    	  <div className={size}>
-    	    <img src={src} alt={data.name}/>
-
-    	  </div>
-    	  );
+      <div className="pm-half">
+        <img src={src} alt={data.name} />
+        <div className="pm-c">
+          <div className={addclass} />
+        </div>
+      </div>
+    );
   });
   return methodItem;
 }
-const PaymentMethod = (props) => {
+const PaymentMethod = props => {
+  const paymentData = props.data;
+ 
 
-	const paymentData = props.data;
-	console.log(paymentData)
-
-	return (
-	<div id="PaymentMethod">
-		{ showMethodItem(paymentData) }
-	</div>
-	);
+  return <div id="PaymentMethod">{showMethodItem(paymentData)}</div>;
+};
+PaymentMethod.propTypes= {
+  data:shape({
+    name:string.isRequired,
+    src:string.isRequired,
+    value:bollean
+  }).isRequired
 }
 export default PaymentMethod;

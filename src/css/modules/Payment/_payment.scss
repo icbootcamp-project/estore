@@ -35,5 +35,26 @@
 			overflow: hidden;
 
 		}
+		.pm-c{
+			height: 30px;
+			width: 30px;
+			border-radius: 100%;
+			border:1px $primary-color solid;
+			display: flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+			//background-color: $primary-color;
+			.pm-radio{
+				height: 20px;
+				width: 20px;
+				border-radius: 100%;
+				background-color: $white;
+			}
+			.radio-select{
+				background-color: $primary-color;
+			}
+
+		}
 	}
 }
