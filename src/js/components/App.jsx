@@ -1,29 +1,37 @@
 // ########## Import Dependencies Here ##########
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { func } from "prop-types";
+import { func,shape } from "prop-types";
 import {
-  // BrowserRouter as Router,
-  // Route,
+  BrowserRouter as Router,
+  Route,
   // Link,
-  // Switch,
-  withRouter
+  Switch,
+  withRouter,
+  Redirect
 } from "react-router-dom";
 
 // ########## Import Components Here ##########
 import * as actions from "../actions";
 import Home from "./Home";
+import Confirmation from "./Confirmation/Confirmation";
+import Delivery from "./Delivery/Delivery";
+import Payment from "./Payment/Payment";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadCategories: func.isRequired,
     loadSubCategoriesGallery: func.isRequired,
-    loadFooter: func.isRequired
+    loadFooter: func.isRequired,
+    header:shape().isRequired,
+    footer:shape().isRequired
   };
 
   static defaultProps = {};
-
+  // <Confirmation {...this.props} />
   componentDidMount() {
     const {
       loadHeader,
@@ -38,12 +46,21 @@ export class App extends Component {
   }
 
   render() {
+    const { header, footer } = this.props;
     return (
-      <Fragment>
+      <Router>
         <div className="app">
-          <Home {...this.props} />
+          <Header header={header} />
+          <Switch>
+            <Route exact path="/" render={() => <Home {...this.props} />} />
+            <Route exact path="/payment" component={Payment} />
+            <Route exact path="/delivery" component={Delivery} />
+            <Route exact path="/confirmation" component={Confirmation} />
+            <Redirect to="/" />
+          </Switch>
+          <Footer footer={footer} />
         </div>
-      </Fragment>
+      </Router>
     );
   }
 }
