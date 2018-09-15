@@ -57,46 +57,45 @@ const categories = [
   }
 ];
 
-
-
-const products = [
+const subCategoriesGallery = [
   {
-    productId: "product-item-1",
-    productName: "Oils & Ghee",
-    productImage: "./img/subcategories-gallery/oils-ghee.jpg",
+    subCategoriesGalleryId: "subcategory-item-1",
+    subCategoryName: "Oils & Ghee",
+    subCategoryImage: "./img/subcategories-gallery/oils-ghee.jpg",
     isOnSale: true
   },
   {
-    productId: "product-item-2",
-    productName: "Canned Items",
-    productImage: "./img/subcategories-gallery/canned-items.jpg",
+    subCategoriesGalleryId: "subcategory-item-2",
+    subCategoryName: "Canned Items",
+    subCategoryImage: "./img/subcategories-gallery/canned-items.jpg",
     isOnSale: true
   },
   {
-    productId: "product-item-3",
-    productName: "Rice & Atta",
-    productImage: "./img/subcategories-gallery/rice-atta.jpg",
+    subCategoriesGalleryId: "subcategory-item-3",
+    subCategoryName: "Rice & Atta",
+    subCategoryImage: "./img/subcategories-gallery/rice-atta.jpg",
     isOnSale: false
   },
   {
-    productId: "product-item-4",
-    productName: "Home Baking",
-    productImage: "./img/subcategories-gallery/home-baking.jpg",
+    subCategoriesGalleryId: "subcategory-item-4",
+    subCategoryName: "Home Baking",
+    subCategoryImage: "./img/subcategories-gallery/home-baking.jpg",
     isOnSale: true
   },
   {
-    productId: "product-item-5",
-    productName: "Pasta & Noodles",
-    productImage: "./img/subcategories-gallery/pasta-noodles.jpg",
+    subCategoriesGalleryId: "subcategory-item-5",
+    subCategoryName: "Pasta & Noodles",
+    subCategoryImage: "./img/subcategories-gallery/pasta-noodles.jpg",
     isOnSale: false
   },
   {
-    productId: "product-item-6",
-    productName: "Pickles",
-    productImage: "./img/subcategories-gallery/pickles.jpg",
+    subCategoriesGalleryId: "subcategory-item-6",
+    subCategoryName: "Pickles",
+    subCategoryImage: "./img/subcategories-gallery/pickles.jpg",
     isOnSale: true
   }
 ];
+
 
 const footer = {
   footerMenuItems: [
@@ -175,7 +174,45 @@ const footer = {
     footerDisclaimerLiner: "© EStore. 2018 All Rights Reserved."
   }
 };
+const products = [
+  {
+    productId: "product-item-1",
+    productName: "Oils & Ghee",
+    productImage: "./img/subcategories-gallery/oils-ghee.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-2",
+    productName: "Canned Items",
+    productImage: "./img/subcategories-gallery/canned-items.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-3",
+    productName: "Rice & Atta",
+    productImage: "./img/subcategories-gallery/rice-atta.jpg",
+    isOnSale: false
+  },
+  {
+    productId: "product-item-4",
+    productName: "Home Baking",
+    productImage: "./img/subcategories-gallery/home-baking.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-5",
+    productName: "Pasta & Noodles",
+    productImage: "./img/subcategories-gallery/pasta-noodles.jpg",
+    isOnSale: false
+  },
+  {
+    productId: "product-item-6",
+    productName: "Pickles",
+    productImage: "./img/subcategories-gallery/pickles.jpg",
+    isOnSale: true
+  }
+];
 
-const appData = [header, categories, products, footer];
+const appData = [header, categories, subCategoriesGallery, footer, products];
 
 export default appData;

@@ -17,7 +17,7 @@ const Products = props => {
 
   return (
     <Fragment>
-      <div id="sub-category-gallery">{renderProducts()}</div>
+      <div id="product-gallery">{renderProducts()}</div>
     </Fragment>
   );
 };

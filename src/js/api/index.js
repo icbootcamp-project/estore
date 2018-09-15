@@ -10,7 +10,7 @@ export function categoriesResponse() {
 }
 
 export function productsResponse() {
-  return appData[2];
+  return appData[4];
 }
 
 export function footerResponse() {
