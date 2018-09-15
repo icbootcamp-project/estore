@@ -177,7 +177,7 @@ const footer = {
 const products = [
   {
     productId: "product-item-1",
-    productName: "Oils & Ghee",
+    productName: "Cooking Oil",
     productImage: "./img/subcategories-gallery/oils-ghee.jpg",
     isOnSale: true
   },
@@ -189,7 +189,7 @@ const products = [
   },
   {
     productId: "product-item-3",
-    productName: "Rice & Atta",
+    productName: "Wheat Flour",
     productImage: "./img/subcategories-gallery/rice-atta.jpg",
     isOnSale: false
   },
@@ -201,7 +201,7 @@ const products = [
   },
   {
     productId: "product-item-5",
-    productName: "Pasta & Noodles",
+    productName: "Pasta",
     productImage: "./img/subcategories-gallery/pasta-noodles.jpg",
     isOnSale: false
   },
