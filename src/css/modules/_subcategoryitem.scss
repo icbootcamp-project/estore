@@ -19,7 +19,7 @@
       align-items: center;
       border-radius: 1em;
       .sub-category-item-heading {
-        @include H3(center, $white);
+        @include H2(center, $white);
       }
     }
   }

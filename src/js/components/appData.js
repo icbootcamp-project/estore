@@ -96,6 +96,7 @@ const subCategoriesGallery = [
   }
 ];
 
+
 const footer = {
   footerMenuItems: [
     {
@@ -173,7 +174,45 @@ const footer = {
     footerDisclaimerLiner: "© EStore. 2018 All Rights Reserved."
   }
 };
+const products = [
+  {
+    productId: "product-item-1",
+    productName: "Cooking Oil",
+    productImage: "./img/subcategories-gallery/oils-ghee.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-2",
+    productName: "Canned Items",
+    productImage: "./img/subcategories-gallery/canned-items.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-3",
+    productName: "Wheat Flour",
+    productImage: "./img/subcategories-gallery/rice-atta.jpg",
+    isOnSale: false
+  },
+  {
+    productId: "product-item-4",
+    productName: "Home Baking",
+    productImage: "./img/subcategories-gallery/home-baking.jpg",
+    isOnSale: true
+  },
+  {
+    productId: "product-item-5",
+    productName: "Pasta",
+    productImage: "./img/subcategories-gallery/pasta-noodles.jpg",
+    isOnSale: false
+  },
+  {
+    productId: "product-item-6",
+    productName: "Pickles",
+    productImage: "./img/subcategories-gallery/pickles.jpg",
+    isOnSale: true
+  }
+];
 
-const appData = [header, categories, subCategoriesGallery, footer];
+const appData = [header, categories, subCategoriesGallery, footer, products];
 
 export default appData;

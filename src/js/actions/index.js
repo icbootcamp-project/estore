@@ -55,32 +55,33 @@ export function loadCategoriesFail(error) {
   };
 }
 
-// ########## Import Sub Categories Gallery Actions Here ##########
-export function loadSubCategoriesGallery() {
+// ########## Import Products Actions Here ##########
+export function loadProducts() {
   return {
-    type: types.LOAD_SUB_CATEGORIES_GALLERY
+    type: types.LOAD_PRODUCTS
   };
 }
 
-export function loadSubCategoriesGalleryAttempt() {
+export function loadProductsAttempt() {
   return {
-    type: types.LOAD_SUB_CATEGORIES_GALLERY_ATTEMPT
+    type: types.LOAD_PRODUCTS_ATTEMPT
   };
 }
 
-export function loadSubCategoriesGallerySuccess(data) {
+export function loadProductsSuccess(data) {
   return {
-    type: types.LOAD_SUB_CATEGORIES_GALLERY_SUCCESS,
+    type: types.LOAD_PRODUCTS_SUCCESS,
     payload: data
   };
 }
 
-export function loadSubCategoriesGalleryFail(error) {
+export function loadProductsFail(error) {
   return {
-    type: types.LOAD_SUB_CATEGORIES_GALLERY_FAIL,
+    type: types.LOAD_PRODUCTS_FAIL,
     payload: error
   };
 }
+
 
 // ########## Import Footer Gallery Actions Here ##########
 export function loadFooter() {
