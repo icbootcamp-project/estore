@@ -1,0 +1,12 @@
+.tf-full {
+	@include textfield(100%,10px 0px 5px 0px);
+}
+.tf-onethird {
+	@include textfield(31%,10px 0px 5px 0px);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	
+}
+.tf-half {
+	@include textfield(48%,10px 0px 5px 0px);
+}
