@@ -6,16 +6,14 @@ import PaymentMethod from "./PaymentMethod";
 import TextField from "../TextField/TextField";
 
 function showtextFields(tfData) {
-  const textFields = tfData.map(data => {
-    return (
-      <TextField
-        name={data.name}
-        type={data.type}
-        width={data.width}
-        key={Math.random()}
-      />
-    );
-  });
+  const textFields = tfData.map(data => (
+    <TextField
+      name={data.name}
+      type={data.type}
+      width={data.width}
+      key={Math.random()}
+    />
+  ));
 
   return textFields;
 }
