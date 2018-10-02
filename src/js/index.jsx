@@ -1,13 +1,16 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import logger from 'redux-logger';
-import createSagaMiddleware from 'redux-saga';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './components/App';
-import rootReducer from './reducers';
-import rootSaga from './sagas';
+// ########## Import Dependencies Here ##########
+import ReactDOM from "react-dom";
+import React from "react";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import logger from "redux-logger";
+import createSagaMiddleware from "redux-saga";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// ########## Import Components Here ##########
+import App from "./components/App";
+import rootReducer from "./reducers";
+import rootSaga from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -25,5 +28,5 @@ ReactDOM.render(
       <App />
     </Router>
   </Provider>,
-  document.querySelector('#app')
+  document.querySelector("#app")
 );
