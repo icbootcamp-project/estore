@@ -1,0 +1,29 @@
+#estore-btn {
+	position: relative;
+	@include btn(100%, left, 15px 0px);
+	.btn-circle {
+		height: 60px;
+		width: 60px;
+		border-radius: 100%;
+		background-color: $white;
+		opacity: 0.1;
+		float: right;
+		margin: 15px 15px 15px 15px;
+		color: $black;
+		font-size: 0.8em;
+		line-height: 60px;
+	}
+	.btn-glyphicon {
+		height: 15px;
+		width: 15px;
+		img {
+			position: absolute;
+			right: 35px;
+			top: 37px;
+			height: 15px;
+			width: 15px;
+			opacity: 0.9;
+			color: white;
+		}
+	}
+}

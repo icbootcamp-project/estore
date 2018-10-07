@@ -94,3 +94,41 @@
   border-radius: 1em;
 }
 
+// ########## All Textfield mixins Here ##########
+@mixin textfield($size,$margin) {
+  width: $size;
+  margin:$margin;
+  height: 90px;
+  border-radius: 8px;
+  border: 1px $textfield-color solid;
+  text-indent: 50px;
+  font-size: 1.5em;
+  &::placeholder {
+    color: $placeholder-color;
+    opacity: 0.8;
+    font-weight: normal;
+    font-family: sans-serif;
+  }
+  &::active{
+    border: 1px $textfield-color solid;
+  }
+}
+
+
+// ########## All Buttons mixins Here ##########
+@mixin btn($size,$position,$margin) {
+  width: $size;
+  margin:$margin;
+  height: 90px;
+  border-radius: 8px;
+  background-color: $primary-color;
+  color: $white;
+  border:none;
+  text-align: center;
+  font-size: 1.5em;
+  display: inline;
+  float: $position;
+  line-height: 90px;
+  font-family: sans-serif;
+  cursor: pointer;
+}

@@ -8,11 +8,12 @@ import Cart from "./Cart";
 import Footer from "./Footer";
 
 const Home = props => {
-  const { header, cart, footer } = props;
+  const { header, cart, footer, categories, subCategoriesGallery } = props;
   return (
     <Fragment>
       <Header header={header} />
-
+      <Categories categories={categories} />
+      <SubCategoriesGallery subCategoriesGallery={subCategoriesGallery} />
       <Cart cart={cart} />
 
       <Footer footer={footer} />
@@ -23,7 +24,9 @@ const Home = props => {
 Home.propTypes = {
   header: shape().isRequired,
   cart: arrayOf(shape()).isRequired,
-  footer: shape().isRequired
+  footer: shape().isRequired,
+  categories: arrayOf(shape()).isRequired,
+  subCategoriesGallery: arrayOf(shape()).isRequired
 };
 
 export default Home;
