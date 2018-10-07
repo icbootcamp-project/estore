@@ -17,23 +17,16 @@ import Home from "./Home";
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
-    loadCategories: func.isRequired,
-    loadSubCategoriesGallery: func.isRequired,
-    loadFooter: func.isRequired
+    loadFooter: func.isRequired,
+    loadCart: func.isRequired
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const {
-      loadHeader,
-      loadCategories,
-      loadSubCategoriesGallery,
-      loadFooter
-    } = this.props;
+    const { loadHeader, loadFooter, loadCart } = this.props;
     loadHeader();
-    loadCategories();
-    loadSubCategoriesGallery();
+    loadCart();
     loadFooter();
   }
 
@@ -48,16 +41,10 @@ export class App extends Component {
   }
 }
 
-function mapStateToProps({
-  headerReducer,
-  categoriesReducer,
-  subCategoriesGalleryReducer,
-  footerReducer
-}) {
+function mapStateToProps({ headerReducer, cartReducer, footerReducer }) {
   return {
     header: headerReducer.data,
-    categories: categoriesReducer.data,
-    subCategoriesGallery: subCategoriesGalleryReducer.data,
+    cart: cartReducer.data,
     footer: footerReducer.data
   };
 }
@@ -67,8 +54,7 @@ export default withRouter(
     mapStateToProps,
     {
       loadHeader: actions.loadHeader,
-      loadCategories: actions.loadCategories,
-      loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
+      loadCart: actions.loadCart,
       loadFooter: actions.loadFooter
     }
   )(App)
