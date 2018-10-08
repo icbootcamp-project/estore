@@ -1,0 +1,131 @@
+.sub-category-item {
+  display: inline-block;
+  padding: 0.5em;
+  position: relative;
+  .sub-category-item-frame-item-1 {
+    @include sub-category-item("./img/subcategories-gallery/oils-ghee.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H2(center, $white);
+      }
+    }
+  }
+  .sub-category-item-frame-item-2 {
+    @include sub-category-item("./img/subcategories-gallery/canned-items.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H3(center, $white);
+      }
+    }
+  }
+  .sub-category-item-frame-item-3 {
+    @include sub-category-item("./img/subcategories-gallery/rice-atta.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H3(center, $white);
+      }
+    }
+  }
+  .sub-category-item-frame-item-4 {
+    @include sub-category-item("./img/subcategories-gallery/home-baking.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H3(center, $white);
+      }
+    }
+  }
+  .sub-category-item-frame-item-5 {
+    @include sub-category-item("./img/subcategories-gallery/pasta-noodles.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H3(center, $white);
+      }
+    }
+  }
+  .sub-category-item-frame-item-6 {
+    @include sub-category-item("./img/subcategories-gallery/pickles.jpg");
+    .sub-category-item-overlay {
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      width: 21em;
+      height: 21em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1em;
+      .sub-category-item-heading {
+        @include H3(center, $white);
+      }
+    }
+  }
+}

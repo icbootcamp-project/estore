@@ -1,0 +1,13 @@
+#Delivery {
+	.d-form {
+		@include wrapper(90%);
+		form{
+			margin:50px 0px 50px 0px;
+			display: flex;
+			flex-direction:row;
+			justify-content:space-between;
+			align-content:flex-start;
+			flex-wrap:wrap;
+		}
+	}
+}
