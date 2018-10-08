@@ -1,5 +1,5 @@
 import React from "react";
-import {shape ,string ,bollean} from "prop-types";
+import {shape ,string ,boolean} from "prop-types";
 
 function showMethodItem(paymentData) {
   const methodItem = paymentData.map(data => {
@@ -30,7 +30,7 @@ PaymentMethod.propTypes= {
   data:shape({
     name:string.isRequired,
     src:string.isRequired,
-    value:bollean
+    value:boolean
   }).isRequired
 }
 export default PaymentMethod;
