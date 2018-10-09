@@ -3,7 +3,7 @@ import { arrayOf, shape } from "prop-types";
 
 import Categories from "../Categories";
 import Filterproduct from "./FilterProduct";
-
+import Item from "./Item";
 export default class Products extends Component {
 
     static propTypes = {
@@ -23,9 +23,11 @@ export default class Products extends Component {
         <Fragment>
             <Categories categories={categories} />
             <Filterproduct />
-            <div id="product-container" style={{height:700}}>
-                
-                Products page
+            <div id="product-container">
+                <Item />
+                <Item />
+                <Item />
+                <Item />
             </div>
         </Fragment>
             

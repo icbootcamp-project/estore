@@ -11,23 +11,23 @@ export default class FilterProduct extends Component {
 
     render(){
         return(
-        <Fragment>
+          <Fragment>
             <div id="filter-products">
-                <div className="filter-sort">
-                    <span className="sort-by">Sort by:</span>
-                    <span className="price">price</span>
-                </div>
-                <div className="filter-box border">
-                    <div className="filter-arrow" />
-                </div>
-                <div className="filter-box border">
-                    <img src="../img/products/list-view.png" />
-                </div>
-                <div className="filter-box">
-                    <img src="../img/products/grid-view.png" />
-                </div>
+              <div className="filter-sort">
+                <span className="sort-by">Sort by:</span>
+                <span className="price">price</span>
+              </div>
+              <div className="filter-box border">
+                <div className="filter-arrow" />
+              </div>
+              <div className="filter-box border">
+                <img src="../img/products/list-view.png" alt="" />
+              </div>
+              <div className="filter-box">
+                <img src="../img/products/grid-view.png" alt="" />
+              </div>
             </div>
-        </Fragment>
+          </Fragment> 
             
         )
     }

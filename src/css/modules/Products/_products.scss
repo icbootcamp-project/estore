@@ -1,8 +1,11 @@
 #product-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 5%
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding:2% 0% 2% 0%;
+    //min-height: 2000px;
 }
 #filter-products{
     height: 80px;
@@ -41,6 +44,10 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        &:hover{
+            box-shadow: 2px 2px 5px #e0ebeb;
+        }
+        
         .filter-arrow{
             height: 18px;
             width: 18px;
@@ -52,4 +59,105 @@
     .border{
         border-right:1px #e0ebeb solid;
     }
+}
+#Products-Item{
+    width: 95%;
+    min-height: 600px;
+    margin:10px 0px;
+    display: block;
+    //border:1px red solid;
+    .Item{
+        min-height: 600px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        // background: url('../img/products/pasta-noodles.jpg');
+        // background-position: center;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        border-radius: 10px;
+        //background-color: rgba(5, 5, 5, 0.245)a;
+        img{
+            min-height: 600px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .blur-sec{
+            height:100px;
+            width:100%;
+            position: absolute;
+            bottom:15px;
+            filter: blur(10px);
+            background-color: rgba(5, 5, 5, 0.245);
+            
+        }
+        .Item-info{
+            height:100px;
+            width:100%;
+            position: absolute;
+            bottom:0px;
+            font-family: $font-family;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .des{
+                height: 100px;
+                //width:50%;
+                margin-left:50px;
+                margin-bottom: -20px;
+                //margin-top:5px;
+                color:white;
+                .Item-name{
+                font-size: 36px;
+                font-weight: 300;
+                font-weight: 500;
+                }
+                .Item-cat{
+                    font-size: 24px;
+                    letter-spacing: 4px;
+                }
+            }
+            .other-info{
+                height: 90px;
+                min-width:260px;
+                //background-color: aqua;
+                margin-right: 50px;
+                display: flex;
+                flex-direction:row;
+                justify-content: space-between;
+                align-items: center;         
+                .price-btn{
+                    height: 65px;
+                    width:180px;
+                    background-color: $primary-color;
+                    text-align: center;
+                    line-height: 65px;
+                    font-size: 24px;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    display: inline-block;
+                    color:white;
+                    font-family: $font-family;
+                    cursor: pointer;
+                }
+                .add-btn{
+                    height: 65px;
+                    width: 65px;
+                    background-image: linear-gradient(to bottom,rgb(133, 209, 97), rgb(102, 184, 26), rgb(74, 139, 12));;
+                    text-align: center;
+                    line-height: 65px;
+                    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    font-size: 24px;
+                    border-radius: 10px;
+                    display: inline-block;
+                    color:white;
+                    font-family: $font-family;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+   
 }
