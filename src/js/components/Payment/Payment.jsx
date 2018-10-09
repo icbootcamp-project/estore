@@ -6,17 +6,14 @@ import PaymentMethod from "./PaymentMethod";
 import TextField from "../TextField/TextField";
 
 function showtextFields(tfData) {
-  const textFields = tfData.map(data => {
-    return (
-      <TextField
-        name={data.name}
-        type={data.type}
-        width={data.width}
-        key={Math.random()}
-      />
-    );
-  });
-
+  const textFields = tfData.map(data => (
+    <TextField
+      name={data.name}
+      type={data.type}
+      width={data.width}
+      key={Math.random()}
+    />
+  ));
   return textFields;
 }
 
@@ -24,7 +21,6 @@ const Payment = () => (
   <Fragment>
     <div id="Payment">
       <HeroTitle name="Payment" section="1" />
-
       <div className="p-form">
         <form>
           <PaymentMethod data={PaymentData.pmData} />
