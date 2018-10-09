@@ -5,17 +5,14 @@ import DeliveryData from "./DeliveryData";
 import Button from "../Button/Button";
 
 function showtextFields(Data) {
-  const textFields = Data.map(data => {
-    return (
-      <TextField
-        name={data.name}
-        type={data.type}
-        width={data.width}
-        key={Math.random()}
-      />
-    );
-  });
-
+  const textFields = Data.map(data => (
+    <TextField
+      name={data.name}
+      type={data.type}
+      width={data.width}
+      key={Math.random()}
+    />
+  ));
   return textFields;
 }
 const Delivery = () => (
