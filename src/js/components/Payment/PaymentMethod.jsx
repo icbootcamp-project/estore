@@ -20,13 +20,12 @@ function showMethodItem(paymentData) {
   });
 }
 
-const PaymentMethod = props => {
-  const paymentData = props.data;
-  return <div id="PaymentMethod">{showMethodItem(paymentData)}</div>;
-};
+const PaymentMethod = ({ paymentTypes }) => (
+  <div id="PaymentMethod">{showMethodItem(paymentTypes)}</div>
+);
 
 PaymentMethod.propTypes = {
-  data: arrayOf(object).isRequired
+  paymentTypes: arrayOf(object).isRequired
 }
 
 export default PaymentMethod;

@@ -22,7 +22,7 @@ const Payment = () => (
       <HeroTitle name="Payment" section="1" />
       <div className="p-form">
         <form>
-          <PaymentMethod data={paymentTypes} />
+          <PaymentMethod paymentTypes={paymentTypes} />
           {showtextFields(paymentFields)}
           <Button value="Next step" arrow="true" />
         </form>
