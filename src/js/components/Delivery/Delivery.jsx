@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Skeleton from "react-loading-skeleton";
+// import Skeleton from "react-loading-skeleton";
 import { connect } from "react-redux";
 import { func, arrayOf, shape, string } from "prop-types";
 
@@ -11,7 +11,7 @@ import * as actions from "../../actions";
 const SkeletonLoading = () => (
   <Fragment>
     <div id="Delivery">
-      <HeroTitle name="Delivery" section="2" />
+      {  /*  <HeroTitle name="Delivery" section="2" />
     </div>
 
     <div className="d-form">
@@ -69,8 +69,8 @@ const SkeletonLoading = () => (
         }}
       >
         <Skeleton width={600} height={90} />
-      </div>
-    </div>
+      </div>  */  }
+    </div> 
   </Fragment>
 );
 

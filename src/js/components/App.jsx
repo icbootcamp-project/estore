@@ -17,6 +17,7 @@ import Home from "./Home";
 import Confirmation from "./Confirmation/Confirmation";
 import Delivery from "./Delivery/Delivery";
 import Payment from "./Payment/Payment";
+import Products from "./Products/Products";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -56,6 +57,7 @@ export class App extends Component {
             <Route exact path="/payment" component={Payment} />
             <Route exact path="/delivery" component={Delivery} />
             <Route exact path="/confirmation" component={Confirmation} />
+            <Route exact path="/products" render={() => <Products categories={this.props.categories} />} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
