@@ -1,11 +1,11 @@
 import React from "react";
-import {shape ,string ,boolean} from "prop-types";
+import { shape, string, boolean } from "prop-types";
 
 function showMethodItem(paymentData) {
   const methodItem = paymentData.map(data => {
-    const select =  data.value;
+    const select = data.value;
     let addclass;
-    if(select){
+    if (select) {
       addclass = "pm-radio radio-select";
     }
     const src = `./img/payment/${data.src}`;
@@ -22,15 +22,15 @@ function showMethodItem(paymentData) {
 }
 const PaymentMethod = props => {
   const paymentData = props.data;
- 
+
 
   return <div id="PaymentMethod">{showMethodItem(paymentData)}</div>;
 };
-PaymentMethod.propTypes= {
-  data:shape({
-    name:string.isRequired,
-    src:string.isRequired,
-    value:boolean
+PaymentMethod.propTypes = {
+  data: shape({
+    name: string.isRequired,
+    src: string.isRequired,
+    value: boolean
   }).isRequired
 }
 export default PaymentMethod;
