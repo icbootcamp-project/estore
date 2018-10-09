@@ -174,6 +174,54 @@ const footer = {
   }
 };
 
-const appData = [header, categories, subCategoriesGallery, footer];
+export const paymentFields = [
+  {
+    id: "payment-field-1",
+    name: "Card name",
+    width: "full",
+    type: "text"
+  },
+  {
+    id: "payment-field-2",
+    name: "Card number",
+    width: "full",
+    type: "type"
+  },
+  {
+    id: "payment-field-3",
+    name: "MM",
+    width: "onethird",
+    type: "dropdown"
+  },
+  {
+    id: "payment-field-4",
+    name: "YY",
+    width: "onethird",
+    type: "dropdown"
+  },
+  {
+    id: "payment-field-5",
+    name: "",
+    width: "onethird",
+    type: "text"
+  }
+];
+
+export const paymentTypes = [
+  {
+    id: "payment-type-1",
+    name: "Jazz cash",
+    src: "jazzcash.png",
+    value: true
+  },
+  {
+    id: "payment-type-2",
+    name: "Cash on delivery",
+    src: "cashondelivery.png",
+    value: false
+  }
+];
+
+const appData = [header, categories, subCategoriesGallery, footer, paymentFields, paymentTypes];
 
 export default appData;
