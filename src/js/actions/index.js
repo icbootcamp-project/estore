@@ -108,3 +108,11 @@ export function loadFooterFail(error) {
     payload: error
   };
 }
+
+// HERE THE FUNCTIONS ARE WRITTEN FOR THE DETAILS PAGE OF THE APP
+
+export function detailsPageAttempt() {
+  return {
+    type: types.LOAD_DETAILS_PAGE_ATTEMPT
+  };
+}

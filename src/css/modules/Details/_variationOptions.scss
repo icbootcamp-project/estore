@@ -1,0 +1,14 @@
+.to-display-two-things {
+  display: flex;
+  // background-color: blue;
+  // flex-direction: row;
+  justify-content: space-between;
+}
+.variation-options-div {
+  @include H2(left, $black);
+  width: 50%;
+  margin: 10px;
+}
+.variation-options-div:hover {
+  background: blue;
+}

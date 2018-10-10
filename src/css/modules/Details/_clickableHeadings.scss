@@ -1,0 +1,28 @@
+.clickable-headings-outer-div {
+  @include H2(center, $black);
+  display: flex;
+  // flex-direction: row;
+  justify-content: space-around;
+}
+.clickable-description-div {
+  @include H3(left, $black);
+}
+// STYLING FOR THE MODAL OF DETAILS IS DONE HERE
+.modal-div-here {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-around;
+  //  USE Z INDEX TO TURN EVERY THING IN GREY
+  // STYLING FOR THE CENTER DIV OF MODAL OF DETAILS IS DONE HERE
+  .center-div-for-modal-details {
+    background-color: red;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
