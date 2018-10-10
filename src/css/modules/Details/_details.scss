@@ -1,0 +1,86 @@
+// CSS WRITTEN FOR THE RE-USABLE COMPONENT PRICE BUTTON
+.details {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+
+  .p-btn {
+    @include btn(100%, right, 0);
+    box-shadow: 10px 5px 5px grey;
+    .btn-circle {
+      height: 60px;
+      width: 60px;
+      border-radius: 100%;
+      background-color: $white;
+      opacity: 0.2;
+      float: right;
+      margin: 15px 15px 15px 15px;
+      color: $black;
+      font-size: 0.8em;
+      line-height: 60px;
+    }
+    .btn-glyphicon {
+      position: absolute;
+      display: inline;
+    }
+  }
+}
+// CSS WRITTEN FOR THE UPPER BODY OF THE DETAILS PAGE
+.upper-body-details {
+  .image-backgound-details-div {
+    display: flex;
+    justify-content: space-around;
+    .pasta-image-details-page {
+      width: calc(100vw - 50px);
+      height: calc((940 / 711) * (100vw - 50px));
+    }
+  }
+}
+// CSS WRITTEN FOR THE LOWER BODY OF THE DETAILS PAGE
+.full-outer-div {
+  margin: 0 80px;
+  margin-bottom: 40px;
+  .outer-details-div {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    .details {
+      width: 20%;
+    }
+  }
+}
+// .details-4 {
+//   width: 100%;
+//   padding-left: 2%;
+//   padding-right: 2%;
+//   .p-btn {
+//     @include btn(100%, right, 0);
+//     box-shadow: 10px 5px 5px grey;
+//     .btn-circle {
+//       height: 60px;
+//       width: 60px;
+//       border-radius: 100%;
+//       background-color: $white;
+//       opacity: 0.2;
+//       float: right;
+//       margin: 15px 15px 15px 15px;
+//       color: $black;
+//       font-size: 0.8em;
+//       line-height: 60px;
+//     }
+//     .btn-glyphicon {
+//       position: absolute;
+//       display: inline;
+//     }
+//   }
+// }
+// ################ THIS IS DONE JUST FOR CHECKING ##########
+// .details {
+//   #Payment {
+//     .p-btn {
+//       .btn-circle {
+//         width: 90px;
+//       }
+//     }
+//   }
+// }

@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { func,shape } from "prop-types";
+import { func, shape } from "prop-types";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +19,7 @@ import Delivery from "./Delivery/Delivery";
 import Payment from "./Payment/Payment";
 import Header from "./Header";
 import Footer from "./Footer";
+import Details from "./Details";
 
 export class App extends Component {
   static propTypes = {
@@ -26,8 +27,8 @@ export class App extends Component {
     loadCategories: func.isRequired,
     loadSubCategoriesGallery: func.isRequired,
     loadFooter: func.isRequired,
-    header:shape().isRequired,
-    footer:shape().isRequired
+    header: shape().isRequired,
+    footer: shape().isRequired
   };
 
   static defaultProps = {};
@@ -56,6 +57,7 @@ export class App extends Component {
             <Route exact path="/payment" component={Payment} />
             <Route exact path="/delivery" component={Delivery} />
             <Route exact path="/confirmation" component={Confirmation} />
+            <Route exact path="/details" component={Details} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
