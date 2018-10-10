@@ -14,9 +14,9 @@ import {
 // ########## Import Components Here ##########
 import * as actions from "../actions";
 import Home from "./Home";
-import Confirmation from "./Confirmation/Confirmation";
-import Delivery from "./Delivery/Delivery";
-import Payment from "./Payment/Payment";
+// import Confirmation from "./Confirmation/Confirmation";
+// import Delivery from "./Delivery/Delivery";
+// import Payment from "./Payment/Payment";
 import Details from "./Details";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -54,9 +54,9 @@ export class App extends Component {
           <Header header={header} />
           <Switch>
             <Route exact path="/" render={() => <Home {...this.props} />} />
-            <Route exact path="/payment" component={Payment} />
-            <Route exact path="/delivery" component={Delivery} />
-            <Route exact path="/confirmation" component={Confirmation} />
+            {/* <Route exact path="/payment" component={Payment} /> */}
+            {/* <Route exact path="/delivery" component={Delivery} /> */}
+            {/* <Route exact path="/confirmation" component={Confirmation} /> */}
             <Route exact path="/details" component={Details} />
             <Redirect to="/" />
           </Switch>
