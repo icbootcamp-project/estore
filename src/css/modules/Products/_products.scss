@@ -65,19 +65,15 @@
     min-height: 600px;
     margin:10px 0px;
     display: block;
-    //border:1px red solid;
     .Item{
         min-height: 600px;
+        font-family: $font-family;
         width: 100%;
         overflow: hidden;
         position: relative;
-        // background: url('../img/products/pasta-noodles.jpg');
-        // background-position: center;
-        // background-size: cover;
-        // background-repeat: no-repeat;
         border-radius: 10px;
-        //background-color: rgba(5, 5, 5, 0.245)a;
-        img{
+    
+        .product-img{
             min-height: 600px;
             width: 100%;
             object-fit: cover;
@@ -91,11 +87,58 @@
             background-color: rgba(5, 5, 5, 0.245);
             
         }
-        .Item-info{
-            height:100px;
+        .upper-info{
+            min-height:180px;
             width:100%;
             position: absolute;
-            bottom:0px;
+            //background-color: #e0ebeb;
+            top:20px;
+            font-family: $font-family;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            .brand-info{
+                height: 150px;
+                width:150px;
+                margin-left: 50px;
+                position: relative;
+                .preminum-logo{
+                    height: 150px;
+                    width:150px;
+                    object-fit: cover;
+                }
+                .brand-logo{
+                    //height: 50px;
+                    //width: 50px;
+                    position: absolute;
+                    top:50px;
+                    left:40px;
+                    object-fit: cover;
+                }
+            }
+            .fvrt-btn{
+                margin-right: 50px;
+                height: 65px;
+                width: 65px;
+                background-color: rgba(207, 2, 2, 0.842);
+                font-size: 24px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    cursor: pointer;
+                }
+            }
+        }
+        .Item-info{
+            height:90px;
+            width:100%;
+            position: absolute;
+            bottom:10px;
             font-family: $font-family;
             display: flex;
             flex-direction: row;
@@ -103,15 +146,14 @@
             
             .des{
                 height: 100px;
-                //width:50%;
                 margin-left:50px;
                 margin-bottom: -20px;
-                //margin-top:5px;
                 color:white;
                 .Item-name{
                 font-size: 36px;
                 font-weight: 300;
                 font-weight: 500;
+                
                 }
                 .Item-cat{
                     font-size: 24px;
@@ -121,7 +163,6 @@
             .other-info{
                 height: 90px;
                 min-width:260px;
-                //background-color: aqua;
                 margin-right: 50px;
                 display: flex;
                 flex-direction:row;
@@ -135,11 +176,13 @@
                     line-height: 65px;
                     font-size: 24px;
                     border-radius: 10px;
-                    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
                     display: inline-block;
                     color:white;
                     font-family: $font-family;
                     cursor: pointer;
+                    &:hover{
+                        box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    }
                 }
                 .add-btn{
                     height: 65px;
@@ -147,13 +190,16 @@
                     background-image: linear-gradient(to bottom,rgb(133, 209, 97), rgb(102, 184, 26), rgb(74, 139, 12));;
                     text-align: center;
                     line-height: 65px;
-                    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    
                     font-size: 24px;
                     border-radius: 10px;
                     display: inline-block;
                     color:white;
                     font-family: $font-family;
                     cursor: pointer;
+                    &:hover{
+                        box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+                    }
                 }
 
             }

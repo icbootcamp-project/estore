@@ -4,6 +4,8 @@ import { arrayOf, shape } from "prop-types";
 import Categories from "../Categories";
 import Filterproduct from "./FilterProduct";
 import Item from "./Item";
+import ProductItmes from "./data";
+
 export default class Products extends Component {
 
     static propTypes = {
@@ -16,6 +18,12 @@ export default class Products extends Component {
         this.state = {};
 
     }
+    productItems(){
+        return ProductItmes.map(
+            (item) => <Item item={item} />
+            
+        );
+    }
 
     render(){
         const { categories } = this.props;
@@ -24,10 +32,7 @@ export default class Products extends Component {
             <Categories categories={categories} />
             <Filterproduct />
             <div id="product-container">
-                <Item />
-                <Item />
-                <Item />
-                <Item />
+                {this.productItems()}
             </div>
         </Fragment>
             
