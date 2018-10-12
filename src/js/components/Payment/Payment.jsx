@@ -1,32 +1,30 @@
 import React, { Fragment } from "react";
 import HeroTitle from "../HeroTitle/HeroTitle";
-import PaymentData from "./PaymentData";
 import Button from "../Button/Button";
 import PaymentMethod from "./PaymentMethod";
+import { paymentFields, paymentTypes } from '../appData';
 import TextField from "../TextField/TextField";
 
 function showtextFields(tfData) {
-  const textFields = tfData.map(data => (
+
+  return tfData.map(data => (
     <TextField
       name={data.name}
       type={data.type}
       width={data.width}
-      key={Math.random()}
+      key={data.id}
     />
   ));
-
-  return textFields;
 }
 
 const Payment = () => (
   <Fragment>
     <div id="Payment">
       <HeroTitle name="Payment" section="1" />
-
       <div className="p-form">
         <form>
-          <PaymentMethod data={PaymentData.pmData} />
-          {showtextFields(PaymentData.tfData)}
+          <PaymentMethod paymentTypes={paymentTypes} />
+          {showtextFields(paymentFields)}
           <Button value="Next step" arrow="true" />
         </form>
         <div className="clear" />
@@ -34,4 +32,5 @@ const Payment = () => (
     </div>
   </Fragment>
 );
+
 export default Payment;
