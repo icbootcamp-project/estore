@@ -5,8 +5,10 @@ import { func, arrayOf, shape, string } from "prop-types";
 
 import HeroTitle from "../HeroTitle/HeroTitle";
 import TextField from "../TextField/TextField";
+
 import Button from "../Button/Button";
 import * as actions from "../../actions";
+
 
 const SkeletonLoading = () => (
   <Fragment>
