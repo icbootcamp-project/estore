@@ -18,7 +18,7 @@ export default class Products extends Component {
         this.state = {};
 
     }
-    renderItems(){
+    static renderItems(){
         return ProductItmes.map(
             (item) => <Item item={item} />
             

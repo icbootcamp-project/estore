@@ -24,6 +24,7 @@ export default class Item extends Component {
     render(){
         const {name , price , brandLogo,premiumLogo , cat,subCat,img } = this.props.item;
         const dir = "../img/products/";
+        const subCategory = `${cat} +  ">" + ${subCat}` ;
         return(
           <Fragment>
             <div id="Products-Item">
@@ -42,7 +43,7 @@ export default class Item extends Component {
                 <div className="Item-info">
                   <div className="des">
                     <div className="Item-name">{name}</div>
-                    <div className="Item-cat">{cat} > {subCat}</div>
+                    <div className="Item-cat">{subCategory}</div>
                   </div>
                   <div className="other-info">
                     <div className="price-btn">PKR: {price}</div>
