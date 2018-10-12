@@ -1,4 +1,4 @@
- var ProductItems = [
+const ProductItems = [
     {
         id:0,
         name:'Pasta',

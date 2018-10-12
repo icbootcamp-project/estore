@@ -28,7 +28,8 @@ export class App extends Component {
     loadSubCategoriesGallery: func.isRequired,
     loadFooter: func.isRequired,
     header:shape().isRequired,
-    footer:shape().isRequired
+    footer:shape().isRequired,
+    categories:shape().isRequired
   };
 
   static defaultProps = {};

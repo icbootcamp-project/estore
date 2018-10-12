@@ -1,8 +1,7 @@
 import React from "react";
 import { string } from "prop-types";
 
-const HeroTitle = props => {
-  const { name, section } = props;
+const HeroTitle = ({ name, section }) => {
   let lineClass;
   let circleClass;
   let dotClass;
@@ -25,12 +24,12 @@ const HeroTitle = props => {
     dots = false;
     wraperClass = "hero-wraper h1-center";
   }
+
   return (
     <div id="HeroTitle">
       <div className={wraperClass}>
         <h1>{name}</h1>
       </div>
-
       {dots && (
         <div>
           <div className="hero-lines">

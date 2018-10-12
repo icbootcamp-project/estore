@@ -18,23 +18,23 @@ export default class Products extends Component {
         this.state = {};
 
     }
-    productItems(){
+    renderItems(){
         return ProductItmes.map(
             (item) => <Item item={item} />
             
-        );
+        )
     }
 
     render(){
         const { categories } = this.props;
         return(
-        <Fragment>
+          <Fragment>
             <Categories categories={categories} />
             <Filterproduct />
             <div id="product-container">
-                {this.productItems()}
+              {this.renderItems()}
             </div>
-        </Fragment>
+          </Fragment>
             
         )
     }
