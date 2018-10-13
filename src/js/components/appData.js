@@ -273,6 +273,14 @@ export const deliveryFields = [
   }
 ];
 
-const appData = [header, categories, subCategoriesGallery, footer, paymentFields, paymentTypes, deliveryFields];
+const appData = [
+  header,
+  categories,
+  subCategoriesGallery,
+  footer,
+  paymentFields,
+  paymentTypes,
+  deliveryFields
+];
 
 export default appData;

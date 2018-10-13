@@ -8,9 +8,9 @@ const { heading, subheading } = data;
 const DetailsHeadingSubheading = () => (
   <Fragment>
     <div className="details-wrapper-div">
-      <div className="details-text-portion">
-        <div>{heading}</div>
-        <div>{subheading}</div>
+      <div style={{ margin: "auto 0" }}>
+        <div className="details-text-portion-heading">{heading}</div>
+        <div className="details-text-portion-subheading">{subheading}</div>
       </div>
       <div className="details-rate-flag-portion">
         <div className="details">

@@ -31,26 +31,26 @@ const Details = () => (
 
     {/* THIS IS VARIATION COMPONENT WHERE OPTIONS CAN BE SELECTED */}
     <div className="to-display-two-things">
-      <VariationDetailsPage text="size" />
-      <VariationDetailsPage text="venue" />
+      <VariationDetailsPage text="Size:" />
+      <VariationDetailsPage text="Shape:" />
     </div>
     {/* <DetailsModalDiv /> */}
     <div className="to-display-two-things">
-      <VariationDetailsPage text="variation" />
-      <VariationDetailsPage text="more varitation" />
+      <VariationDetailsPage text="Variation:" />
+      <VariationDetailsPage text="More varitation:" />
     </div>
 
     {/* THIS PORTION IS FOR THE LOWER BODY OF DETAILS PAGE  */}
     <div className="full-outer-div">
       <div className="outer-details-div">
         <div className="details">
-          <PriceButton color="#f5de46" isOpen isImage value="PKR: 250 Rs" />
+          <PriceButton color="#f5a219" isOpen isImage value="PKR: 250 Rs" />
         </div>
         <div className="details">
-          <PriceButton color="#f5de46" isOpen isImage value="PKR: 250 Rs" />
+          <PriceButton color="#c52f2f" isOpen isImage value="PKR: 250 Rs" />
         </div>
         <div className="details">
-          <PriceButton color="#f5de46" isOpen isImage value="PKR: 250 Rs" />
+          <PriceButton color="#45c34d" isOpen isImage value="PKR: 250 Rs" />
         </div>
         {/* <Payment /> */}
       </div>

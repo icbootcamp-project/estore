@@ -26,6 +26,6 @@ const PaymentMethod = ({ paymentTypes }) => (
 
 PaymentMethod.propTypes = {
   paymentTypes: arrayOf(object).isRequired
-}
+};
 
 export default PaymentMethod;
