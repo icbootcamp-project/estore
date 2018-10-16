@@ -7,6 +7,7 @@ import loadHeaderSaga from "./loadHeaderSaga";
 import loadCategoriesSaga from "./loadCategoriesSaga";
 import loadSubCategoriesGallerySaga from "./loadSubCategoriesGallerySaga";
 import loadFooterSaga from "./loadFooterSaga";
+import getDeliveryDataSaga from "./getDeliveryDataSaga";
 
 function* watchLoadHeader() {
   yield takeLatest(types.LOAD_HEADER, loadHeaderSaga);
@@ -27,11 +28,16 @@ function* watchLoadFooter() {
   yield takeLatest(types.LOAD_FOOTER, loadFooterSaga);
 }
 
+function* watchGetDeliveryData() {
+  yield takeLatest(types.GET_DELIVERY_DATA, getDeliveryDataSaga);
+}
+
 export default function* rootSaga() {
   yield all([
     fork(watchLoadHeader),
     fork(watchLoadCategories),
     fork(watchLoadSubCategoriesGallery),
-    fork(watchLoadFooter)
+    fork(watchLoadFooter),
+    fork(watchGetDeliveryData)
   ]);
 }
