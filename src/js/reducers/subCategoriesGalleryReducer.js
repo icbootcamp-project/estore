@@ -9,7 +9,8 @@ const initial = {
       subCategoriesGalleryId: "",
       subCategoryName: "",
       subCategoryImage: "",
-      isOnSale: null
+      isOnSale: null,
+      link: ""
     }
   ]
 };
