@@ -25,6 +25,7 @@ export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadCategories: func.isRequired,
+    switchCategoriesActive: func.isRequired,
     loadSubCategoriesGallery: func.isRequired,
     loadFooter: func.isRequired,
     header:shape().isRequired,
@@ -88,6 +89,7 @@ export default withRouter(
     {
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
+      switchCategoriesActive: actions.switchCategoriesActive,
       loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
       loadFooter: actions.loadFooter
     }

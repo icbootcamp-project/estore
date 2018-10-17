@@ -48,12 +48,12 @@ const categories = [
   {
     id: "category-3",
     name: "house care",
-    isActive: true
+    isActive: false
   },
   {
     id: "category-4",
     name: "sale",
-    isActive: false
+    isActive: true
   }
 ];
 
