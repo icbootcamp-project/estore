@@ -55,6 +55,13 @@ export function loadCategoriesFail(error) {
   };
 }
 
+export function switchCategoriesActive(data) {
+  return {
+    type: types.SWITCH_CATEGORIES_ACTIVE,
+    payload: data
+  }
+}
+
 // ########## Import Sub Categories Gallery Actions Here ##########
 export function loadSubCategoriesGallery() {
   return {
@@ -131,8 +138,6 @@ export function getDeliveryDataAttempt() {
     type: types.GET_DELIVERY_DATA_ATTEMPT
   };
 }
-
-
 // ########## Import Products Actions Here ##########
 export function loadProducts() {
   return {

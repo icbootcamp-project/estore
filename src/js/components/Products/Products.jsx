@@ -2,6 +2,7 @@ import React , {Component , Fragment} from "react";
 import { arrayOf, shape,func,bool,string } from "prop-types";
 import { connect } from "react-redux";
 
+
 import Categories from "../Categories";
 import Filterproduct from "./FilterProduct";
 import Item from "./Item";

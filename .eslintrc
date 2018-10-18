@@ -2,7 +2,9 @@
   "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "rules": {
-    "import/no-named-as-default": 0
+    "import/no-named-as-default": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-param-reassign": 0
   },
   "env": {
     "browser": true,

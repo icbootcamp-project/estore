@@ -1,14 +1,14 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from "react";
-import { arrayOf, shape } from "prop-types";
+import { arrayOf, shape, func } from "prop-types";
 
 // ########## Import Components Here ##########
 import Category from "./Category";
 
-const Categories = props => {
+const Categories = ({ categories, switchCategoriesActive}) => {
+
   function renderCategories() {
-    const { categories } = props;
-    return categories.map(item => <Category key={item.id} category={item} />);
+    return categories.map(item => <Category key={item.id} category={item} switchCategoriesActive={switchCategoriesActive} />);
   }
 
   return (
@@ -33,7 +33,8 @@ const Categories = props => {
 };
 
 Categories.propTypes = {
-  categories: arrayOf(shape()).isRequired
+  categories: arrayOf(shape()).isRequired,
+  switchCategoriesActive: func.isRequired
 };
 
 export default Categories;

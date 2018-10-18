@@ -10,6 +10,7 @@ import loadFooterSaga from "./loadFooterSaga";
 import getDeliveryDataSaga from "./getDeliveryDataSaga";
 import loadProductsSaga from "./loadProductsSaga";
 
+
 function* watchLoadHeader() {
   yield takeLatest(types.LOAD_HEADER, loadHeaderSaga);
 }
@@ -35,6 +36,7 @@ function* watchGetDeliveryData() {
 function* watchLoadProducts() {
   yield takeLatest(types.LOAD_PRODUCTS, loadProductsSaga);
 }
+
 export default function* rootSaga() {
   yield all([
     fork(watchLoadHeader),
