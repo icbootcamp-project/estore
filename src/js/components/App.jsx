@@ -29,7 +29,7 @@ export class App extends Component {
     loadFooter: func.isRequired,
     header:shape().isRequired,
     footer:shape().isRequired,
-    categories:arrayOf(shape()).isRequired
+    categories: arrayOf(shape({})).isRequired
   };
 
   static defaultProps = {};
