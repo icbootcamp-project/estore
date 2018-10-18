@@ -1,6 +1,7 @@
 // ########## Import Components Here ##########
 import appData from "../components/appData";
 import deliveryData from "../components/Delivery/DeliveryData";
+import ProductItems from "../components/Products/data";
 
 export function headerResponse() {
   return appData[0];
@@ -20,4 +21,8 @@ export function footerResponse() {
 
 export function deliveryDataApi() {
   return deliveryData;
+}
+
+export function productsResponse() {
+  return ProductItems;
 }

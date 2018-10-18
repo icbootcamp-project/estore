@@ -7,13 +7,15 @@ import categoriesReducer from "./categoriesReducer";
 import subCategoriesGalleryReducer from "./subCategoriesGalleryReducer";
 import footerReducer from "./footerReducer";
 import deliveryData from "./getDeliveryReducer";
+import productsReducer from "./productsReducer";
 
 const rootReducer = combineReducers({
   headerReducer,
   categoriesReducer,
   subCategoriesGalleryReducer,
   footerReducer,
-  deliveryData
+  deliveryData,
+  productsReducer
 });
 
 export default rootReducer;

@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { func,shape } from "prop-types";
+import { func,shape,arrayOf} from "prop-types";
 import {
   BrowserRouter as Router,
   Route,
@@ -29,7 +29,7 @@ export class App extends Component {
     loadFooter: func.isRequired,
     header:shape().isRequired,
     footer:shape().isRequired,
-    categories:shape().isRequired
+    categories:arrayOf(shape()).isRequired
   };
 
   static defaultProps = {};

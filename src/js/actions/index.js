@@ -131,3 +131,31 @@ export function getDeliveryDataAttempt() {
     type: types.GET_DELIVERY_DATA_ATTEMPT
   };
 }
+
+
+// ########## Import Products Actions Here ##########
+export function loadProducts() {
+  return {
+    type: types.LOAD_PRODUCTS
+  };
+}
+
+export function loadProductsAttempt() {
+  return {
+    type: types.LOAD_PRODUCTS_ATTEMPT
+  };
+}
+
+export function loadProductsSuccess(data) {
+  return {
+    type: types.LOAD_PRODUCTS_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadProductsFail(error) {
+  return {
+    type: types.LOAD_PRODUCTS_FAIL,
+    payload: error
+  };
+}

@@ -1,29 +1,36 @@
 import React , {Component , Fragment} from "react";
-import { arrayOf, shape } from "prop-types";
+import { arrayOf, shape,func,bool,string } from "prop-types";
+import { connect } from "react-redux";
 
 import Categories from "../Categories";
 import Filterproduct from "./FilterProduct";
 import Item from "./Item";
-import ProductItmes from "./data";
+import { loadProducts } from '../../actions';
 
-export default class Products extends Component {
+class Products extends Component {
 
     static propTypes = {
         categories: arrayOf(
-            shape()).isRequired
+            shape()).isRequired,
+        loadProducts:func.isRequired,
+        productsReducer:shape({
+            isLoading:bool.isRequired,
+            err:string,
+            data:arrayOf(shape()).isRequired
+        }).isRequired
+    }
+    componentDidMount(){
+        this.props.loadProducts();
     }
 
-    constructor(){
-        super();
-        this.state = {};
-
-    }
-    static renderItems(){
+    renderItems(){
+        const ProductItmes = this.props.productsReducer.data;
         return ProductItmes.map(
-            (item) => <Item item={item} />
+            (item) => <Item item={item} key={item.id} />
             
         )
     }
+    
 
     render(){
         const { categories } = this.props;
@@ -39,6 +46,17 @@ export default class Products extends Component {
         )
     }
 
-
-
 };
+function mapStateToProps({productsReducer}){
+    return {
+        productsReducer
+    }
+};
+
+
+export default connect(
+    mapStateToProps,
+    {
+        loadProducts
+    }
+)(Products);
