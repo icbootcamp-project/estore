@@ -9,6 +9,7 @@ import footerReducer from "./footerReducer";
 import deliveryData from "./getDeliveryReducer";
 import productsReducer from "./productsReducer";
 
+
 const rootReducer = combineReducers({
   headerReducer,
   categoriesReducer,

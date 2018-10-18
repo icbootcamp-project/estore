@@ -48,12 +48,12 @@ const categories = [
   {
     id: "category-3",
     name: "house care",
-    isActive: true
+    isActive: false
   },
   {
     id: "category-4",
     name: "sale",
-    isActive: false
+    isActive: true
   }
 ];
 
@@ -62,37 +62,43 @@ const subCategoriesGallery = [
     subCategoriesGalleryId: "subcategory-item-1",
     subCategoryName: "Oils & Ghee",
     subCategoryImage: "./img/subcategories-gallery/oils-ghee.jpg",
-    isOnSale: true
+    isOnSale: true,
+    link: "/products"
   },
   {
     subCategoriesGalleryId: "subcategory-item-2",
     subCategoryName: "Canned Items",
     subCategoryImage: "./img/subcategories-gallery/canned-items.jpg",
-    isOnSale: true
+    isOnSale: true,
+    link: "/products"
   },
   {
     subCategoriesGalleryId: "subcategory-item-3",
     subCategoryName: "Rice & Atta",
     subCategoryImage: "./img/subcategories-gallery/rice-atta.jpg",
-    isOnSale: false
+    isOnSale: false,
+    link: "/products"
   },
   {
     subCategoriesGalleryId: "subcategory-item-4",
     subCategoryName: "Home Baking",
     subCategoryImage: "./img/subcategories-gallery/home-baking.jpg",
-    isOnSale: true
+    isOnSale: true,
+    link: "/products"
   },
   {
     subCategoriesGalleryId: "subcategory-item-5",
     subCategoryName: "Pasta & Noodles",
     subCategoryImage: "./img/subcategories-gallery/pasta-noodles.jpg",
-    isOnSale: false
+    isOnSale: false,
+    link: "/products"
   },
   {
     subCategoriesGalleryId: "subcategory-item-6",
     subCategoryName: "Pickles",
     subCategoryImage: "./img/subcategories-gallery/pickles.jpg",
-    isOnSale: true
+    isOnSale: true,
+    link: "/products"
   }
 ];
 
