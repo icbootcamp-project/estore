@@ -39,3 +39,12 @@ export const LOAD_PRODUCTS_ATTEMPT = "LOAD_PRODUCTS_ATTEMPT";
 export const LOAD_PRODUCTS_SUCCESS = "LOAD_PRODUCTS_SUCCESS";
 export const LOAD_PRODUCTS_FAIL = "LOAD_PRODUCTS_FAIL";
 
+// ########## Import Cart Constants Here ##########
+export const LOAD_CART = "LOAD_CART";
+export const LOAD_CART_ATTEMPT = "LOAD_CART_ATTEMPT";
+export const LOAD_CART_SUCCESS = "LOAD_CART_SUCCESS";
+export const LOAD_CART_FAIL = "LOAD_CART_FAIL";
+
+// ########## Import Local Constants Here ##########
+export const ADD_COUNTER = "ADD_COUNTER";
+export const LESS_COUNTER = "LESS_COUNTER";

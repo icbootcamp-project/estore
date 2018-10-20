@@ -1,5 +1,9 @@
 // ########## Import Dependencies Here ##########
-import { takeLatest, fork, all } from "redux-saga/effects";
+import {
+  takeLatest,
+  fork,
+  all
+} from "redux-saga/effects";
 
 // ########## Import Components Here ##########
 import * as types from "../constants";
@@ -9,7 +13,7 @@ import loadSubCategoriesGallerySaga from "./loadSubCategoriesGallerySaga";
 import loadFooterSaga from "./loadFooterSaga";
 import getDeliveryDataSaga from "./getDeliveryDataSaga";
 import loadProductsSaga from "./loadProductsSaga";
-
+import loadCartSaga from "./loadCartSaga";
 
 function* watchLoadHeader() {
   yield takeLatest(types.LOAD_HEADER, loadHeaderSaga);
@@ -37,6 +41,10 @@ function* watchLoadProducts() {
   yield takeLatest(types.LOAD_PRODUCTS, loadProductsSaga);
 }
 
+function* watchLoadCart() {
+  yield takeLatest(types.LOAD_CART, loadCartSaga);
+}
+
 export default function* rootSaga() {
   yield all([
     fork(watchLoadHeader),
@@ -44,6 +52,7 @@ export default function* rootSaga() {
     fork(watchLoadSubCategoriesGallery),
     fork(watchLoadFooter),
     fork(watchGetDeliveryData),
-    fork(watchLoadProducts)
+    fork(watchLoadProducts),
+    fork(watchLoadCart),
   ]);
 }

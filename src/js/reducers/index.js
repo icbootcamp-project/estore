@@ -1,5 +1,7 @@
 // ########## Import Dependencies Here ##########
-import { combineReducers } from "redux";
+import {
+  combineReducers
+} from "redux";
 
 // ########## Import Reducers Here ##########
 import headerReducer from "./headerReducer";
@@ -9,6 +11,7 @@ import footerReducer from "./footerReducer";
 import deliveryData from "./getDeliveryReducer";
 import productsReducer from "./productsReducer";
 
+import cartReducer from "./cartReducer";
 
 const rootReducer = combineReducers({
   headerReducer,
@@ -16,7 +19,8 @@ const rootReducer = combineReducers({
   subCategoriesGalleryReducer,
   footerReducer,
   deliveryData,
-  productsReducer
+  productsReducer,
+  cartReducer
 });
 
 export default rootReducer;

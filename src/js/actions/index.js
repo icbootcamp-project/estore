@@ -154,13 +154,54 @@ export function loadProductsAttempt() {
 export function loadProductsSuccess(data) {
   return {
     type: types.LOAD_PRODUCTS_SUCCESS,
-    payload: data
-  };
+    payload:data
+  }
 }
-
 export function loadProductsFail(error) {
   return {
     type: types.LOAD_PRODUCTS_FAIL,
     payload: error
+  };
+}
+// ########## Import Cart Actions Here ##########
+export function loadCart() {
+  return {
+    type: types.LOAD_CART
+  };
+}
+
+export function loadCartAttempt() {
+  return {
+    type: types.LOAD_CART_ATTEMPT
+  };
+}
+
+export function loadCartSuccess(data) {
+  return {
+    type: types.LOAD_CART_SUCCESS,
+    payload: data
+  };
+}
+
+
+export function loadCartFail(error) {
+  return {
+    type: types.LOAD_CART_FAIL,
+    payload: error
+  };
+}
+
+// ########## Import Local Actions Here ##########
+export function addCounter(item) {
+  return {
+    type: "ADD_COUNTER",
+    payload: item
+  };
+}
+
+export function lessCounter(item) {
+  return {
+    type: "LESS_COUNTER",
+    payload: item
   };
 }
