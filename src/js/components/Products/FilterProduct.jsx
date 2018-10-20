@@ -35,7 +35,13 @@ export default class FilterProduct extends Component {
                   <span className="sort-by">Sort by:</span>
                   <span className="price">price</span>
                 </div>
-                <div className="filter-box border" role="button" onKeyPress="" onClick={this.toggleFilter} tabIndex={0}>
+                <div 
+                  className="filter-box border" 
+                  role="button" 
+                  onKeyPress={this.toggleFilter} 
+                  onClick={this.toggleFilter} 
+                  tabIndex={0} 
+                >
                   <div className="filter-arrow" />
                 </div>
                 <div className="filter-box border">
