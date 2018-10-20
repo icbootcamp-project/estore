@@ -1,0 +1,66 @@
+.cart {
+	.bill {
+		h4 {
+			display: flex;
+			justify-content: center;
+			// align-items: center;
+			@include H4(right, $secondary-color);
+			margin-bottom: 2em;
+		}
+		.bill-detail {
+			margin-left: 50%;
+			display: flex;
+			justify-content: space-between;
+			h4 {
+				@include H4(right, $secondary-color);
+			}
+		}
+		.tax {
+			margin-left: 47%;
+			display: flex;
+			justify-content: space-between;
+			h4 {
+				@include H4(right, $secondary-color);
+			}
+		}
+		.half-hr {
+			max-width: 60%;
+			margin-right: 0;
+		}
+		.total {
+			margin-left: 56%;
+			display: flex;
+			justify-content: space-between;
+			h4 {
+				@include H4(right, $primary-color);
+			}
+		}
+		.checkout {
+			margin-top: 5%;
+			margin-left: 25%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// text-align: center;
+			background-color: $primary-color;
+			border-radius: 0.3em;
+			width: 50%;
+			height: 3em;
+			.txt {
+				color: $white;
+				font-size: 28px;
+			}
+			// .arr {
+			// 	display: flex;
+			// 	z-index: 1;
+			// 	background-color: white;
+			// 	border-radius: 50%;
+			// 	width: 2em;
+			// 	height: 2em;
+			// 	background: url("./img/categories/arrow.png") no-repeat center;
+			// 	background-size: cover;
+			// 	overflow: hidden;
+			// }
+		}
+	}
+}
