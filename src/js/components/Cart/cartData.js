@@ -6,7 +6,9 @@ const cart = [
     cartItemSize: "Medium size",
     cartItemQty: 1,
     cartItemValue: 256,
-    cartItemDisplayPrice: 256
+    cartItemDisplayPrice: 256,
+    cartItemTotalPrice: 256,
+    GST17: ""
   },
   {
     cartItemId: "cart-item-2",
@@ -15,7 +17,9 @@ const cart = [
     cartItemSize: "Family Size",
     cartItemQty: 1,
     cartItemValue: 2098,
-    cartItemDisplayPrice: 2098
+    cartItemDisplayPrice: 2098,
+    cartItemTotalPrice: 2098,
+    GST17: ""
   },
   {
     cartItemId: "cart-item-3",
@@ -24,7 +28,9 @@ const cart = [
     cartItemSize: "05 Kg bag",
     cartItemQty: 1,
     cartItemValue: 750,
-    cartItemDisplayPrice: 750
+    cartItemDisplayPrice: 750,
+    cartItemTotalPrice: 750,
+    GST17: ""
   }
 ];
 

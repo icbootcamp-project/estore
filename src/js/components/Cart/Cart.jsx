@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from "react";
-import { arrayOf, shape, func } from "prop-types";
+import { arrayOf, shape, func, } from "prop-types";
 import { connect } from "react-redux";
 
 // ########## Import Components Here ##########
@@ -8,9 +8,9 @@ import * as actions from "../../actions";
 import CartItem from "./CartItem";
 
 const Cart = props => {
-  function renderCart() {
-    const { cart, addCounter, lessCounter } = props;
+  const { cart, addCounter, lessCounter, counter } = props;
 
+  function renderCart() {
     return cart.map(item => (
       <CartItem
         cartItem={item}
@@ -20,6 +20,8 @@ const Cart = props => {
       />
     ));
   }
+  // console.log("DP", cart)
+
   return (
     <Fragment>
       <div className="cart">
@@ -30,18 +32,18 @@ const Cart = props => {
           <div className="bill-detail">
             <h4>Sub-total:</h4>
             <h4>Rs:</h4>
-            <h4>3,104.00</h4>
+            <h4>{counter.cartItemTotalPrice}</h4>
           </div>
           <div className="tax">
             <h4>GST @ 17%:</h4>
             <h4>Rs:</h4>
-            <h4>527.68</h4>
+            <h4>{counter.GST17}</h4>
           </div>
           <hr className="half-hr" />
           <div className="total">
             <h4>Total:</h4>
             <h4>Rs:</h4>
-            <h4>3,631.68</h4>
+            <h4>{counter.cartItemTotalPrice + counter.GST17} </h4>
           </div>
           <div className="checkout">
             <div className="txt">Checkout</div>
@@ -61,6 +63,7 @@ function mapStateToProps({ cartReducer }) {
 
 Cart.propTypes = {
   cart: arrayOf(shape()).isRequired,
+  counter: arrayOf(shape()).isRequired,
   addCounter: func.isRequired,
   lessCounter: func.isRequired
 };
