@@ -43,7 +43,7 @@ const CartItem = props => {
         </div>
 
         <div className="sec-amt">
-          <div className="amount">Rs: {cartItem.cartItemDisplayPrice}</div>
+          <div className="amount">Rs: {cartItem.cartItemValue}</div>
         </div>
       </div>
     </Fragment >
