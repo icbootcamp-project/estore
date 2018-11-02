@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from 'react';
-import { arrayOf, shape, func } from 'prop-types';
+import { arrayOf, shape, func, object } from 'prop-types';
 import { connect } from 'react-redux';
 
 // ########## Import Components Here ##########
@@ -49,15 +49,15 @@ const Cart = props => {
 
 function mapStateToProps({ cartReducer }) {
 	return {
-		counter: cartReducer
+		counter : cartReducer
 	};
 }
 
 Cart.propTypes = {
-	cart: arrayOf(shape()).isRequired,
-	counter: arrayOf(shape()).isRequired,
-	addCounter: func.isRequired,
-	lessCounter: func.isRequired
+	cart        : arrayOf(shape()).isRequired,
+	counter     : object.isRequired,
+	addCounter  : func.isRequired,
+	lessCounter : func.isRequired
 };
 
 export default connect(mapStateToProps, { addCounter: actions.addCounter, lessCounter: actions.lessCounter })(Cart);
