@@ -34,7 +34,7 @@ export class App extends Component {
   };
 
   static defaultProps = {};
-  // <Confirmation {...this.props} />
+
   componentDidMount() {
     const {
       loadHeader,
@@ -90,6 +90,8 @@ export default withRouter(
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
       switchCategoriesActive: actions.switchCategoriesActive,
+      switchCategoriesRight: actions.switchCategoriesRight,
+      switchCategoriesLeft: actions.switchCategoriesLeft,
       loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
       loadFooter: actions.loadFooter
     }

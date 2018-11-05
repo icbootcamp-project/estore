@@ -62,6 +62,20 @@ export function switchCategoriesActive(data) {
   }
 }
 
+export function switchCategoriesRight(data) {
+  return {
+    type: types.SWITCH_CATEGORIES_RIGHT,
+    payload: data
+  }
+}
+
+export function switchCategoriesLeft(data) {
+  return {
+    type: types.SWITCH_CATEGORIES_LEFT,
+    payload: data
+  }
+}
+
 // ########## Import Sub Categories Gallery Actions Here ##########
 export function loadSubCategoriesGallery() {
   return {
