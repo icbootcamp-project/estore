@@ -10,25 +10,29 @@ const initial = {
         iconId: "",
         iconName: "",
         iconPosition: "",
-        iconPath: ""
+        iconPath: "",
+        iconBadgeCount: 0
       },
       {
         iconId: "",
         iconName: "",
         iconPosition: "",
-        iconPath: ""
+        iconPath: "",
+        iconBadgeCount: 0
       },
       {
         iconId: "",
         iconName: "",
         iconPosition: "",
-        iconPath: ""
+        iconPath: "",
+        iconBadgeCount: 0
       },
       {
         iconId: "",
         iconName: "",
         iconPosition: "",
-        iconPath: ""
+        iconPath: "",
+        iconBadgeCount: 0
       }
     ],
     logo: {
