@@ -13,8 +13,9 @@ const initial = {
   ]
 };
 
-export default function(state = initial, action) {
+export default function (state = initial, action) {
   let data;
+  let length;
   const mappedData = [];
 
   switch (action.type) {
@@ -27,8 +28,8 @@ export default function(state = initial, action) {
       return { ...state, isLoading: false, error: action.payload };
     case types.SWITCH_CATEGORIES_ACTIVE:
       state.data.forEach(item => {
-        if(item.id === action.payload.id) {
-          if(!item.isActive) {
+        if (item.id === action.payload.id) {
+          if (!item.isActive) {
             item.isActive = !item.isActive;
             mappedData.push(item)
           }
@@ -38,6 +39,15 @@ export default function(state = initial, action) {
         }
       })
       return { ...state, data: mappedData, isLoading: false, error: null };
+    case types.SWITCH_CATEGORIES_LEFT:
+      length = state.data.length
+      console.log(length);
+      if (action.payload === 750) {
+        
+      }
+      if (length < 0) {
+        state.data.splice(-1);
+      }
     default:
       return state;
   }
