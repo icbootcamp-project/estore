@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { func, shape, arrayOf } from "prop-types";
+import { func, shape } from "prop-types";
 import {
   BrowserRouter as Router,
   Route,
@@ -13,7 +13,7 @@ import {
 
 // ########## Import Components Here ##########
 import * as actions from "../actions";
-import Home from "./Home";
+import Home from "../containers/Home";
 import Confirmation from "./Confirmation/Confirmation";
 import Delivery from "./Delivery/Delivery";
 import Payment from "./Payment/Payment";
@@ -24,13 +24,9 @@ import Footer from "./Footer";
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
-    loadCategories: func.isRequired,
-    switchCategoriesActive: func.isRequired,
-    loadSubCategoriesGallery: func.isRequired,
     loadFooter: func.isRequired,
-    header:shape().isRequired,
-    footer:shape().isRequired,
-    categories: arrayOf(shape({})).isRequired
+    header: shape().isRequired,
+    footer: shape().isRequired,
   };
 
   static defaultProps = {};
@@ -38,13 +34,9 @@ export class App extends Component {
   componentDidMount() {
     const {
       loadHeader,
-      loadCategories,
-      loadSubCategoriesGallery,
       loadFooter
     } = this.props;
     loadHeader();
-    loadCategories();
-    loadSubCategoriesGallery();
     loadFooter();
   }
 
@@ -55,11 +47,11 @@ export class App extends Component {
         <div className="app">
           <Header header={header} />
           <Switch>
-            <Route exact path="/" render={() => <Home {...this.props} />} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/payment" component={Payment} />
             <Route exact path="/delivery" component={Delivery} />
             <Route exact path="/confirmation" component={Confirmation} />
-            <Route exact path="/products" render={() => <Products categories={this.props.categories} />} />
+            <Route exact path="/products" render={() => <Products />} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
@@ -71,14 +63,10 @@ export class App extends Component {
 
 function mapStateToProps({
   headerReducer,
-  categoriesReducer,
-  subCategoriesGalleryReducer,
   footerReducer
 }) {
   return {
     header: headerReducer.data,
-    categories: categoriesReducer.data,
-    subCategoriesGallery: subCategoriesGalleryReducer.data,
     footer: footerReducer.data
   };
 }
@@ -88,11 +76,6 @@ export default withRouter(
     mapStateToProps,
     {
       loadHeader: actions.loadHeader,
-      loadCategories: actions.loadCategories,
-      switchCategoriesActive: actions.switchCategoriesActive,
-      switchCategoriesRight: actions.switchCategoriesRight,
-      switchCategoriesLeft: actions.switchCategoriesLeft,
-      loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
       loadFooter: actions.loadFooter
     }
   )(App)
