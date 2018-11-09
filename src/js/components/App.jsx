@@ -28,7 +28,7 @@ export class App extends Component {
     loadCart: func.isRequired,
     loadFooter: func.isRequired,
     header: shape().isRequired,
-    footer: shape().isRequired,
+    footer: shape().isRequired
     // cart: array,
     // categories: array
   };
@@ -36,11 +36,7 @@ export class App extends Component {
   static defaultProps = {};
 
   componentDidMount() {
-    const {
-      loadHeader,
-      loadFooter,
-      loadCart
-    } = this.props;
+    const { loadHeader, loadFooter, loadCart } = this.props;
     loadHeader();
     loadCart();
     loadFooter();
