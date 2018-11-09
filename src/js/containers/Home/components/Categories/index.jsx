@@ -62,11 +62,7 @@ const Categories = ({ categories, switchCategoriesActive, switchCategoriesRight,
               className="right-arrow"
               src="/img/categories/arrow.png"
               alt="left arrow"
-<<<<<<< HEAD
             // onKeyPress={handlePress("right")}
-=======
-              // onKeyPress={handlePress("right")}
->>>>>>> 0a3c2a25f5f38e6fcab2b020a99a0aed6f2419ca
             />
           </a>
         </div>

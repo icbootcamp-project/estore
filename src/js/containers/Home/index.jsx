@@ -37,11 +37,7 @@ Home.propTypes = {
   switchCategoriesLeft: func.isRequired
 };
 
-<<<<<<< HEAD
 const mapStateToProps = ({ categoriesReducer, subCategoriesGalleryReducer }) => ({
-=======
-const mapStateToProps = ({ categoriesReducer, subCategoriesGalleryReducer, }) => ({
->>>>>>> 0a3c2a25f5f38e6fcab2b020a99a0aed6f2419ca
   categories: categoriesReducer.data,
   subCategoriesGallery: subCategoriesGalleryReducer.data,
 });
@@ -54,8 +50,4 @@ export default connect(mapStateToProps,
     switchCategoriesLeft: actions.switchCategoriesLeft,
     loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
   }
-<<<<<<< HEAD
 )(Home);
-=======
-)(Home);
->>>>>>> 0a3c2a25f5f38e6fcab2b020a99a0aed6f2419ca
