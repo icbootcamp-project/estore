@@ -1,21 +1,16 @@
 // ########## Import Components Here ##########
 import * as types from "../constants";
+import appData from '../../../components/appData';
 
 const initial = {
   isLoading: false,
   error: null,
-  data: [
-    {
-      id: "",
-      name: "",
-      isActive: false
-    }
-  ]
+  data: appData[1]
 };
 
 export default function (state = initial, action) {
   let data;
-  let length;
+  // let length;
   const mappedData = [];
 
   switch (action.type) {
@@ -39,15 +34,15 @@ export default function (state = initial, action) {
         }
       })
       return { ...state, data: mappedData, isLoading: false, error: null };
-    case types.SWITCH_CATEGORIES_LEFT:
-      length = state.data.length
-      console.log(length);
-      if (action.payload === 750) {
+    // case types.SWITCH_CATEGORIES_LEFT:
+    //   let { length } = state.data
+    //   console.log(length);
+    //   if (action.payload === 750) {
         
-      }
-      if (length < 0) {
-        state.data.splice(-1);
-      }
+    //   }
+    //   if (length < 0) {
+    //     state.data.splice(-1);
+    //   }
     default:
       return state;
   }
