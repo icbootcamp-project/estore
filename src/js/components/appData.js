@@ -261,59 +261,51 @@ export const paymentTypes = [
 export const deliveryFields = [
   {
     id: "delivery-fields-1",
-    name: "fname",
+    name: "First name",
     width: "full",
-    type: "text",
-    placeholder:"First name"
+    type: "text"
   },
   {
     id: "delivery-fields-2",
-    name: "lname",
+    name: "Last name",
     width: "full",
-    type: "text",
-    placeholder:"Last Name"
+    type: "text"
   },
   {
     id: "delivery-fields-3",
-    name: "email",
+    name: "Email",
     width: "full",
-    type: "email",
-    placeholder:"Email"
+    type: "email"
   },
   {
     id: "delivery-fields-4",
-    name: "phone",
+    name: "Phone",
     width: "full",
-    type: "text",
-    placeholder:"Phone"
+    type: "text"
   },
   {
     id: "delivery-fields-5",
-    name: "country",
+    name: "Country",
     width: "full",
-    type: "text",
-    placeholder:"Country"
+    type: "text"
   },
   {
     id: "delivery-fields-6",
-    name: "state",
+    name: "State",
     width: "half",
-    type: "text",
-    placeholder:"State"
+    type: "text"
   },
   {
     id: "delivery-fields-7",
-    name: "city",
+    name: "City",
     width: "half",
-    type: "text",
-    placeholder:"City"
+    type: "text"
   },
   {
     id: "delivery-fields-8",
-    name: "address",
+    name: "Address",
     width: "full",
-    type: "text",
-    placeholder:"Address"
+    type: "text"
   }
 ];
 

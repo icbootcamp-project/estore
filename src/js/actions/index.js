@@ -55,53 +55,6 @@ export function loadFooterFail(error) {
 	};
 }
 
-export function getDeliveryData() {
-	return {
-		type: types.GET_DELIVERY_DATA
-	};
-}
-export function getDeliveryDataSuccess(data) {
-	return {
-		type: types.GET_DELIVERY_DATA_SUCCESS,
-		payload: data
-	};
-}
-export function getDeliveryDataFail(err) {
-	return {
-		type: types.GET_DELIVERY_DATA_FAIL,
-		payload: err
-	};
-}
-export function getDeliveryDataAttempt() {
-	return {
-		type: types.GET_DELIVERY_DATA_ATTEMPT
-	};
-}
-// ########## Import Products Actions Here ##########
-export function loadProducts() {
-  return {
-    type: types.LOAD_PRODUCTS
-  };
-}
-
-export function loadProductsAttempt() {
-  return {
-    type: types.LOAD_PRODUCTS_ATTEMPT
-  };
-}
-
-export function loadProductsSuccess(data) {
-  return {
-    type: types.LOAD_PRODUCTS_SUCCESS,
-    payload:data
-  }
-}
-export function loadProductsFail(error) {
-  return {
-    type: types.LOAD_PRODUCTS_FAIL,
-    payload: error
-  };
-}
 // ########## Import Cart Actions Here ##########
 export function loadCart() {
 	return {
@@ -122,7 +75,6 @@ export function loadCartSuccess(data) {
 	};
 }
 
-
 export function loadCartFail(error) {
 	return {
 		type: types.LOAD_CART_FAIL,
@@ -139,15 +91,8 @@ export function addCounter(item) {
 }
 
 export function lessCounter(item) {
-<<<<<<< HEAD
 	return {
 		type: 'LESS_COUNTER',
 		payload: item
 	};
-=======
-  return {
-    type: "LESS_COUNTER",
-    payload: item
-  };
->>>>>>> 562046f5103cf0a60ee53bb6ed6e24ad3cd75646
 }
