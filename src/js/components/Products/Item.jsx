@@ -24,7 +24,7 @@ export default class Item extends Component {
     render(){
         const {name , price , brandLogo,premiumLogo , cat,subCat,img } = this.props.item;
         const dir = "../img/products/";
-        const subCategory = `${cat} +  ">" + ${subCat}` ;
+        const subCategory = `${cat} > ${subCat}` ;
         return(
           <Fragment>
             <div id="Products-Item">

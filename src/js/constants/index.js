@@ -17,6 +17,12 @@ export const GET_DELIVERY_DATA_ATTEMPT = 'GET_DELIVERY_DATA_ATTEMPT';
 export const GET_DELIVERY_DATA_SUCCESS = 'GET_DELIVERY_DATA_SUCCESS';
 export const GET_DELIVERY_DATA_FAIL = 'GET_DELIVERY_DATA_FAIL';
 
+// ########## Import Products Constants Here ##########
+export const LOAD_PRODUCTS = "LOAD_PRODUCTS";
+export const LOAD_PRODUCTS_ATTEMPT = "LOAD_PRODUCTS_ATTEMPT";
+export const LOAD_PRODUCTS_SUCCESS = "LOAD_PRODUCTS_SUCCESS";
+export const LOAD_PRODUCTS_FAIL = "LOAD_PRODUCTS_FAIL";
+
 // ########## Import Cart Constants Here ##########
 export const LOAD_CART = 'LOAD_CART';
 export const LOAD_CART_ATTEMPT = 'LOAD_CART_ATTEMPT';

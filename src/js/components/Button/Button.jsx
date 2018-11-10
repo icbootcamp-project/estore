@@ -1,11 +1,17 @@
-import React, { Fragment } from "react";
-import { string } from "prop-types";
+import React,{ Fragment } from "react";
+import { func,string } from "prop-types";
 
 const Button = props => {
-  const { value, arrow } = props;
+  const { value, arrow, handler } = props;
 
   return (
-    <div id="estore-btn">
+    <div 
+      id="estore-btn" 
+      onClick={handler} 
+      role="button" 
+      onKeyPress={handler} 
+      tabIndex={0}
+    >
       {value}
       {arrow && (
         <Fragment>
@@ -20,6 +26,7 @@ const Button = props => {
 };
 Button.propTypes = {
   value: string.isRequired,
-  arrow: string.isRequired
+  arrow: string.isRequired,
+  handler:func.isRequired
 }
 export default Button;

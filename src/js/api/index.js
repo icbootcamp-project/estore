@@ -1,6 +1,6 @@
 // ########## Import Components Here ##########
 import appData from "../components/appData";
-import deliveryData from "../components/Delivery/DeliveryData";
+import ProductItems from "../components/Products/data";
 import cartData from "../components/Cart/cartData";
 
 export function headerResponse() {
@@ -20,7 +20,10 @@ export function footerResponse() {
 }
 
 export function deliveryDataApi() {
-  return deliveryData;
+  return appData[6];
+}
+export function productsResponse() {
+  return ProductItems;
 }
 
 export function cartDataResponse() {

@@ -1,7 +1,12 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from "react";
 import { connect } from "react-redux";
+<<<<<<< HEAD
 import { func, shape } from "prop-types";
+=======
+import { func,shape,arrayOf} from "prop-types";
+
+>>>>>>> 562046f5103cf0a60ee53bb6ed6e24ad3cd75646
 import {
   BrowserRouter as Router,
   Route,
