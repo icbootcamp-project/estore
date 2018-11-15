@@ -16,7 +16,11 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-
+"files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  }
 # nyc test coverage
 .nyc_output
 

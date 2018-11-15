@@ -11,17 +11,21 @@
     width: 100%;
     padding: 0 0 10px 0;
   }
-  .clickable-headings-div:hover {
-    color: $primary-color;
-    border-style: solid;
-    border-width: 0 0 5px 0;
-    border-color: $primary-color;
-  }
+  // .clickable-headings-div:hover {
+  //   // color: $primary-color;
+  //   // border-style: solid;
+  //   // border-width: 0 0 5px 0;
+  //   // border-color: $primary-color;
+  // }
 }
 .clickable-description-div {
   padding: 20px;
   @include P(left, $line-grey-color);
 }
+
+// #################################################################
+// MODAL STYLING SHOULD BE DONE HERE SO PLZ BE AWARE OF THAT
+// #################################################################
 // STYLING FOR THE MODAL OF DETAILS IS DONE HERE
 .modal-div-here {
   position: absolute;
@@ -36,8 +40,13 @@
   //  USE Z INDEX TO TURN EVERY THING IN GREY
   // STYLING FOR THE CENTER DIV OF MODAL OF DETAILS IS DONE HERE
   .center-div-for-modal-details {
-    background-color: red;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0 20px;
+    .center-component-for-modal-details {
+      background-color: $white;
+      border-radius: 10px;
+      padding: 20px 0;
+    }
   }
 }

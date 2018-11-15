@@ -15,10 +15,13 @@
 @import "./modules/footermenuitem";
 @import "./modules/Confirmation/confirmation";
 @import "./modules/Delivery/delivery";
+@import "./modules/Products/products";
 @import "./modules/Payment/payment";
 @import "./modules/HeroTitle/HeroTitle";
 @import "./modules/TextField/textfield";
 @import "./modules/Button/button";
-
+@import "./modules/Cart/cart";
+@import "./modules/Cart/cartItem";
+@import "./modules/Cart/counter";
 // ########## Import Details Page Components Here ##########
 @import "./modules/Details/index";

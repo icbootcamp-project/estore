@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { func, shape } from "prop-types";
+import { func, shape, arrayOf } from "prop-types";
 import {
   BrowserRouter as Router,
   Route,
@@ -17,6 +17,8 @@ import Home from "./Home";
 import Confirmation from "./Confirmation/Confirmation";
 import Delivery from "./Delivery/Delivery";
 import Payment from "./Payment/Payment";
+import Products from "./Products/Products";
+import Cart from "./Cart/Cart";
 import Header from "./Header";
 import Footer from "./Footer";
 import Details from "./Details";
@@ -25,10 +27,14 @@ export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadCategories: func.isRequired,
+    switchCategoriesActive: func.isRequired,
     loadSubCategoriesGallery: func.isRequired,
+    loadCart: func.isRequired,
     loadFooter: func.isRequired,
     header: shape().isRequired,
-    footer: shape().isRequired
+    footer: shape().isRequired,
+    cart: arrayOf(shape({})).isRequired,
+    categories: arrayOf(shape({})).isRequired
   };
 
   static defaultProps = {};
@@ -38,16 +44,18 @@ export class App extends Component {
       loadHeader,
       loadCategories,
       loadSubCategoriesGallery,
-      loadFooter
+      loadFooter,
+      loadCart
     } = this.props;
     loadHeader();
     loadCategories();
     loadSubCategoriesGallery();
+    loadCart();
     loadFooter();
   }
 
   render() {
-    const { header, footer } = this.props;
+    const { header, footer, cart } = this.props;
     return (
       <Router>
         <div className="app">
@@ -58,6 +66,12 @@ export class App extends Component {
             <Route exact path="/delivery" component={Delivery} />
             <Route exact path="/confirmation" component={Confirmation} />
             <Route exact path="/details" component={Details} />
+            <Route
+              exact
+              path="/products"
+              render={() => <Products categories={this.props.categories} />}
+            />
+            <Route exact path="/cart" render={() => <Cart cart={cart} />} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
@@ -71,12 +85,14 @@ function mapStateToProps({
   headerReducer,
   categoriesReducer,
   subCategoriesGalleryReducer,
+  cartReducer,
   footerReducer
 }) {
   return {
     header: headerReducer.data,
     categories: categoriesReducer.data,
     subCategoriesGallery: subCategoriesGalleryReducer.data,
+    cart: cartReducer.data,
     footer: footerReducer.data
   };
 }
@@ -87,7 +103,9 @@ export default withRouter(
     {
       loadHeader: actions.loadHeader,
       loadCategories: actions.loadCategories,
+      switchCategoriesActive: actions.switchCategoriesActive,
       loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
+      loadCart: actions.loadCart,
       loadFooter: actions.loadFooter
     }
   )(App)

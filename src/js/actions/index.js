@@ -55,6 +55,13 @@ export function loadCategoriesFail(error) {
   };
 }
 
+export function switchCategoriesActive(data) {
+  return {
+    type: types.SWITCH_CATEGORIES_ACTIVE,
+    payload: data
+  };
+}
+
 // ########## Import Sub Categories Gallery Actions Here ##########
 export function loadSubCategoriesGallery() {
   return {
@@ -106,6 +113,71 @@ export function loadFooterFail(error) {
   return {
     type: types.LOAD_FOOTER_FAIL,
     payload: error
+  };
+}
+
+export function getDeliveryData() {
+  return {
+    type: types.GET_DELIVERY_DATA
+  };
+}
+export function getDeliveryDataSuccess(data) {
+  return {
+    type: types.GET_DELIVERY_DATA_SUCCESS,
+    payload: data
+  };
+}
+export function getDeliveryDataFail(err) {
+  return {
+    type: types.GET_DELIVERY_DATA_FAIL,
+    payload: err
+  };
+}
+export function getDeliveryDataAttempt() {
+  return {
+    type: types.GET_DELIVERY_DATA_ATTEMPT
+  };
+}
+
+// ########## Import Cart Actions Here ##########
+export function loadCart() {
+  return {
+    type: types.LOAD_CART
+  };
+}
+
+export function loadCartAttempt() {
+  return {
+    type: types.LOAD_CART_ATTEMPT
+  };
+}
+
+export function loadCartSuccess(data) {
+  return {
+    type: types.LOAD_CART_SUCCESS,
+    payload: data
+  };
+}
+
+export function loadCartFail(error) {
+  return {
+    type: types.LOAD_CART_FAIL,
+    payload: error
+  };
+}
+
+// ########## Import Local Actions Here ##########
+export function addCounter(item) {
+  return {
+    type: "ADD_COUNTER",
+    payload: item
+  };
+}
+
+export function lessCounter(item) {
+  return {
+    type: "LESS_COUNTER",
+    payload: item
   };
 }
 
