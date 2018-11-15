@@ -3,7 +3,7 @@ import { put, call } from 'redux-saga/effects';
 
 // ########## Import Components Here ##########
 import * as actions from '../actions';
-import * as api from '../api';
+import * as api from '../../../api';
 
 export default function* loadCartSaga() {
 	yield put(actions.loadCartAttempt());

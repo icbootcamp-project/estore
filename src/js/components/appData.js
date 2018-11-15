@@ -54,6 +54,36 @@ const categories = [
     id: "category-4",
     name: "sale",
     isActive: true
+  },
+  {
+    id: "category-5",
+    name: "pet food",
+    isActive: false
+  },
+  {
+    id: "category-6",
+    name: "garden",
+    isActive: false
+  },
+  {
+    id: "category-7",
+    name: "pet food",
+    isActive: false
+  },
+  {
+    id: "category-8",
+    name: "pet food",
+    isActive: false
+  },
+  {
+    id: "category-9",
+    name: "pet food",
+    isActive: false
+  },
+  {
+    id: "category-10",
+    name: "pet food",
+    isActive: false
   }
 ];
 
