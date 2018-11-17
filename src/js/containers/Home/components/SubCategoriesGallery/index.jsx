@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { arrayOf, shape } from "prop-types";
 
 // ########## Import Components Here ##########
-import SubCategoryItem from "./SubCategoryItem";
+import SubCategoryItem from "../SubCategoryItem";
 
 const SubCategoriesGallery = props => {
   function renderSubCategories() {

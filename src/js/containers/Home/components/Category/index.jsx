@@ -19,7 +19,7 @@ class Category extends Component {
 
   handleKeyPress(e) {
     const { category, switchCategoriesActive } = this.props;
-    if(e.key === 'Enter') {
+    if (e.key === 'Enter') {
       switchCategoriesActive(category);
     }
   }
@@ -28,10 +28,10 @@ class Category extends Component {
     const { category } = this.props;
     return (
       <Fragment>
-        <div 
-          onClick={this.handleSelect} 
-          className={`category-name ${category.isActive ? "underline" : ""}`} 
-          role="button" 
+        <div
+          onClick={this.handleSelect}
+          className={`category-name ${category.isActive ? "underline" : ""}`}
+          role="button"
           tabIndex="0"
           onKeyPress={this.handleKeyPress}
         >
