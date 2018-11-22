@@ -1,18 +1,11 @@
 // ########## Import Components Here ##########
 import * as types from "../constants";
+import appData from '../../../components/appData';
 
 const initial = {
   isLoading: false,
   error: null,
-  data: [
-    {
-      subCategoriesGalleryId: "",
-      subCategoryName: "",
-      subCategoryImage: "",
-      isOnSale: null,
-      link: ""
-    }
-  ]
+  data: appData[2]
 };
 
 export default function(state = initial, action) {

@@ -7,9 +7,14 @@ import { arrayOf, shape, func } from "prop-types";
 import Categories from "./Categories";
 import SubCategoriesGallery from "./SubCategoriesGallery";
 
-const Home = ({ categories, subCategoriesGallery, switchCategoriesActive }) => (
+const Home = ({ categories, subCategoriesGallery, switchCategoriesActive, switchCategoriesRight, switchCategoriesLeft }) => (
   <Fragment>
-    <Categories categories={categories} switchCategoriesActive={switchCategoriesActive} />
+    <Categories
+      categories={categories}
+      switchCategoriesActive={switchCategoriesActive}
+      switchCategoriesRight={switchCategoriesRight}
+      switchCategoriesLeft={switchCategoriesLeft}
+    />
     <SubCategoriesGallery subCategoriesGallery={subCategoriesGallery} />
   </Fragment>
 );
@@ -17,7 +22,9 @@ const Home = ({ categories, subCategoriesGallery, switchCategoriesActive }) => (
 Home.propTypes = {
   categories: arrayOf(shape()).isRequired,
   subCategoriesGallery: arrayOf(shape()).isRequired,
-  switchCategoriesActive: func.isRequired
+  switchCategoriesActive: func.isRequired,
+  switchCategoriesRight: func.isRequired,
+  switchCategoriesLeft: func.isRequired
 };
 
 export default Home;

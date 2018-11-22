@@ -1,17 +1,13 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from 'react';
-import { arrayOf, shape, func, object } from 'prop-types';
-import { connect } from 'react-redux';
+import { object, func } from 'prop-types';
 
 // ########## Import Components Here ##########
-import * as actions from './actions';
 import CartItem from './CartItem';
 
-const Cart = props => {
-	const { cart, addCounter, lessCounter, counter } = props;
-
+const Cart = ({cart, addCounter, lessCounter}) => {
 	function renderCart() {
-		return cart.map(item => (
+		return cart.data.map(item => (
 			<CartItem cartItem={item} key={item.cartItemId} addCounter={addCounter} lessCounter={lessCounter} />
 		));
 	}
@@ -24,18 +20,18 @@ const Cart = props => {
 					<div className='bill-detail'>
 						<h4>Sub-total:</h4>
 						<h4>Rs:</h4>
-						<h4>{counter.cartItemTotalPrice.toFixed(2)}</h4>
+						<h4>{cart.cartItemTotalPrice.toFixed(2)}</h4>
 					</div>
 					<div className='tax'>
 						<h4>GST @ 17%:</h4>
 						<h4>Rs:</h4>
-						<h4>{counter.GST17.toFixed(2)}</h4>
+						<h4>{cart.GST17.toFixed(2)}</h4>
 					</div>
 					<hr className='half-hr' />
 					<div className='total'>
 						<h4>Total:</h4>
 						<h4>Rs:</h4>
-						<h4>{(counter.cartItemTotalPrice + counter.GST17).toFixed(2)} </h4>
+						<h4>{(cart.cartItemTotalPrice + cart.GST17).toFixed(2)} </h4>
 					</div>
 					<div className='checkout'>
 						<div className='txt'>Checkout</div>
@@ -47,17 +43,11 @@ const Cart = props => {
 	);
 };
 
-function mapStateToProps({ cartReducer }) {
-	return {
-		counter : cartReducer
-	};
-}
 
 Cart.propTypes = {
-	cart        : arrayOf(shape()).isRequired,
-	counter     : object.isRequired,
+	cart        : object.isRequired,
 	addCounter  : func.isRequired,
 	lessCounter : func.isRequired
 };
 
-export default connect(mapStateToProps, { addCounter: actions.addCounter, lessCounter: actions.lessCounter })(Cart);
+export default Cart;

@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { arrayOf, shape, func } from "prop-types";
 
 // ########## Import Components Here ##########
-import Category from "./Category";
+import Category from "../Category";
 
 const Categories = ({ categories, switchCategoriesActive, switchCategoriesRight, switchCategoriesLeft }) => {
 
@@ -37,6 +37,9 @@ const Categories = ({ categories, switchCategoriesActive, switchCategoriesRight,
       <div id="categories">
         <div className="category-item">
           <a
+            role="button"
+            tabIndex={0}
+            onKeyPress={() => handleClick("left")}
             onClick={() => handleClick("left")}
           >
             <img
@@ -50,13 +53,16 @@ const Categories = ({ categories, switchCategoriesActive, switchCategoriesRight,
             {renderCategories()}
           </div>
           <a
+            role="button"
+            tabIndex={0}
+            onKeyPress={() => handleClick("right")}
             onClick={() => handleClick("right")}
           >
             <img
               className="right-arrow"
               src="/img/categories/arrow.png"
               alt="left arrow"
-              // onKeyPress={handlePress("right")}
+            // onKeyPress={handlePress("right")}
             />
           </a>
         </div>

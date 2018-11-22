@@ -1,7 +1,6 @@
 // ########## Import Components Here ##########
 import appData from "../components/appData";
 import deliveryData from "../components/Delivery/DeliveryData";
-import cartData from "../components/Cart/cartData";
 
 export function headerResponse() {
   return appData[0];
@@ -21,8 +20,4 @@ export function footerResponse() {
 
 export function deliveryDataApi() {
   return deliveryData;
-}
-
-export function cartDataResponse() {
-  return cartData
 }
