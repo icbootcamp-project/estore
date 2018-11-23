@@ -18,11 +18,9 @@ const TextField = props => {
     <input type={type} className={size} placeholder={name} />
   );
 };
-
 TextField.propTypes = {
   name: string.isRequired,
   width: string.isRequired,
   type: string.isRequired
 };
-
 export default TextField;
