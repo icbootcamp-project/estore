@@ -1,4 +1,6 @@
 import * as types from "../constants";
+import cartData from '../cartData'
+
 
 const initial = {
 	isLoading: false,
@@ -6,17 +8,20 @@ const initial = {
 	cartItemDisplayPrice: 0,
 	cartItemTotalPrice: 0,
 	GST17: 0,
-	data: [
-		{
-			cartItemId: "",
-			cartItemImage: "",
-			cartItemName: "",
-			cartItemSize: "",
-			cartItemQty: 0,
-			cartItemValue: 0,
+	data: cartData
+	
+	
+	// [
+	// 	{
+	// 		cartItemId: "",
+	// 		cartItemImage: "",
+	// 		cartItemName: "",
+	// 		cartItemSize: "",
+	// 		cartItemQty: 0,
+	// 		cartItemValue: 0,
 
-		}
-	]
+	// 	}
+	// ]
 };
 
 export default function (state = initial, action) {
@@ -26,13 +31,15 @@ export default function (state = initial, action) {
 			return { ...state, isLoading: true };
 
 		case types.LOAD_CART_SUCCESS:
-			data = action.payload;
+			data = state;
 			const amountsR = []
-			data.forEach(item => amountsR.push(item.cartItemValue))
+			data.data.forEach(item => amountsR.push(item.cartItemValue))
 			const totalerR = (total, currentValue) => total + currentValue
 			const totalAmountR = amountsR.reduce(totalerR)
 			const GSTR = (totalAmountR * 17) / 100
-			return { ...state, data, cartItemTotalPrice: totalAmountR, GST17: GSTR, isLoading: false, error: null };
+			return { ...state, cartItemTotalPrice: totalAmountR, GST17: GSTR, isLoading: false, error: null };
+			
+			// return { ...state, data, cartItemTotalPrice: totalAmountR, GST17: GSTR, isLoading: false, error: null };
 		case types.LOAD_CART_FAIL:
 			return { ...state, isLoading: false, error: action.payload };
 		case types.ADD_COUNTER:
