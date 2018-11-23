@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { arrayOf, shape, func } from "prop-types";
 
 // ########## Import Components Here ##########
-import Category from "../Category";
+import Category from "./Category";
 
 const Categories = ({ categories, switchCategoriesActive, switchCategoriesRight, switchCategoriesLeft }) => {
 
