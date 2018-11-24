@@ -21,3 +21,8 @@ export const LOAD_CART_FAIL = 'LOAD_CART_FAIL';
 // ########## Import Local Constants Here ##########
 export const ADD_COUNTER = 'ADD_COUNTER';
 export const LESS_COUNTER = 'LESS_COUNTER';
+// ########## Import delivery Constants Here ##########
+export const GET_DELIVERY_DATA = 'GET_DELIVERY_DATA';
+export const GET_DELIVERY_DATA_ATTEMPT = 'GET_DELIVERY_DATA_ATTEMPT';
+export const GET_DELIVERY_DATA_SUCCESS = 'GET_DELIVERY_DATA_SUCCESS';
+export const GET_DELIVERY_DATA_FAIL = 'GET_DELIVERY_DATA_FAIL';

@@ -89,10 +89,33 @@ export function addCounter(item) {
 		payload: item
 	};
 }
-
+// ########## Import delivery Actions Here ##########
 export function lessCounter(item) {
 	return {
 		type: 'LESS_COUNTER',
 		payload: item
+	}
+}
+
+export function getDeliveryData() {
+	return {
+		type: types.GET_DELIVERY_DATA
+	};
+}
+export function getDeliveryDataSuccess(data) {
+	return {
+		type: types.GET_DELIVERY_DATA_SUCCESS,
+		payload: data
+	};
+}
+export function getDeliveryDataFail(err) {
+	return {
+		type: types.GET_DELIVERY_DATA_FAIL,
+		payload: err
+	};
+}
+export function getDeliveryDataAttempt() {
+	return {
+		type: types.GET_DELIVERY_DATA_ATTEMPT
 	};
 }
