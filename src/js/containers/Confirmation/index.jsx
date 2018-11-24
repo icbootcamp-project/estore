@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import HeroTitle from "../Common/HeroTitle";
+import HeroTitle from "../../Common/HeroTitle";
 
 const Confirmation = () => (
   <Fragment>

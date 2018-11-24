@@ -19,14 +19,14 @@ export default class FilterProduct extends Component {
     }
 
     render(){
-      const { display } = this.state;
-      let status;
-       if(display){
-         status = "show";
-       }
-       else{
-         status = "hide";
-       }
+      // const { display } = this.state;
+      // let status;
+      //  if(display){
+      //    status = "show";
+      //  }
+      //  else{
+      //    status = "hide";
+      //  }
         return(
           <Fragment>
             <div id="filter-products">

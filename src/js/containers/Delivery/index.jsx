@@ -2,10 +2,10 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { func, arrayOf, shape, string } from "prop-types";
 
-import HeroTitle from "../Common/HeroTitle";
-import TextField from "../Common/TextField";
+import HeroTitle from "../../Common/HeroTitle";
+import TextField from "../../Common/TextField";
 
-import Button from "../Common/Button";
+import Button from "../../Common/Button";
 import * as actions from "./actions";
 import SkeletonLoading from "./components/SkeletonLoading";
 

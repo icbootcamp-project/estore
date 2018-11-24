@@ -16,6 +16,7 @@ export default class Products extends Component {
   render() {
     return (
       <Fragment>
+        
         <Filterproduct />
         <div id="product-container">
           {this.renderItems()}
