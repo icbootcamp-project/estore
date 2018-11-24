@@ -10,7 +10,7 @@ import * as actions from "./actions";
 import SkeletonLoading from "./components/SkeletonLoading";
 
 function showtextFields(Data) {
-  const textFields = Data.map(data => (
+  return Data.map(data => (
     <TextField
       name={data.name}
       type={data.type}
@@ -18,8 +18,6 @@ function showtextFields(Data) {
       key={Math.random()}
     />
   ));
-
-  return textFields;
 }
 class Delivery extends React.Component {
 
