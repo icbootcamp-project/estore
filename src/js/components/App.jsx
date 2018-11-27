@@ -14,10 +14,10 @@ import {
 // ########## Import Components Here ##########
 import * as actions from "../actions";
 import Home from "../containers/Home";
-import Confirmation from "./Confirmation/Confirmation";
-import Delivery from "./Delivery/Delivery";
+import Confirmation from "../containers/Confirmation";
+import Delivery from "../containers/Delivery";
 import Payment from "./Payment/Payment";
-import Products from "./Products/Products";
+import Products from "../containers/Products";
 import Cart from "../containers/Cart";
 import Header from "./Header";
 import Footer from "./Footer";

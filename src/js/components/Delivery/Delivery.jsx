@@ -76,33 +76,91 @@ const SkeletonLoading = () => (
   </Fragment>
 );
 
-function showtextFields(Data) {
-  const textFields = Data.map(data => (
-    <TextField
-      name={data.name}
-      type={data.type}
-      width={data.width}
-      key={Math.random()}
-    />
-  ));
-
-  return textFields;
-}
 class Delivery extends React.Component {
+
   static propTypes = {
     getDeliveryData: func.isRequired,
-    deliveryData: arrayOf(
-      shape({
-        name: string.isRequired,
-        width: string.isRequired,
-        type: string.isRequired
-      })
+    deliveryData: shape(
+      arrayOf(
+        shape({
+          name: string.isRequired,
+          width: string.isRequired,
+          type: string.isRequired,
+          placeholder:string.isRequired
+        })
+      ).isRequired
     ).isRequired
   };
+  constructor(props){
+    super(props);
+    this.state = {
+      fname: "",
+      lname: "",
+      email:"",
+      phone: "",
+      country:"",
+      state: "",
+      city: "",
+      address: ""
 
+    };
+    this.onSubmit = this.onSubmit.bind(this);
+    this.getUserDetails = this.getUserDetails.bind(this);
+  }
+  
+  
+  
   componentDidMount() {
     this.props.getDeliveryData();
   }
+  onSubmit(e){
+    e.preventDefault();
+    let validate = false;
+    const userData = this.state;
+    const keys = Object.keys(userData);
+    keys.forEach((key)=>{
+      if(this.state[key] !== ""){
+        validate =true;
+     }
+    })
+
+    if(validate){
+      // const newUser = {
+      //   firstname: this.state.fname,
+      //   lastname:this.state.lname,
+      //   email:this.state.email,
+      //   phone:this.state.phone,
+      //   country:this.state.country,
+      //   state:this.state.state,
+      //   city:this.state.city,
+      //   address:this.state.address
+      // };
+      // console.log(newUser);
+    }
+    else{
+      // console.log("Fill it correctly")
+    }
+  }
+  getUserDetails(e){
+    this.setState({
+      [e.target.name]:e.target.value
+    });
+  }
+  showtextFields(Data) {
+    const textFields=Data.map(data => (
+      <TextField
+        name={data.name}
+        type={data.type}
+        width={data.width}
+        placeholder={data.placeholder}
+        key={Math.random()}
+        getUserDetails={this.getUserDetails}
+      />
+    ));
+  
+    return textFields;
+  }
+
   render() {
     return this.props.deliveryData.data.length ? (
       <Fragment>
@@ -111,8 +169,8 @@ class Delivery extends React.Component {
 
           <div className="d-form">
             <form>
-              {showtextFields(this.props.deliveryData.data)}
-              <Button value="Next step" arrow="true" />
+              {this.showtextFields(this.props.deliveryData.data)}
+              <Button value="Next step" arrow="true" handler={this.onSubmit} />
             </form>
           </div>
         </div>

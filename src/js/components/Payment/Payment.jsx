@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import HeroTitle from "../HeroTitle/HeroTitle";
-import Button from "../Button/Button";
+import HeroTitle from "../../Common/HeroTitle";
+import Button from "../../Common/Button";
 import PaymentMethod from "./PaymentMethod";
 import { paymentFields, paymentTypes } from '../appData';
-import TextField from "../TextField/TextField";
+import TextField from "../../Common/TextField";
 
 function showtextFields(tfData) {
   return tfData.map(data => (
