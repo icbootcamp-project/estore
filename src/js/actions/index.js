@@ -55,6 +55,48 @@ export function loadFooterFail(error) {
 	};
 }
 
+// ########## Import Cart Actions Here ##########
+export function loadCart() {
+	return {
+		type: types.LOAD_CART
+	};
+}
+
+export function loadCartAttempt() {
+	return {
+		type: types.LOAD_CART_ATTEMPT
+	};
+}
+
+export function loadCartSuccess(data) {
+	return {
+		type: types.LOAD_CART_SUCCESS,
+		payload: data
+	};
+}
+
+export function loadCartFail(error) {
+	return {
+		type: types.LOAD_CART_FAIL,
+		payload: error
+	};
+}
+
+// ########## Import Local Actions Here ##########
+export function addCounter(item) {
+	return {
+		type: 'ADD_COUNTER',
+		payload: item
+	};
+}
+// ########## Import delivery Actions Here ##########
+export function lessCounter(item) {
+	return {
+		type: 'LESS_COUNTER',
+		payload: item
+	}
+}
+
 export function getDeliveryData() {
 	return {
 		type: types.GET_DELIVERY_DATA
