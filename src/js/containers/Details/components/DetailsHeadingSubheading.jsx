@@ -14,7 +14,13 @@ const DetailsHeadingSubheading = () => (
       </div>
       <div className="details-rate-flag-portion">
         <div className="details">
-          <PriceButton color="blue" value="PKR: 250 Rs" />
+          <PriceButton
+            className={{
+              classForText: "font-for-price-button",
+              classForButton: "details-price-button-height"
+            }}
+            value="PKR: 250"
+          />
         </div>
         <div className="clear" />
       </div>

@@ -11,21 +11,11 @@ const array = [
 ];
 const renderData = array.map(item => (
   <div key={array.indexOf(item)}>
-    <label
-      style={{
-        lineHeight: "50px",
-        width: "500px",
-        display: "flex",
-        justifyContent: "space-between",
-        borderTop: "1px solid",
-        padding: "0 20px"
-      }}
-      htmlFor={item}
-    >
+    <label className="modal-selection-text" htmlFor={item}>
       <div>{item}</div>
 
       <input
-        style={{ width: "50px", height: "50px" }}
+        className="modal-div-radio-buttons"
         type="radio"
         id={item}
         name="drone"
@@ -44,15 +34,11 @@ class ModalCenterDiv extends React.Component {
     const { closeModal } = this.props;
     return (
       <div className="center-component-for-modal-details">
-        <div
-          className="to-display-two-things"
-          style={{ padding: "0 20px", lineHeight: "50px" }}
-        >
-          <p style={{ textAlign: "center", width: "100%" }}>select your size</p>
+        <div className="to-display-two-things upper-portion-modal-div">
+          <p className="modal-div-heading">select your size</p>
           <button
             type="button"
-            className="close"
-            style={{ height: "50px", width: "50px" }}
+            className="close close-button-for-modal"
             aria-label="Close"
             onClick={closeModal}
           >

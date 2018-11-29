@@ -1,19 +1,19 @@
 import React, { Fragment } from "react";
-import { string, bool } from "prop-types";
+import { string, bool, object } from "prop-types";
 
 // const { value, isOpen } = props;
 const PriceButton = props => {
-  const { value, isOpen, color, isImage } = props;
+  const { value, isOpen, className, isImage } = props;
 
   return (
     <Fragment>
-      <div className="p-btn" style={{ backgroundColor: color }}>
+      <div className={`p-btn ${className.classForButton}`}>
         {isImage ? (
           <div className="favourite-icon">
             <img src="./img/header/favourite-icon.png" alt="favourite icon" />
           </div>
         ) : (
-          <div>
+          <div className={className.classForText}>
             {value}
             {isOpen ? (
               <Fragment>
@@ -32,14 +32,18 @@ const PriceButton = props => {
 PriceButton.defaultProps = {
   value: "",
   isOpen: false,
-  isImage: false
+  isImage: false,
+  className: {
+    classForText: "",
+    classForButton: ""
+  }
 };
 
 PriceButton.propTypes = {
   value: string,
   isOpen: bool,
   isImage: bool,
-  color: string.isRequired
+  className: object
 };
 export default PriceButton;
 

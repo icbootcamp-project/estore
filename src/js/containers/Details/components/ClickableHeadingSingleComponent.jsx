@@ -4,21 +4,9 @@ import { bool, shape, func } from "prop-types";
 
 const ClickableHeadingSingleComponent = ({ item, isActive, clickFunction }) => (
   <div
-    className="clickable-headings-div"
-    style={
-      //   this.state[
-      //   Object.keys(this.state)[clickableArray.indexOf(item)]
-      // ]
-
-      (isActive && {
-        color: "blue",
-        borderStyle: "solid",
-        borderWidth: "0 0 5px 0",
-        borderColor: "blue"
-      }) ||
-      {}
-    }
-    // key={item.text}
+    className={`clickable-headings-div ${
+      isActive ? "clickable-headings-div-if-active" : ""
+    }`}
     onClick={clickFunction}
     // onKeyPress={clickableFunc[clickableArray.indexOf(item)]}
     role="none"

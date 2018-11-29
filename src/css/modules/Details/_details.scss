@@ -3,10 +3,13 @@
   width: 100%;
   padding-left: 2%;
   padding-right: 2%;
-
   .p-btn {
     @include btn(100%, right, 0);
     box-shadow: 10px 5px 5px grey;
+    .font-for-price-button {
+      @include H4(center, $white);
+      line-height: 60px;
+    }
     .btn-circle {
       height: 60px;
       width: 60px;
@@ -23,6 +26,9 @@
       position: absolute;
       display: inline;
     }
+  }
+  .details-price-button-height {
+    height: 60px;
   }
 }
 // CSS WRITTEN FOR THE UPPER BODY OF THE DETAILS PAGE

@@ -21,26 +21,26 @@ import Products from "../containers/Products";
 import Cart from "../containers/Cart";
 import Header from "./Header";
 import Footer from "./Footer";
-import Details from "./Details";
+import Details from "../containers/Details";
 
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
     loadFooter: func.isRequired,
     header: shape().isRequired,
-    footer: shape().isRequired,
+    footer: shape().isRequired
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const { loadHeader, loadFooter, } = this.props;
+    const { loadHeader, loadFooter } = this.props;
     loadHeader();
     loadFooter();
   }
 
   render() {
-    const { header, footer} = this.props;
+    const { header, footer } = this.props;
     return (
       <Router>
         <div className="app">
