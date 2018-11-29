@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import PriceButton from "../Details/PriceButton";
+import PriceButton from "./PriceButton";
 // THIS IS THE MOCK DATA GIVEN SO THAT IT COULD BE SENT THROUGH PROPS
 const data = { heading: "Pasta", subheading: "FOOD > PASTA & NOODLES" };
 const { heading, subheading } = data;

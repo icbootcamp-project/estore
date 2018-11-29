@@ -14,11 +14,11 @@ import {
 // ########## Import Components Here ##########
 import * as actions from "../actions";
 import Home from "../containers/Home";
-import Confirmation from "./Confirmation/Confirmation";
-import Delivery from "./Delivery/Delivery";
+import Confirmation from "../containers/Confirmation";
+import Delivery from "../containers/Delivery";
 import Payment from "./Payment/Payment";
-import Products from "./Products/Products";
-// import Cart from "./Cart/Cart";
+import Products from "../containers/Products";
+import Cart from "../containers/Cart";
 import Header from "./Header";
 import Footer from "./Footer";
 import Details from "./Details";
@@ -26,25 +26,21 @@ import Details from "./Details";
 export class App extends Component {
   static propTypes = {
     loadHeader: func.isRequired,
-    loadCart: func.isRequired,
     loadFooter: func.isRequired,
     header: shape().isRequired,
-    footer: shape().isRequired
-    // cart: array,
-    // categories: array
+    footer: shape().isRequired,
   };
 
   static defaultProps = {};
 
   componentDidMount() {
-    const { loadHeader, loadFooter, loadCart } = this.props;
+    const { loadHeader, loadFooter, } = this.props;
     loadHeader();
-    loadCart();
     loadFooter();
   }
 
   render() {
-    const { header, footer } = this.props;
+    const { header, footer} = this.props;
     return (
       <Router>
         <div className="app">
@@ -56,6 +52,7 @@ export class App extends Component {
             <Route exact path="/confirmation" component={Confirmation} />
             <Route exact path="/details" component={Details} />
             <Route exact path="/products" render={() => <Products />} />
+            <Route exact path="/cart" component={Cart} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
@@ -65,10 +62,9 @@ export class App extends Component {
   }
 }
 
-function mapStateToProps({ headerReducer, cartReducer, footerReducer }) {
+function mapStateToProps({ headerReducer, footerReducer }) {
   return {
     header: headerReducer.data,
-    cart: cartReducer.data,
     footer: footerReducer.data
   };
 }
@@ -78,7 +74,6 @@ export default withRouter(
     mapStateToProps,
     {
       loadHeader: actions.loadHeader,
-      loadCart: actions.loadCart,
       loadFooter: actions.loadFooter
     }
   )(App)

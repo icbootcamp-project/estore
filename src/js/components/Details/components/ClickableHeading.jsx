@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 
-import PriceButton from "../Details/PriceButton";
+import PriceButton from "./PriceButton";
 
-import VariationDetailsPage from "../Details/VariationDetailsPage";
+import VariationDetailsPage from "./VariationDetailsPage";
 
-import ClickableHeadingSingleComponent from "../Details/ClickableHeadingSingleComponent";
-import array from "../Details/detailsAppData";
+import ClickableHeadingSingleComponent from "./ClickableHeadingSingleComponent";
+import array from "./detailsAppData";
 
 export default class ClickableHeading extends React.Component {
   constructor() {
@@ -130,7 +130,8 @@ export default class ClickableHeading extends React.Component {
           </Fragment>
         )) || (
           <div className="clickable-description-div">
-            review div{/*
+            review div
+            {/*
           YOU HAVE TO WRITE THE WHOLE PORTION OF REVIEW_PORTION OF THE DETAILS PAGE IN HERE */}
           </div>
         )}

@@ -1,5 +1,5 @@
 import React from "react";
-import ModalCenterDiv from "../Details/ModalCenterDiv";
+import ModalCenterDiv from "./ModalCenterDiv";
 // class DetailsModalDiv extends React.Component{
 //   constructor(){
 //   }

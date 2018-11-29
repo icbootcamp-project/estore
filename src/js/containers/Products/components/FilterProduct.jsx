@@ -19,14 +19,14 @@ export default class FilterProduct extends Component {
     }
 
     render(){
-      const { display } = this.state;
-      let status;
-       if(display){
-         status = "show";
-       }
-       else{
-         status = "hide";
-       }
+      // const { display } = this.state;
+      // let status;
+      //  if(display){
+      //    status = "show";
+      //  }
+      //  else{
+      //    status = "hide";
+      //  }
         return(
           <Fragment>
             <div id="filter-products">
@@ -51,9 +51,9 @@ export default class FilterProduct extends Component {
                   <img src="../img/products/grid-view.png" alt="" />
                 </div>
               </div>
-              <div id="filter-options" className={status}>
+              {/* <div id="filter-options" className={status}>
                 Filter Options under working...!
-              </div>
+              </div> */}
             </div>
             
           </Fragment> 

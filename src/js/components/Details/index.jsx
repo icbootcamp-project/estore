@@ -2,9 +2,9 @@ import React, { Fragment /* , Component */ } from "react";
 
 // import Payment from "../Payment/Payment";
 
-import DetailsHeadingSubheading from "../Details/DetailsHeadingSubheading";
-import ClickableHeading from "../Details/ClickableHeading";
-import DetailsModalDiv from "../Details/DetailsModalDiv";
+import DetailsHeadingSubheading from "./components/DetailsHeadingSubheading";
+import ClickableHeading from "./components/ClickableHeading";
+import DetailsModalDiv from "./components/DetailsModalDiv";
 
 class Details extends React.Component {
   state = { isModal: false };
