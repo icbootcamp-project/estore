@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
 import PriceButton from "./PriceButton";
-
+import Reviews from "../../../Common/Reviews";
 import VariationDetailsPage from "./VariationDetailsPage";
-
+import reviewsData from "./reviewsData";
 import ClickableHeadingSingleComponent from "./ClickableHeadingSingleComponent";
 import array from "./detailsAppData";
 
@@ -86,7 +86,7 @@ export default class ClickableHeading extends React.Component {
           </Fragment>
         )) || (
           <div className="clickable-description-div">
-            review div
+            { <Reviews reviews={reviewsData} />}
             {/*
           YOU HAVE TO WRITE THE WHOLE PORTION OF REVIEW_PORTION OF THE DETAILS PAGE IN HERE */}
           </div>
