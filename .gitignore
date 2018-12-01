@@ -62,3 +62,6 @@ typings/
 
 # annoying .DS_Store Mac file
 .DS_Store
+
+# dist
+dist/js/
