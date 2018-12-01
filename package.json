@@ -41,7 +41,6 @@
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "prettier": "^1.14.2",
     "prop-types": "^15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -75,10 +74,12 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "fetch-mock": "^6.3.0",
     "glob-all": "^3.1.0",
+    "husky": "^1.2.0",
     "jest": "^22.4.3",
     "jest-serializer-enzyme": "^1.0.0",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.7.2",
+    "prettier": "^1.15.2",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "react-test-renderer": "^16.2.0",
@@ -90,9 +91,11 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
-  "pre-commit": [
-    "lint-staged"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
