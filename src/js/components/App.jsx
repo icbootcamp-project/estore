@@ -20,7 +20,7 @@ import Payment from './Payment/Payment';
 import Products from '../containers/Products';
 import Cart from '../containers/Cart';
 import Header from '../commons/Header';
-import Footer from './Footer';
+import Footer from '../commons/Footer';
 
 export class App extends Component {
   static propTypes = {
