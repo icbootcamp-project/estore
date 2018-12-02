@@ -1,28 +1,21 @@
 // ########## Import Dependencies Here ##########
-import React, { Component, Fragment } from "react";
-import { shape, string, func } from "prop-types";
+import React, { Component, Fragment } from 'react';
+import { shape, string, func } from 'prop-types';
 
 // ########## Import Components Here ##########
 
 class Category extends Component {
-
-  constructor() {
-    super();
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
-
-  handleSelect() {
+  handleSelect = () => {
     const { category, switchCategoriesActive } = this.props;
     switchCategoriesActive(category);
-  }
+  };
 
-  handleKeyPress(e) {
+  handleKeyPress = (e) => {
     const { category, switchCategoriesActive } = this.props;
     if (e.key === 'Enter') {
       switchCategoriesActive(category);
     }
-  }
+  };
 
   render() {
     const { category } = this.props;
@@ -30,7 +23,7 @@ class Category extends Component {
       <Fragment>
         <div
           onClick={this.handleSelect}
-          className={`category-name ${category.isActive ? "underline" : ""}`}
+          className={`category-name ${category.isActive ? 'underline' : ''}`}
           role="button"
           tabIndex="0"
           onKeyPress={this.handleKeyPress}
@@ -40,13 +33,13 @@ class Category extends Component {
       </Fragment>
     );
   }
-};
+}
 
 Category.propTypes = {
   category: shape({
-    name: string.isRequired
+    name: string.isRequired,
   }).isRequired,
-  switchCategoriesActive: func.isRequired
+  switchCategoriesActive: func.isRequired,
 };
 
 export default Category;
