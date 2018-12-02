@@ -33,7 +33,7 @@ const CartItem = props => {
 						<div id='counter'>
 							<Counter addCounter={addCounter} lessCounter={lessCounter} cartItem={cartItem} />
 						</div>
-						<div className='del-icon' role="button" onClick={()=> delItem(cartItem)} tabIndex="0" onKeyPress="" />
+						<div className='del-icon' role="button" onClick={()=> delItem(cartItem)} tabIndex="0" onKeyPress={()=>{}} />
 					</div>
 				</div>
 

@@ -38,7 +38,7 @@ const Cart = ({cart, addCounter,delItem , lessCounter}) => {
 						<h4>{(cart.cartItemTotalPrice).toFixed(2)} </h4>
 					</div>
 					<div className='checkout'>
-					<Button value="Checkout" style={btnStyle} />
+					<Button value="Checkout" arrow="" style={btnStyle} />
 
 						{/* <div className='txt'>Checkout</div> */}
 					</div>
