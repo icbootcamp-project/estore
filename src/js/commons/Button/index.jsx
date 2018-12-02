@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import { string } from "prop-types";
+import React, { Fragment } from 'react';
+import { string } from 'prop-types';
 
-const Button = props => {
+const Button = (props) => {
   const { value, arrow } = props;
 
   return (
@@ -20,6 +20,6 @@ const Button = props => {
 };
 Button.propTypes = {
   value: string.isRequired,
-  arrow: string.isRequired
-}
+  arrow: string.isRequired,
+};
 export default Button;
