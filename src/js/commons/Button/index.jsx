@@ -21,6 +21,7 @@ const Button = (props) => {
 Button.propTypes = {
   value: string.isRequired,
   arrow: string.isRequired,
-  style:object.isRequired      //pass the object css with line height for the button height
+  style:object.isRequired      
+  // pass the object css with line height for the button height
 };
 export default Button;
