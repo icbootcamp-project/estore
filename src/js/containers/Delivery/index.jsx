@@ -1,27 +1,18 @@
-import React, { Fragment } from "react";
-import { connect } from "react-redux";
-import { func, arrayOf, shape, string } from "prop-types";
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import { func, arrayOf, shape, string } from 'prop-types';
 
-import HeroTitle from "../../Common/HeroTitle";
-import TextField from "../../Common/TextField";
+import HeroTitle from '../../commons/HeroTitle';
+import TextField from '../../commons/TextField';
 
-import Button from "../../Common/Button";
-import * as actions from "./actions";
-import SkeletonLoading from "./components/SkeletonLoading";
+import Button from '../../commons/Button';
+import * as actions from './actions';
+import SkeletonLoading from './components/SkeletonLoading';
 
 function showtextFields(Data) {
-  return Data.map(data => (
-    <TextField
-      name={data.name}
-      type={data.type}
-      width={data.width}
-      key={Math.random()}
-    />
-  ));
+  return Data.map((data) => <TextField name={data.name} type={data.type} width={data.width} key={Math.random()} />);
 }
 class Delivery extends React.Component {
-
-
   static propTypes = {
     getDeliveryDataAttempt: func.isRequired,
     getDeliveryDataSuccess: func.isRequired,
@@ -30,9 +21,9 @@ class Delivery extends React.Component {
       shape({
         name: string.isRequired,
         width: string.isRequired,
-        type: string.isRequired
+        type: string.isRequired,
       })
-    ).isRequired
+    ).isRequired,
   };
 
   componentDidMount() {
@@ -62,16 +53,15 @@ class Delivery extends React.Component {
 
 function mapStateToProps({ deliveryData }) {
   return {
-    deliveryData
+    deliveryData,
   };
 }
 
 export default connect(
   mapStateToProps,
   {
-    getDeliveryDataAttempt:actions.getDeliveryDataAttempt,
+    getDeliveryDataAttempt: actions.getDeliveryDataAttempt,
     getDeliveryDataSuccess: actions.getDeliveryDataSuccess,
-    getDeliveryDataFail:actions.getDeliveryDataFail
-
+    getDeliveryDataFail: actions.getDeliveryDataFail,
   }
 )(Delivery);

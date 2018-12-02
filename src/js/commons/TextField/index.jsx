@@ -1,12 +1,12 @@
-import React from "react";
-import { string } from "prop-types";
+import React from 'react';
+import { string } from 'prop-types';
 
-const TextField = props => {
+const TextField = (props) => {
   const { type, width, name } = props;
   const size = `tf-${width}`;
   // for dropdown
   let dropdown = false;
-  if (type === "dropdown") {
+  if (type === 'dropdown') {
     dropdown = true;
   }
 
@@ -21,6 +21,6 @@ const TextField = props => {
 TextField.propTypes = {
   name: string.isRequired,
   width: string.isRequired,
-  type: string.isRequired
+  type: string.isRequired,
 };
 export default TextField;

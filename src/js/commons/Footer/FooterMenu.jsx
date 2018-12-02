@@ -1,14 +1,14 @@
 // ########## Import Dependencies Here ##########
-import React, { Fragment } from "react";
-import { arrayOf, shape, string } from "prop-types";
+import React, { Fragment } from 'react';
+import { arrayOf, shape, string } from 'prop-types';
 
 // ########## Import Components Here ##########
-import FooterMenuItem from "./FooterMenuItem";
+import FooterMenuItem from './FooterMenuItem';
 
-const FooterMenu = props => {
+const FooterMenu = (props) => {
   function renderFooterMenuItems() {
     const { footerMenu } = props;
-    return footerMenu.footerMenuSubMenuItems.map(item => (
+    return footerMenu.footerMenuSubMenuItems.map((item) => (
       <FooterMenuItem key={item.footerMenuSubMenuId} footerMenuItem={item} />
     ));
   }
@@ -28,10 +28,10 @@ FooterMenu.propTypes = {
   footerMenu: shape({
     footerMenuSubMenuItems: arrayOf(
       shape({
-        footerMenuSubMenuId: string.isRequired
+        footerMenuSubMenuId: string.isRequired,
       }).isRequired
-    ).isRequired
-  }).isRequired
+    ).isRequired,
+  }).isRequired,
 };
 
 export default FooterMenu;

@@ -1,10 +1,10 @@
 // ########## Import Dependencies Here ##########
-import React, { Fragment } from "react";
-import { shape, arrayOf, string } from "prop-types";
+import React, { Fragment } from 'react';
+import { shape, arrayOf, string } from 'prop-types';
 
 // ########## Import Components Here ##########
 
-const Header = props => {
+const Header = (props) => {
   const { header } = props;
   return (
     <Fragment>
@@ -33,14 +33,14 @@ const Header = props => {
 Header.propTypes = {
   header: shape({
     logo: shape({
-      logoPath: string.isRequired
+      logoPath: string.isRequired,
     }).isRequired,
     icons: arrayOf(
       shape({
-        iconPath: string.isRequired
+        iconPath: string.isRequired,
       }).isRequired
-    ).isRequired
-  }).isRequired
+    ).isRequired,
+  }).isRequired,
 };
 
 export default Header;

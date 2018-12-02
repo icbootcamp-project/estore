@@ -1,28 +1,28 @@
-import React from "react";
-import { string } from "prop-types";
+import React from 'react';
+import { string } from 'prop-types';
 
 const HeroTitle = ({ name, section }) => {
   let lineClass;
   let circleClass;
   let dotClass;
-  let wraperClass = "hero-wraper";
+  let wraperClass = 'hero-wraper';
   let dots = true;
-  if (section === "1") {
+  if (section === '1') {
     // with Two dots
-    lineClass = "hero-line2 grey-line";
-    circleClass = "c-1  grey-circle";
-    dotClass = "";
+    lineClass = 'hero-line2 grey-line';
+    circleClass = 'c-1  grey-circle';
+    dotClass = '';
   }
-  if (section === "2") {
+  if (section === '2') {
     // with Three dots
-    lineClass = "hero-line2";
-    circleClass = "c-1";
-    dotClass = "dot1";
+    lineClass = 'hero-line2';
+    circleClass = 'c-1';
+    dotClass = 'dot1';
   }
-  if (section === "0") {
+  if (section === '0') {
     // without dots section and Text in center
     dots = false;
-    wraperClass = "hero-wraper h1-center";
+    wraperClass = 'hero-wraper h1-center';
   }
 
   return (
@@ -55,7 +55,7 @@ const HeroTitle = ({ name, section }) => {
 
 HeroTitle.propTypes = {
   name: string.isRequired,
-  section: string.isRequired
+  section: string.isRequired,
 };
 
 export default HeroTitle;
