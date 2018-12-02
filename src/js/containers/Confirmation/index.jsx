@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import HeroTitle from "../../Common/HeroTitle";
+import React, { Fragment } from 'react';
+import HeroTitle from '../../commons/HeroTitle';
 
 const Confirmation = () => (
   <Fragment>
@@ -15,8 +15,7 @@ const Confirmation = () => (
       </div>
       <div className="confirm-detail">
         <p>
-          Etiam blandit nisi feugiat eros mollis, sed vehicula massa
-          tempus.Donec suscipit a lectus et egastas. Meacanas
+          Etiam blandit nisi feugiat eros mollis, sed vehicula massa tempus.Donec suscipit a lectus et egastas. Meacanas
           fermentum accumsan metus non sagittis.
         </p>
       </div>
