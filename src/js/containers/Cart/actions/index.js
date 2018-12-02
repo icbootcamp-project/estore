@@ -41,3 +41,11 @@ export function lessCounter(item) {
 		payload: item
 	};
 }
+
+export function delItem(item) {
+	return {
+		type: 'DEL_ITEM',
+		payload: item
+	};
+}
+
