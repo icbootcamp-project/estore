@@ -13,7 +13,7 @@ const Cart = ({cart, addCounter,delItem , lessCounter}) => {
 		));
 	}
 
-	// const Styles = StyleSheet.create({btn:{height: "50px" }});
+	const btnStyle = {height:'50px',lineHeight:'50px'};
 	return (
 		 cart.data.length ? 
 		<Fragment>
@@ -38,7 +38,7 @@ const Cart = ({cart, addCounter,delItem , lessCounter}) => {
 						<h4>{(cart.cartItemTotalPrice).toFixed(2)} </h4>
 					</div>
 					<div className='checkout'>
-					<Button value="Checkout" arrow="" />
+					<Button value="Checkout" style={btnStyle}/>
 
 						{/* <div className='txt'>Checkout</div> */}
 					</div>
