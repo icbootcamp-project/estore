@@ -8,31 +8,67 @@
 			margin-bottom: 2em;
 		}
 		.bill-detail {
-			margin-left: 50%;
+			margin-left: 45%;
 			display: flex;
-			justify-content: space-between;
+			// justify-content: space-between;
 			h4 {
-				@include H4(right, $secondary-color);
+				&:first-child {
+					flex-basis: 50%;
+					display: flex;
+					justify-content: flex-start;
+				}
+				&:nth-child(2) {
+					flex-basis: 10%;
+				}
+				&:nth-child(3) {
+					flex-basis: 40%;
+				}
+				@include H4(left, $secondary-color);
+				// text-align: left;
 			}
 		}
 		.tax {
-			margin-left: 47%;
+			margin-left: 45%;
 			display: flex;
-			justify-content: space-between;
+			// justify-content: space-between;
 			h4 {
-				@include H4(right, $secondary-color);
+				&:first-child {
+					flex-basis: 50%;
+					display: flex;
+					justify-content: flex-start;
+				}
+				&:nth-child(2) {
+					flex-basis: 10%;
+				}
+				&:nth-child(3) {
+					flex-basis: 40%;
+				}
+				// flex-basis: 33%;
+				@include H4(left, $secondary-color);
 			}
 		}
 		.half-hr {
-			max-width: 60%;
+			max-width: 45%;
 			margin-right: 0;
 		}
 		.total {
-			margin-left: 56%;
+			margin-left: 45%;
 			display: flex;
-			justify-content: space-between;
+			// justify-content: space-between;
 			h4 {
-				@include H4(right, $primary-color);
+				&:first-child {
+					flex-basis: 50%;
+					display: flex;
+					justify-content: flex-start;
+				}
+				&:nth-child(2) {
+					flex-basis: 10%;
+				}
+				&:nth-child(3) {
+					flex-basis: 40%;
+				}
+				// flex-basis: 33%;
+				@include H4(left, $primary-color);
 			}
 		}
 		.checkout {
@@ -45,7 +81,7 @@
 			background-color: $primary-color;
 			border-radius: 0.3em;
 			width: 50%;
-			height: 3em;
+			height: 2em;
 			.txt {
 				color: $white;
 				font-size: 28px;

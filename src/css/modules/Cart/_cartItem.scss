@@ -1,78 +1,87 @@
 .cart-item {
-  // background-color: red;
+	// background-color: red;
   display: flex;
-  // justify-content: flex-end;
-  margin: 1em;
+  // flex-direction: row;
+	// justify-content: space-between;
+	margin: 1em;
 
-  .img {
-    .item-frame-item-1 {
-      @include sub-category-item("../img/subcategories-gallery/pasta-noodles.jpg"
+	.img {
+    flex-basis: 20%;
+		.item-frame-item-1 {
+			@include sub-category-item("../img/subcategories-gallery/pasta-noodles.jpg"
       );
-      width: 12em;
-      height: 12em;
-    }
+			width: 12em;
+			height: 12em;
+		}
 
-    .item-frame-item-2 {
-      @include sub-category-item("./img/subcategories-gallery/oils-ghee.jpg");
-      width: 12em;
-      height: 12em;
-    }
+		.item-frame-item-2 {
+			@include sub-category-item("./img/subcategories-gallery/oils-ghee.jpg");
+			width: 12em;
+			height: 12em;
+		}
 
-    .item-frame-item-3 {
-      @include sub-category-item("./img/subcategories-gallery/rice-atta.jpg");
-      width: 12em;
-      height: 12em;
-    }
-  }
+		.item-frame-item-3 {
+			@include sub-category-item("./img/subcategories-gallery/rice-atta.jpg");
+			width: 12em;
+			height: 12em;
+		}
+	}
 
-  .detail {
-    margin: 2em;
+	.detail {
+    flex-basis: 60%;
+
+		margin: 2em;
     width: 20em;
+    // margin-left: -200px;
 
-    .item-name {
-      @include H3(left, $black);
-    }
+		.item-name {
+			@include H3(left, $black);
+		}
 
-    .item-size {
-      @include H4(left, $secondary-color);
-    }
+		.item-size {
+			@include H4(left, $secondary-color);
+		}
 
-    .co {
-      #counter {
-        padding: 2em 0.5em;
-      }
+		.co {
+			#counter {
+				padding: 2em 0.5em;
+			}
 
-      display: flex;
-      flex-direction: row;
+			display: flex;
+			flex-direction: row;
 
-      .del-icon {
-        width: 2em;
-        height: 2em;
-        background: url("./img/cart/bin-icon.png") no-repeat center;
-        background-size: cover;
-        overflow: hidden;
-        margin: 2.7em 0 0 1em;
-      }
-    }
-  }
+			.del-icon {
+				width: 2em;
+				height: 2em;
+				background: url("./img/cart/bin-icon.png") no-repeat center;
+				background-size: cover;
+				overflow: hidden;
+				margin: 2.7em 0 0 1em;
+				border: none;
+				outline: none;
+			}
+		}
+	}
 
-  .sec-amt {
-    // margin: 20% 0 0 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.sec-amt {
+    flex-basis: 20%;
 
-    .amount {
-      font-size: 18px;
-      color: $white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      // text-align: center;
-      background-color: $primary-color;
-      border-radius: 0.5em;
-      width: 8em;
-      height: 2em;
-    }
-  }
+		// margin: 20% 0 0 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.amount {
+			font-size: 18px;
+			color: $white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// text-align: center;
+			background-color: $primary-color;
+			border-radius: 0.5em;
+			width: 8em;
+			height: 2em;
+		}
+	}
 }

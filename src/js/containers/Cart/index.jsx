@@ -12,6 +12,7 @@ export class CartIndex extends Component {
     loadCart: func.isRequired,
     addCounter: func.isRequired,
     lessCounter: func.isRequired,
+    delItem: func.isRequired,
     cart: object.isRequired
   };
 
@@ -23,11 +24,11 @@ export class CartIndex extends Component {
   }
 
   render() {
-    const {cart, addCounter, lessCounter} = this.props;
+    const {cart,delItem, addCounter, lessCounter} = this.props;
     return (
       <Fragment>
         <div className="cart">
-         <Cart cart={cart} addCounter={addCounter} lessCounter={lessCounter} />
+         <Cart cart={cart} delItem={delItem} addCounter={addCounter} lessCounter={lessCounter} />
         </div>
       </Fragment>
     );
@@ -45,6 +46,7 @@ export default connect(
     {
       loadCart: actions.loadCartSuccess,
       addCounter: actions.addCounter,
-      lessCounter: actions.lessCounter
+      lessCounter: actions.lessCounter,
+      delItem: actions.delItem
     }
   )(CartIndex);

@@ -6,7 +6,7 @@ import { shape, func } from 'prop-types';
 import Counter from './Counter';
 
 const CartItem = props => {
-	const { cartItem, addCounter, lessCounter } = props;
+	const { cartItem, addCounter, delItem, lessCounter } = props;
 	return (
 		<Fragment>
 			<div className='cart-item'>
@@ -33,12 +33,12 @@ const CartItem = props => {
 						<div id='counter'>
 							<Counter addCounter={addCounter} lessCounter={lessCounter} cartItem={cartItem} />
 						</div>
-						<div className='del-icon' />
+						<div className='del-icon' role="button" onClick={()=> delItem(cartItem)} tabIndex="0" onKeyPress={()=>{}} />
 					</div>
 				</div>
 
 				<div className='sec-amt'>
-					<div className='amount'>Rs: {cartItem.cartItemValue}</div>
+					<div className='amount'>Rs: {cartItem.cartItemValue}</div>	
 				</div>
 			</div>
 		</Fragment>
@@ -48,7 +48,8 @@ const CartItem = props => {
 CartItem.propTypes = {
 	cartItem    : shape().isRequired,
 	addCounter  : func.isRequired,
-	lessCounter : func.isRequired
+	lessCounter : func.isRequired,
+	delItem: func.isRequired
 };
 
 export default CartItem;
