@@ -1,11 +1,8 @@
 import React, { Fragment } from "react";
-import { string } from "prop-types";
+import { string,func } from "prop-types";
 
-const Button = props => {
-  const { value, arrow } = props;
-
-  return (
-    <div id="estore-btn">
+const Button = ({ value, arrow, onClick }) => (
+    <div id="estore-btn" onClick={onClick} role="button" tabIndex={0} onKeyPress="" >
       {value}
       {arrow && (
         <Fragment>
@@ -17,9 +14,10 @@ const Button = props => {
       )}
     </div>
   );
-};
+
 Button.propTypes = {
   value: string.isRequired,
-  arrow: string.isRequired
+  arrow: string.isRequired,
+  onClick:func.isRequired
 }
 export default Button;

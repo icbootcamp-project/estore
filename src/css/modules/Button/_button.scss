@@ -1,6 +1,7 @@
 #estore-btn {
 	position: relative;
 	@include btn(100%, left, 15px 0px);
+	font-family: $font-family;
 	.btn-circle {
 		height: 60px;
 		width: 60px;
@@ -25,5 +26,8 @@
 			opacity: 0.9;
 			color: white;
 		}
+	}
+	&:active{
+		width:99%;
 	}
 }

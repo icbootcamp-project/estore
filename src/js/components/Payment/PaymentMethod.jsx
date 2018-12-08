@@ -1,31 +1,24 @@
 import React from "react";
-import { arrayOf, object } from "prop-types";
+import { string,bool,func } from "prop-types";
 
-function showMethodItem(paymentData) {
-  return paymentData.map(item => {
-    const select = item.value;
-    let addclass;
-    if (select) {
-      addclass = "pm-radio radio-select";
-    }
-    const src = `./img/payment/${item.src}`;
-    return (
-      <div className="pm-half" key={item.id}>
-        <img src={src} alt={item.name} />
-        <div className="pm-c">
-          <div className={addclass} />
-        </div>
-      </div>
-    );
-  });
-}
-
-const PaymentMethod = ({ paymentTypes }) => (
-  <div id="PaymentMethod">{showMethodItem(paymentTypes)}</div>
+const PaymentMethod = ({ id,src,name,selectPaymentType,selected }) => (
+    <div className="pm-half" key={id} onClick={e => selectPaymentType(name,e)} tabIndex="0" onKeyPress="" role="button">
+          <img src={`./img/payment/${src}`} alt={name} />
+          <div className="pm-c">
+            {
+               selected ? <div className="pm-radio radio-select" /> : <div className="pm-radio" />
+            }
+          </div>
+    </div>
+  
 );
 
 PaymentMethod.propTypes = {
-  paymentTypes: arrayOf(object).isRequired
+  id:string.isRequired,
+  src:string.isRequired,
+  name:string.isRequired,
+  selectPaymentType:func.isRequired,
+  selected:bool.isRequired
 }
 
 export default PaymentMethod;

@@ -1,26 +1,22 @@
 import React from "react";
-import { string } from "prop-types";
+import { string,func,shape} from "prop-types";
 
-const TextField = props => {
-  const { type, width, name } = props;
-  const size = `tf-${width}`;
-  // for dropdown
-  let dropdown = false;
-  if (type === "dropdown") {
-    dropdown = true;
-  }
-
-  return dropdown ? (
-    <select className={size}>
-      <option>{name}</option>
-    </select>
-  ) : (
-    <input type={type} className={size} placeholder={name} />
-  );
-};
+const TextField = ({ type, width, name,getUserDetails,parent,placeholder }) => (
+  <input 
+    type={type} 
+    className={`tf-${width}`} 
+    name={name} 
+    placeholder={placeholder} 
+    onChange={getUserDetails} 
+    value={parent[name]} 
+  />
+);
 TextField.propTypes = {
-  name: string.isRequired,
-  width: string.isRequired,
-  type: string.isRequired
+  name: string.isRequired,  // name of the textfield without spaces
+  width: string.isRequired, // size of the textfield  e.g ( half,full,onethird)
+  type: string.isRequired,  // type of the input ( text,password, email)
+  getUserDetails:func.isRequired, // binded method of parent that update the parent state
+  parent:shape().isRequired,  // parent state object for controlled input.
+  placeholder:string.isRequired // placeholder of the input.
 };
 export default TextField;
