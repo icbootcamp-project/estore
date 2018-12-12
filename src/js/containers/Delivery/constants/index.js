@@ -1,6 +1,0 @@
-// ############# Delivery Data ###############
-
-export const GET_DELIVERY_DATA = 'GET_DELIVERY_DATA';
-export const GET_DELIVERY_DATA_ATTEMPT = 'GET_DELIVERY_DATA_ATTEMPT';
-export const GET_DELIVERY_DATA_SUCCESS = 'GET_DELIVERY_DATA_SUCCESS';
-export const GET_DELIVERY_DATA_FAIL = 'GET_DELIVERY_DATA_FAIL';
