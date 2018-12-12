@@ -65,3 +65,6 @@ typings/
 
 # dist
 dist/js/
+
+# vscode is ignored her 
+.vscode
