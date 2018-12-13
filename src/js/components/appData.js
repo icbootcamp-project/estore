@@ -213,48 +213,51 @@ const footer = {
 export const paymentFields = [
   {
     id: "payment-field-1",
-    name: "Card name",
+    name: "cardname",
     width: "full",
-    type: "text"
+    type: "text",
+    placeholder: "Card name",
   },
   {
     id: "payment-field-2",
-    name: "Card number",
+    name: "cardnumber",
     width: "full",
-    type: "type"
+    type: "type",
+    placeholder: "Card number",
   },
   {
     id: "payment-field-3",
-    name: "MM",
+    name: "month",
     width: "onethird",
-    type: "dropdown"
+    type: "dropdown",
+    placeholder: "MM",
   },
   {
     id: "payment-field-4",
-    name: "YY",
+    name: "year",
     width: "onethird",
-    type: "dropdown"
+    type: "dropdown",
+    placeholder:"YY"
   },
   {
     id: "payment-field-5",
-    name: "",
+    name: "cvn",
     width: "onethird",
-    type: "text"
+    type: "text",
+    placeholder:"CVN"
   }
 ];
 
 export const paymentTypes = [
   {
     id: "payment-type-1",
-    name: "Jazz cash",
-    src: "jazzcash.png",
-    value: true
+    name: "jazzCash",
+    src: "jazzcash.png"
   },
   {
     id: "payment-type-2",
-    name: "Cash on delivery",
-    src: "cashondelivery.png",
-    value: false
+    name: "cashOnDelivery",
+    src: "cashondelivery.png"
   }
 ];
 

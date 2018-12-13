@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
-import { string,object} from 'prop-types';
+import React, { Fragment } from "react";
+import { string,func,shape } from "prop-types";
 
-const Button = (props) => {
-  const { value, arrow,style } = props;
-
-  return (
-    <div id="estore-btn" style={style}>
+const Button = ({ value, arrow, onClick, style }) => (
+    <div id="estore-btn" style={style} onClick={onClick} role="button" tabIndex={0} onKeyPress={()=>{}} >
       {value}
       {arrow && (
         <Fragment>
@@ -17,11 +14,16 @@ const Button = (props) => {
       )}
     </div>
   );
-};
+
 Button.propTypes = {
   value: string.isRequired,
-  arrow: string.isRequired,
-  style:object.isRequired      
-  // pass the object css with line height for the button height
+  arrow: string,
+  onClick:func.isRequired,
+  style:shape()      // pass the object for styling
+  
 };
+Button.defaultProps = {
+  arrow:"false",
+  style:{}
+}
 export default Button;
