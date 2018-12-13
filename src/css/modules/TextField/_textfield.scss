@@ -1,12 +1,33 @@
 .tf-full {
 	@include textfield(100%,10px 0px 5px 0px);
+	&::placeholder{
+		font-family: $font-family;
+		font-weight: normal;
+		opacity: 0.5;
+	}
+	box-shadow: 3px 3px 6px #f7f5f5;
+	outline: none;
+	
 }
 .tf-onethird {
 	@include textfield(31%,10px 0px 5px 0px);
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	
+	&::placeholder{
+		font-family: $font-family;
+		font-weight: normal;
+		opacity: 0.5;
+	}
+	box-shadow: 3px 3px 6px #f7f5f5;
+	outline: none;
 }
 .tf-half {
 	@include textfield(48%,10px 0px 5px 0px);
+	&::placeholder{
+		font-family: $font-family;
+		font-weight: normal;
+		opacity: 0.5;
+	}
+	box-shadow: 3px 3px 6px #f7f5f5;
+	outline: none;
 }

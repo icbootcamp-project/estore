@@ -9,17 +9,16 @@ const HeroTitle = ({ name, section }) => {
   let dots = true;
   if (section === '1') {
     // with Two dots
-    lineClass = 'hero-line2 grey-line';
-    circleClass = 'c-1  grey-circle';
-    dotClass = '';
-  }
-  if (section === '2') {
+    lineClass = "hero-line2 grey-line";
+    circleClass = "c-1  grey-circle";
+    dotClass = "";
+  }else
+  if (section === "2") {
     // with Three dots
-    lineClass = 'hero-line2';
-    circleClass = 'c-1';
-    dotClass = 'dot1';
-  }
-  if (section === '0') {
+    lineClass = "hero-line2";
+    circleClass = "c-1";
+    dotClass = "dot1";
+  }else{
     // without dots section and Text in center
     dots = false;
     wraperClass = 'hero-wraper h1-center';
@@ -54,8 +53,8 @@ const HeroTitle = ({ name, section }) => {
 };
 
 HeroTitle.propTypes = {
-  name: string.isRequired,
-  section: string.isRequired,
+  name: string.isRequired,        // Title of the component
+  section: string.isRequired      // select 0, 1 , 2 to use the active dots structure
 };
 
 export default HeroTitle;

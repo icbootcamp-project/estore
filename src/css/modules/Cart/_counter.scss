@@ -33,6 +33,7 @@
       background-color: $white;
       border-radius: 0em 0.5em 0em 0em;
       border: 1px solid $secondary-color;
+      cursor: pointer;
     }
 
     .btn-less {
@@ -42,7 +43,7 @@
 
       border-radius: 0.5em 0em 0em 0em;
       border: 1px solid $secondary-color;
-
+      cursor: pointer;
       transform: rotate(180deg);
     }
   }

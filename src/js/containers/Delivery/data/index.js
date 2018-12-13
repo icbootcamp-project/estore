@@ -1,52 +1,60 @@
 const deliveryFields = [
-    {
-      id: "delivery-fields-1",
-      name: "First name",
-      width: "full",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-2",
-      name: "Last name",
-      width: "full",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-3",
-      name: "Email",
-      width: "full",
-      type: "email"
-    },
-    {
-      id: "delivery-fields-4",
-      name: "Phone",
-      width: "full",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-5",
-      name: "Country",
-      width: "full",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-6",
-      name: "State",
-      width: "half",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-7",
-      name: "City",
-      width: "half",
-      type: "text"
-    },
-    {
-      id: "delivery-fields-8",
-      name: "Address",
-      width: "full",
-      type: "text"
-    }
+  {
+    id: "delivery-field-1",
+    name: "firstname",
+    width: "full",
+    type: "text",
+    placeholder:"First name"
+  },
+  {
+    id: "delivery-field-2",
+    name: "lastname",
+    width: "full",
+    type: "text",
+    placeholder:"Last Name"
+  },
+  {
+    id: "delivery-field-3",
+    name: "email",
+    width: "full",
+    type: "email",
+    placeholder:"Email"
+  },
+  {
+    id: "delivery-field-4",
+    name: "phone",
+    width: "full",
+    type: "text",
+    placeholder:"Phone"
+  },
+  {
+    id: "delivery-field-5",
+    name: "country",
+    width: "full",
+    type: "text",
+    placeholder:"Country"
+  },
+  {
+    id: "delivery-field-6",
+    name: "state",
+    width: "half",
+    type: "text",
+    placeholder:"State"
+  },
+  {
+    id: "delivery-field-7",
+    name: "city",
+    width: "half",
+    type: "text",
+    placeholder:"City"
+  },
+  {
+    id: "delivery-field-8",
+    name: "address",
+    width: "full",
+    type: "text",
+    placeholder:"Address"
+  }
   ];
 
   export default deliveryFields;
