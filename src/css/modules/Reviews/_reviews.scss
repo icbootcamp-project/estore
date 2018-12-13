@@ -1,0 +1,27 @@
+#Review{
+    font-family: $font-family;
+    .review-content{
+        margin: 35px 10px;
+        border: 1px lightgrey solid;
+        padding: 30px 25px;
+        border-radius: 8px;
+        h2{
+            @include H3(left,$black);
+            padding-top: 20px;
+        }
+        p{
+            @include P(left, $secondary-color);
+            padding: 20px 0px;
+            word-spacing: 0.6em;
+            font-size: 1.2em;
+        }
+        span{
+            color: $placeholder-color;
+        }
+        .rating{
+            margin-top:40px;
+        }
+    }
+
+
+}

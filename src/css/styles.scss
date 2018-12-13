@@ -1,25 +1,29 @@
 // ########## Import Partials Here ##########
-@import "./partials/globals";
-@import "./partials/mixins";
-@import "./partials/variables";
+@import './partials/globals';
+@import './partials/mixins';
+@import './partials/variables';
 
 // ########## Import Public Page Components Here ##########
-@import "./modules/app";
-@import "./modules/header";
-@import "./modules/Categories/categories";
-@import "./modules/Categories/category";
-@import "./modules/Gallery/gallery";
-@import "./modules/Gallery/galleryitem";
-@import "./modules/footer";
-@import "./modules/footermenu";
-@import "./modules/footermenuitem";
-@import "./modules/Confirmation/confirmation";
-@import "./modules/Delivery/delivery";
-@import "./modules/Products/products";
-@import "./modules/Payment/payment";
-@import "./modules/HeroTitle/HeroTitle";
-@import "./modules/TextField/textfield";
-@import "./modules/Button/button";
-@import "./modules/Cart/cart";
-@import "./modules/Cart/cartItem";
-@import "./modules/Cart/counter";
+@import './modules/app';
+@import './modules/header';
+@import './modules/Categories/categories';
+@import './modules/Categories/category';
+@import './modules/Gallery/gallery';
+@import './modules/Gallery/galleryitem';
+@import './modules/footer';
+@import './modules/footermenu';
+@import './modules/footermenuitem';
+@import './modules/Confirmation/confirmation';
+@import './modules/Delivery/delivery';
+@import './modules/Products/products';
+@import './modules/Payment/payment';
+@import './modules/HeroTitle/HeroTitle';
+@import './modules/TextField/textfield';
+@import './modules/Button/button';
+@import './modules/Cart/cart';
+@import './modules/Cart/cartItem';
+@import './modules/Cart/counter';
+
+// ########## Import Public Page Components Here ##########
+@import './modules/Details/index';
+@import './modules/Reviews/reviews';
