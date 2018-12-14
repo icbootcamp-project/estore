@@ -8,7 +8,7 @@ const TextField = ({ type, width, name,getUserDetails,parent,placeholder }) => (
     name={name} 
     placeholder={placeholder} 
     onChange={getUserDetails} 
-    value={parent[name]} 
+    value={parent[name]}
   />
 );
 

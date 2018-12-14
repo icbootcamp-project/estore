@@ -8,6 +8,8 @@ import subCategoriesGalleryReducer from '../containers/Home/reducers/subCategori
 import footerReducer from './footerReducer';
 import deliveryData from '../containers/Delivery/reducers/getDeliveryReducer';
 import cartReducer from '../containers/Cart/reducers/cartReducer';
+import loginDetails from '../containers/Login/reducers/loginReducer';
+import signupDetails from '../containers/Signup/reducers/signupReducer';
 
 const rootReducer = combineReducers({
 	headerReducer,
@@ -15,7 +17,9 @@ const rootReducer = combineReducers({
 	subCategoriesGalleryReducer,
 	footerReducer,
 	deliveryData,
-	cartReducer
+	cartReducer,
+	loginDetails,
+	signupDetails
 });
 
 export default rootReducer;
