@@ -1,0 +1,15 @@
+.details-wrapper-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  .details-text-portion-heading {
+    @include H3(left, $black);
+  }
+  .details-text-portion-subheading {
+    @include H5(left, $line-grey-color);
+  }
+  .details-rate-flag-portion {
+    width: 25%;
+  }
+}

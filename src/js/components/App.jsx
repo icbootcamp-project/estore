@@ -23,6 +23,7 @@ import Cart from '../containers/Cart';
 import Header from '../commons/Header';
 import Footer from '../commons/Footer';
 import Signup from '../containers/Signup';
+import Details from '../containers/Details';
 
 export class App extends Component {
   static propTypes = {
@@ -55,6 +56,7 @@ export class App extends Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/details" component={Details} />
             <Redirect to="/" />
           </Switch>
           <Footer footer={footer} />
