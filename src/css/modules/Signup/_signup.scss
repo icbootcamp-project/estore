@@ -1,0 +1,16 @@
+#signup{
+    width: 100%;
+    background-color:$white;
+    font-family: $font-family;
+    padding: 100px 0;
+    .wraper{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+}

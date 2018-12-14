@@ -16,11 +16,13 @@ import * as actions from '../actions';
 import Home from '../containers/Home';
 import Confirmation from '../containers/Confirmation';
 import Delivery from '../containers/Delivery';
+import Login from '../containers/Login';
 import Payment from '../containers/Payment';
 import Products from '../containers/Products';
 import Cart from '../containers/Cart';
 import Header from '../commons/Header';
 import Footer from '../commons/Footer';
+import Signup from '../containers/Signup';
 import Details from '../containers/Details';
 
 export class App extends Component {
@@ -52,6 +54,8 @@ export class App extends Component {
             <Route exact path="/confirmation" component={Confirmation} />
             <Route exact path="/products" render={() => <Products />} />
             <Route exact path="/cart" component={Cart} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
             <Route exact path="/details" component={Details} />
             <Redirect to="/" />
           </Switch>

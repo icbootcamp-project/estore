@@ -109,8 +109,8 @@
     font-weight: normal;
     font-family: sans-serif;
   }
-  &::active{
-    border: 1px $textfield-color solid;
+  &:focus{
+    border: 2px $textfield-color solid;
   }
 }
 
