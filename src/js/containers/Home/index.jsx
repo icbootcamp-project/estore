@@ -1,20 +1,24 @@
 // ########## Import Dependencies Here ##########
-import React, { Component, Fragment } from "react";
-import { arrayOf, shape, func } from "prop-types";
+import React, { Component, Fragment } from 'react';
+import { arrayOf, shape, func } from 'prop-types';
 import { connect } from 'react-redux';
 
 // ########## Import Components Here ##########
 import * as actions from './actions';
-import Categories from "./components/Categories";
-import SubCategoriesGallery from "./components/SubCategoriesGallery";
+import Categories from '../../commons/Categories/Categories';
+import Gallery from '../../commons/ProductsGallery/Gallery';
 
 class Home extends Component {
-  componentDidMount() {
-
-  };
+  componentDidMount() {}
 
   render() {
-    const { categories, subCategoriesGallery, switchCategoriesActive, switchCategoriesRight, switchCategoriesLeft } = this.props;
+    const {
+      categories,
+      subCategoriesGallery,
+      switchCategoriesActive,
+      switchCategoriesRight,
+      switchCategoriesLeft,
+    } = this.props;
     return (
       <Fragment>
         <Categories
@@ -23,18 +27,18 @@ class Home extends Component {
           switchCategoriesRight={switchCategoriesRight}
           switchCategoriesLeft={switchCategoriesLeft}
         />
-        <SubCategoriesGallery subCategoriesGallery={subCategoriesGallery} />
+        <Gallery galleryItems={subCategoriesGallery} />
       </Fragment>
     );
   }
-};
+}
 
 Home.propTypes = {
   categories: arrayOf(shape()).isRequired,
   subCategoriesGallery: arrayOf(shape()).isRequired,
   switchCategoriesActive: func.isRequired,
   switchCategoriesRight: func.isRequired,
-  switchCategoriesLeft: func.isRequired
+  switchCategoriesLeft: func.isRequired,
 };
 
 const mapStateToProps = ({ categoriesReducer, subCategoriesGalleryReducer }) => ({
@@ -42,7 +46,8 @@ const mapStateToProps = ({ categoriesReducer, subCategoriesGalleryReducer }) => 
   subCategoriesGallery: subCategoriesGalleryReducer.data,
 });
 
-export default connect(mapStateToProps,
+export default connect(
+  mapStateToProps,
   {
     loadCategories: actions.loadCategories,
     switchCategoriesActive: actions.switchCategoriesActive,

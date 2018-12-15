@@ -62,3 +62,9 @@ typings/
 
 # annoying .DS_Store Mac file
 .DS_Store
+
+# dist
+dist/js/
+
+# vscode is ignored her 
+.vscode

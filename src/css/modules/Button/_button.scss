@@ -1,6 +1,8 @@
 #estore-btn {
 	position: relative;
 	@include btn(100%, left, 15px 0px);
+	font-family: $font-family;
+	outline: none;
 	.btn-circle {
 		height: 60px;
 		width: 60px;
@@ -12,10 +14,12 @@
 		color: $black;
 		font-size: 0.8em;
 		line-height: 60px;
+		outline: none;
 	}
 	.btn-glyphicon {
 		height: 15px;
 		width: 15px;
+		outline: none;
 		img {
 			position: absolute;
 			right: 35px;
@@ -25,5 +29,9 @@
 			opacity: 0.9;
 			color: white;
 		}
+	}
+	&:active{
+		width:99%;
+		outline: none;
 	}
 }
