@@ -1,0 +1,22 @@
+#payment{
+	// height: 100%;
+	height: 470px;
+	background: yellow;
+	color: #fff;
+	display: flex;
+	flex-flow: column wrap;
+	// align-content: space-between;
+	// justify-content: stretch;
+	.paymentTop{
+		text-align: center;
+		background: $primary-color;
+		flex-grow: 1;
+		h1{
+			@include H1("center", $white);
+		}
+	}
+	.paymentForm{
+		background: red;
+		flex-grow: 1;
+	}
+}

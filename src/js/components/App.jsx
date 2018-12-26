@@ -1,7 +1,5 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { func, shape } from 'prop-types';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,7 +10,7 @@ import {
 } from 'react-router-dom';
 
 // ########## Import Components Here ##########
-import * as actions from '../actions';
+
 import Home from '../containers/Home';
 import Confirmation from '../containers/Confirmation';
 import Delivery from '../containers/Delivery';
@@ -24,27 +22,16 @@ import Footer from '../commons/Footer';
 import Details from '../containers/Details';
 
 export class App extends Component {
-  static propTypes = {
-    loadHeader: func.isRequired,
-    loadFooter: func.isRequired,
-    header: shape().isRequired,
-    footer: shape().isRequired,
-  };
+  static propTypes = {};
 
   static defaultProps = {};
 
-  componentDidMount() {
-    const { loadHeader, loadFooter } = this.props;
-    loadHeader();
-    loadFooter();
-  }
-
+  componentDidMount() {}
   render() {
-    const { header, footer } = this.props;
     return (
       <Router>
         <div className="app">
-          <Header header={header} />
+          <Header />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/payment" component={Payment} />
@@ -55,26 +42,11 @@ export class App extends Component {
             <Route exact path="/details" component={Details} />
             <Redirect to="/" />
           </Switch>
-          <Footer footer={footer} />
+          <Footer />
         </div>
       </Router>
     );
   }
 }
 
-function mapStateToProps({ headerReducer, footerReducer }) {
-  return {
-    header: headerReducer.data,
-    footer: footerReducer.data,
-  };
-}
-
-export default withRouter(
-  connect(
-    mapStateToProps,
-    {
-      loadHeader: actions.loadHeader,
-      loadFooter: actions.loadFooter,
-    }
-  )(App)
-);
+export default withRouter(App);
