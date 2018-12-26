@@ -1,17 +1,91 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from 'react';
-import { shape, string } from 'prop-types';
 
 // ########## Import Components Here ##########
 import FooterMenu from './FooterMenu';
 
-const Footer = (props) => {
+const Footer = () => {
+  const footer = {
+    footerMenuItems: [
+      {
+        footerMenuId: 'footer-menu-1',
+        footerMenuName: 'about',
+        footerMenuLink: '/about',
+        footerMenuSubMenuItems: [
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-1',
+            footerMenuSubMenuName: 'item1',
+            footerMenuSubMenuLink: '/item1',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-2',
+            footerMenuSubMenuName: 'item2',
+            footerMenuSubMenuLink: '/item2',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-3',
+            footerMenuSubMenuName: 'item3',
+            footerMenuSubMenuLink: '/item3',
+          },
+        ],
+      },
+      {
+        footerMenuId: 'footer-menu-2',
+        footerMenuName: 'company',
+        footerMenuLink: '/company',
+        footerMenuSubMenuItems: [
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-1',
+            footerMenuSubMenuName: 'item1',
+            footerMenuSubMenuLink: '/item1',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-2',
+            footerMenuSubMenuName: 'item2',
+            footerMenuSubMenuLink: '/item2',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-3',
+            footerMenuSubMenuName: 'item3',
+            footerMenuSubMenuLink: '/item3',
+          },
+        ],
+      },
+      {
+        footerMenuId: 'footer-menu-3',
+        footerMenuName: 'support',
+        footerMenuLink: '/support',
+        footerMenuSubMenuItems: [
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-1',
+            footerMenuSubMenuName: 'item1',
+            footerMenuSubMenuLink: '/item1',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-2',
+            footerMenuSubMenuName: 'item2',
+            footerMenuSubMenuLink: '/item2',
+          },
+          {
+            footerMenuSubMenuId: 'footer-menu-submenu-3',
+            footerMenuSubMenuName: 'item3',
+            footerMenuSubMenuLink: '/item3',
+          },
+        ],
+      },
+    ],
+    footerLogo: {
+      footerLogoLink: './img/footer/EStore-white.png',
+      footerLogoAltText: 'Estore logo white',
+    },
+    footerDisclaimer: {
+      footerDisclaimerLiner: '© EStore. 2018 All Rights Reserved.',
+    },
+  };
   function renderFooterMenu() {
-    const { footer } = props;
     return footer.footerMenuItems.map((item) => <FooterMenu key={item.footerMenuId} footerMenu={item} />);
   }
 
-  const { footer } = props;
   return (
     <Fragment>
       <div id="footer">
@@ -21,15 +95,6 @@ const Footer = (props) => {
       </div>
     </Fragment>
   );
-};
-
-Footer.propTypes = {
-  footer: shape({
-    footerLogo: shape({
-      footerLogoLink: string.isRequired,
-      footerLogoAltText: string.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
 
 export default Footer;
