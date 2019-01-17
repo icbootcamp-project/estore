@@ -95,9 +95,9 @@
 }
 
 // ########## All Textfield mixins Here ##########
-@mixin textfield($size,$margin) {
+@mixin textfield($size, $margin) {
   width: $size;
-  margin:$margin;
+  margin: $margin;
   height: 90px;
   border-radius: 8px;
   border: 1px $textfield-color solid;
@@ -109,21 +109,20 @@
     font-weight: normal;
     font-family: sans-serif;
   }
-  &::active{
+  &::active {
     border: 1px $textfield-color solid;
   }
 }
 
-
 // ########## All Buttons mixins Here ##########
-@mixin btn($size,$position,$margin) {
+@mixin btn($size, $position, $margin) {
   width: $size;
-  margin:$margin;
+  margin: $margin;
   height: 90px;
   border-radius: 8px;
   background-color: $primary-color;
   color: $white;
-  border:none;
+  border: none;
   text-align: center;
   font-size: 1.5em;
   display: inline;
@@ -132,4 +131,21 @@
   font-family: sans-serif;
   box-shadow: 3px 3px 6px #888888;
   cursor: pointer;
+}
+
+@mixin diffused-btn($h, $w, $font-size, $color1, $color2, $color3) {
+  height: $h;
+  width: $w;
+  background-image: linear-gradient(to bottom, $color1, $color2, $color3);
+  text-align: center;
+  line-height: $h;
+  font-size: $font-size;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+  font-family: $font-family;
+  cursor: pointer;
+  &:active {
+    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.245);
+  }
 }
