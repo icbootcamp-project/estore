@@ -1,36 +1,37 @@
 // CSS WRITTEN FOR THE RE-USABLE COMPONENT PRICE BUTTON
-.details {
-  width: 100%;
-  padding-left: 2%;
-  padding-right: 2%;
-  .p-btn {
-    @include btn(100%, right, 0);
-    box-shadow: 10px 5px 5px grey;
-    .font-for-price-button {
-      @include H4(center, $white);
-      line-height: 60px;
-    }
-    .btn-circle {
-      height: 60px;
-      width: 60px;
-      border-radius: 100%;
-      background-color: $white;
-      opacity: 0.2;
-      float: right;
-      margin: 15px 15px 15px 15px;
-      color: $black;
-      font-size: 0.8em;
-      line-height: 60px;
-    }
-    .btn-glyphicon {
-      position: absolute;
-      display: inline;
-    }
-  }
-  .details-price-button-height {
-    height: 60px;
-  }
-}
+// .details {
+//   width: 100%;
+//   // padding-left: 2%;
+//   // padding-right: 2%;
+//   .p-btn {
+//     @include btn(100%, right, 0);
+//     // box-shadow: 10px 5px 5px grey;
+//     // box-shadow: 3px 3px 6px #f7f5f5;
+//     .font-for-price-button {
+//       @include H5(center, $white);
+//       line-height: 45px;
+//     }
+//     .btn-circle {
+//       height: 60px;
+//       width: 60px;
+//       border-radius: 100%;
+//       background-color: $white;
+//       opacity: 0.2;
+//       float: right;
+//       margin: 15px 15px 15px 15px;
+//       color: $black;
+//       font-size: 0.8em;
+//       line-height: 60px;
+//     }
+//     .btn-glyphicon {
+//       position: absolute;
+//       display: inline;
+//     }
+//   }
+//   .details-price-button-height {
+//     height: 45px;
+//   }
+// }
 // CSS WRITTEN FOR THE UPPER BODY OF THE DETAILS PAGE
 .upper-body-details {
   .image-backgound-details-div {
@@ -44,15 +45,24 @@
 }
 // CSS WRITTEN FOR THE LOWER BODY OF THE DETAILS PAGE
 .full-outer-div {
-  margin: 0 80px;
-  margin: 40px;
+  margin: 30px 80px;
   .outer-details-div {
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
-    .details {
-      width: 20%;
+    .details-page-add-btn {
+      @include diffused-btn(50px, 45px, 20px, rgb(133, 209, 97), rgb(102, 184, 26), rgb(74, 139, 12));
     }
+    .details-page-minus-btn {
+      @include diffused-btn(50px, 45px, 20px, rgb(233, 175, 82), rgb(228, 161, 52), rgb(233, 149, 14));
+    }
+    .details-page-favourite-btn {
+      @include diffused-btn(50px, 45px, 24px, rgb(177, 38, 38), rgb(179, 22, 22), rgb(168, 22, 22));
+    }
+    // .details {
+    //   width: 20%;
+    //   // height: 20%;
+    // }
   }
 }
 // .details-4 {

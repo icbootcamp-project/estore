@@ -7,7 +7,9 @@ const VariationComponent = (props) => {
   return (
     <div onClick={showModal} id="border1" className="to-display-two-things variation-options-div " role="none">
       <div>{text}</div>
-      <div className="glyphicon glyphicon-menu-down" />
+      <div>
+        <i className="fas fa-chevron-down fa-lg" />
+      </div>
     </div>
   );
 };

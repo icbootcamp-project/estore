@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 
-import PriceButton from './PriceButton';
+// import PriceButton from './PriceButton';
 import Reviews from '../../../commons/Reviews';
+import Button from '../../../commons/Button';
 import VariationDetailsPage from './VariationDetailsPage';
 import reviewsData from './reviewsData';
 import ClickableHeadingSingleComponent from './ClickableHeadingSingleComponent';
@@ -12,7 +13,9 @@ export default class ClickableHeading extends React.Component {
     super();
     this.state = { data: array, goto: 'Details' };
   }
-
+  onSubmit = () => {
+    // console.log('this is clicked ???');
+  };
   clickIt = (i) => {
     const { data } = this.state;
     const changedData = data.map((item, index) => {
@@ -66,19 +69,15 @@ export default class ClickableHeading extends React.Component {
             {/* THIS PORTION IS FOR THE LOWER BODY OF DETAILS PAGE  */}
             <div className="full-outer-div">
               <div className="outer-details-div">
-                <div className="details">
-                  <PriceButton isOpen isImage value="PKR: 250 Rs" />
+                <div className="details-page-minus-btn">-</div>
+                <div className="details-page-favourite-btn">
+                  <i className="far fa-heart" />
                 </div>
-                <div className="details">
-                  <PriceButton isOpen isImage value="PKR: 250 Rs" />
-                </div>
-                <div className="details">
-                  <PriceButton isOpen isImage value="PKR: 250 Rs" />
-                </div>
+                <div className="details-page-add-btn">+</div>
                 {/* <Payment /> */}
               </div>
               <div className="details">
-                <PriceButton isOpen value="Add to Cart" />
+                <Button value="Add to cart" arrow="true" onClick={this.onSubmit} />
               </div>
               <div className="clear" />
             </div>

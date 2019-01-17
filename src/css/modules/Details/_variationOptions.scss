@@ -5,11 +5,10 @@
   justify-content: space-between;
 }
 .variation-options-div {
-  @include H4(left, $black);
+  @include H5(left, $black);
   width: 50%;
   padding: 30px;
   border-style: solid;
-
   border-width: 1px 0;
   border-color: $line-grey-color;
 }

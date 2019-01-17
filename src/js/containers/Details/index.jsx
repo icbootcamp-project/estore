@@ -1,10 +1,13 @@
 import React, { Fragment /* , Component */ } from 'react';
-
+import { arrayOf, shape, func } from 'prop-types';
+import { connect } from 'react-redux';
 // import Payment from "../Payment/Payment";
 
+import * as actions from '../Home/actions';
 import DetailsHeadingSubheading from './components/DetailsHeadingSubheading';
 import ClickableHeading from './components/ClickableHeading';
 import DetailsModalDiv from './components/DetailsModalDiv';
+import Categories from '../../commons/Categories/Categories';
 
 class Details extends React.Component {
   state = { isModal: false };
@@ -16,8 +19,21 @@ class Details extends React.Component {
   };
   render() {
     const { isModal } = this.state;
+    const {
+      categories,
+      // subCategoriesGallery,
+      switchCategoriesActive,
+      switchCategoriesRight,
+      switchCategoriesLeft,
+    } = this.props;
     return (
       <Fragment>
+        <Categories
+          categories={categories}
+          switchCategoriesActive={switchCategoriesActive}
+          switchCategoriesRight={switchCategoriesRight}
+          switchCategoriesLeft={switchCategoriesLeft}
+        />
         {/* THIS PORTION IS FOR THE IMAGE OF THE DETAILS PAGE  */}
         <div className="upper-body-details">
           <div className="image-backgound-details-div">
@@ -45,4 +61,29 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+Details.propTypes = {
+  categories: arrayOf(shape()).isRequired,
+  // subCategoriesGallery: arrayOf(shape()).isRequired,
+  switchCategoriesActive: func.isRequired,
+  switchCategoriesRight: func.isRequired,
+  switchCategoriesLeft: func.isRequired,
+};
+
+const mapStateToProps = ({
+  categoriesReducer,
+  // subCategoriesGalleryReducer
+}) => ({
+  categories: categoriesReducer.data,
+  // subCategoriesGallery: subCategoriesGalleryReducer.data,
+});
+
+export default connect(
+  mapStateToProps,
+  {
+    // loadCategories: actions.loadCategories,
+    switchCategoriesActive: actions.switchCategoriesActive,
+    switchCategoriesRight: actions.switchCategoriesRight,
+    switchCategoriesLeft: actions.switchCategoriesLeft,
+    // loadSubCategoriesGallery: actions.loadSubCategoriesGallery,
+  }
+)(Details);
